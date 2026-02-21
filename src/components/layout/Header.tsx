@@ -55,9 +55,9 @@ export default function Header() {
                   to={link.path}
                   className={cn(
                     "font-body text-[11px] tracking-[0.2em] uppercase transition-colors duration-300",
-                    location.pathname === link.path
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
+                     location.pathname === link.path
+                       ? "text-accent"
+                       : "text-muted-foreground hover:text-foreground"
                   )}
                 >
                   {link.label}
@@ -100,9 +100,9 @@ export default function Header() {
                 to={link.path}
                 className={cn(
                   "font-body text-xs tracking-[0.2em] uppercase transition-colors duration-300",
-                  location.pathname === link.path
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
+                   location.pathname === link.path
+                     ? "text-accent"
+                     : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {link.label}

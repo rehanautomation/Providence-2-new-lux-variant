@@ -24,7 +24,7 @@
     --muted: 37 20% 82%;
     --muted-foreground: 150 10% 42%;
 
-    --accent: 37 47% 61%;
+    --accent: 37 47% 55%;
     --accent-foreground: 150 18% 14%;
 
     --destructive: 0 84.2% 60.2%;
@@ -102,9 +102,17 @@
   }
 
   .divider-gold {
-    width: 60px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, hsl(var(--gold)), transparent);
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold)), hsl(var(--bronze)), transparent);
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold) / 0.3);
+  }
+
+  .bg-gold-soft {
+    background: hsl(var(--gold) / 0.08);
   }
 }
 

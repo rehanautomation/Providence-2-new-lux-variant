@@ -37,8 +37,11 @@ export default function MirrorVillaPlaceholder({ landscape, className, aspectRat
         <div className="w-full h-[30%] mt-px bg-white/[0.12] border-x border-b border-white/[0.15] opacity-60 scale-y-[-0.5] origin-top" />
       </div>
 
-      {/* Atmosphere glow */}
-      <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-background/20" />
+       {/* Gold shimmer on glass */}
+       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[45%] w-[35%] h-[8%] bg-gradient-to-r from-transparent via-[hsl(37,47%,55%,0.15)] to-transparent" />
+
+       {/* Atmosphere glow */}
+       <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-background/20" />
     </div>
   );
 }
