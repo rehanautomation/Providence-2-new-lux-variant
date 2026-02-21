@@ -45,7 +45,7 @@ export default function Index() {
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-background to-background" />
         <div className="absolute inset-0 grain-overlay" />
         
         {/* Subtle mirror villa in hero background */}
@@ -61,7 +61,7 @@ export default function Index() {
           >
             <div className="divider-gold mx-auto mb-10" />
             <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-light text-foreground leading-[1.1] mb-6">
-              Extraordinary Journeys<br />Begin Here
+              Extraordinary Journeys<br /><span className="text-gradient-gold">Begin Here</span>
             </h1>
             <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-xl mx-auto leading-relaxed mb-12">
               A sanctuary of transformation. A mirror to your most authentic self.
@@ -78,7 +78,7 @@ export default function Index() {
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <div className="w-px h-12 bg-gradient-to-b from-primary/60 to-transparent" />
+          <div className="w-px h-12 bg-gradient-to-b from-accent/60 to-transparent" />
         </motion.div>
       </section>
 
@@ -133,8 +133,8 @@ export default function Index() {
             {villas.map((villa, i) => (
               <ScrollReveal key={villa.name} delay={i * 0.1}>
                 <div className="group">
-                  <MirrorVillaPlaceholder landscape={villa.landscape} className="w-full mb-5 transition-transform duration-700 group-hover:scale-[1.02]" />
-                  <span className="font-body text-[10px] tracking-[0.3em] uppercase text-primary">{villa.tag}</span>
+              <MirrorVillaPlaceholder landscape={villa.landscape} className="w-full mb-5 transition-transform duration-700 group-hover:scale-[1.02]" />
+                   <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villa.tag}</span>
                   <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-2 mb-2">{villa.name}</h3>
                   <p className="font-body text-xs font-light text-muted-foreground tracking-wide">{villa.features}</p>
                 </div>
@@ -155,9 +155,9 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8 md:gap-12 mt-16">
             {pillars.map((pillar, i) => (
               <ScrollReveal key={pillar.title} delay={i * 0.15}>
-                <div className="border border-border/30 p-8 md:p-10 h-full">
-                  <span className="font-body text-[10px] tracking-[0.3em] uppercase text-primary">0{i + 1}</span>
-                  <h3 className="font-heading text-2xl font-light text-foreground mt-4 mb-5">{pillar.title}</h3>
+                <div className="border border-accent/20 p-8 md:p-10 h-full hover:border-accent/40 transition-colors duration-500">
+                   <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-medium">0{i + 1}</span>
+                   <h3 className="font-heading text-2xl font-light text-foreground mt-4 mb-5">{pillar.title}</h3>
                   <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">{pillar.body}</p>
                 </div>
               </ScrollReveal>
@@ -237,7 +237,7 @@ export default function Index() {
           <div className="grid md:grid-cols-2 gap-12 mb-20">
             {testimonials.map((t, i) => (
               <ScrollReveal key={i} delay={i * 0.15}>
-                <blockquote className="border-l border-primary/40 pl-8">
+                <blockquote className="border-l-2 border-accent/50 pl-8">
                   <p className="font-heading text-xl md:text-2xl font-light text-foreground leading-relaxed italic mb-6">
                     "{t.quote}"
                   </p>

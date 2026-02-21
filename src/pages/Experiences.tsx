@@ -93,7 +93,7 @@ export default function Experiences() {
 
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-background to-background" />
         <div className="absolute inset-0 grain-overlay" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <motion.div
@@ -125,9 +125,9 @@ export default function Experiences() {
                 onClick={() => scrollToSection(i)}
                 className={cn(
                   "font-body text-[10px] md:text-[11px] tracking-[0.2em] uppercase py-5 px-4 md:px-6 whitespace-nowrap transition-all duration-300 border-b-2 -mb-px",
-                  activeTab === i
-                    ? "border-primary text-primary"
-                    : "border-transparent text-muted-foreground hover:text-foreground"
+                   activeTab === i
+                     ? "border-accent text-accent"
+                     : "border-transparent text-muted-foreground hover:text-foreground"
                 )}
               >
                 {tab}
@@ -159,7 +159,7 @@ export default function Experiences() {
               <div className="grid grid-cols-2 gap-3">
                 {accommodationFeatures.map((f) => (
                   <span key={f} className="font-body text-xs font-light text-muted-foreground/80 flex items-center gap-2">
-                    <span className="w-1 h-1 bg-primary/60 rounded-full flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 bg-accent/60 rounded-full flex-shrink-0" />
                     {f}
                   </span>
                 ))}
@@ -188,8 +188,8 @@ export default function Experiences() {
           <div className="grid md:grid-cols-3 gap-8">
             {wellnessOfferings.map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.1}>
-                <div className="border border-border/30 p-8 md:p-10 h-full">
-                  <span className="font-body text-[10px] tracking-[0.3em] uppercase text-primary">0{i + 1}</span>
+                <div className="border border-accent/20 p-8 md:p-10 h-full hover:border-accent/40 transition-colors duration-500">
+                  <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-medium">0{i + 1}</span>
                   <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-4 mb-5">{item.title}</h3>
                   <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
@@ -229,7 +229,7 @@ export default function Experiences() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {culinaryExperiences.map((item, i) => (
               <ScrollReveal key={item.title} delay={i * 0.1}>
-                <div className="border border-border/20 p-6 h-full group hover:border-primary/30 transition-colors duration-500">
+                <div className="border border-accent/15 p-6 h-full group hover:border-accent/40 transition-colors duration-500">
                   <MirrorVillaPlaceholder landscape={["forest", "ocean", "desert", "valley"][i] as any} aspectRatio="16/10" className="w-full mb-5" />
                   <h3 className="font-heading text-lg font-light text-foreground mb-3">{item.title}</h3>
                   <p className="font-body text-xs font-light text-muted-foreground leading-relaxed">{item.desc}</p>
@@ -251,7 +251,7 @@ export default function Experiences() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
             {curationCards.map((card, i) => (
               <ScrollReveal key={card.title} delay={i * 0.08}>
-                <div className="border border-border/20 p-8 h-full group hover:border-primary/30 transition-colors duration-500">
+                <div className="border border-accent/15 p-8 h-full group hover:border-accent/40 transition-colors duration-500">
                   <h3 className="font-heading text-xl font-light text-foreground mb-4">{card.title}</h3>
                   <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">{card.desc}</p>
                 </div>
@@ -284,7 +284,7 @@ export default function Experiences() {
           <div className="grid md:grid-cols-2 gap-8 mt-16">
             <ScrollReveal>
               <div className="border border-border/20 p-8 md:p-10 h-full bg-primary/5">
-                <span className="font-body text-[10px] tracking-[0.3em] uppercase text-primary">Clean Water Initiative</span>
+                <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-medium">Clean Water Initiative</span>
                 <h3 className="font-heading text-2xl font-light text-foreground mt-4 mb-5">CharityWater.org Partnership</h3>
                 <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">
                   Every membership directly funds clean water projects in communities that need it most. Through our partnership with CharityWater.org, your journey becomes a lifeline — providing access to safe, clean drinking water for families across the developing world.
@@ -293,7 +293,7 @@ export default function Experiences() {
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <div className="border border-border/20 p-8 md:p-10 h-full bg-primary/5">
-                <span className="font-body text-[10px] tracking-[0.3em] uppercase text-primary">Housing Initiative</span>
+                <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-medium">Housing Initiative</span>
                 <h3 className="font-heading text-2xl font-light text-foreground mt-4 mb-5">Affordable Housing Initiative</h3>
                 <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">
                   We believe that shelter is a fundamental right. A portion of every membership contributes to affordable housing projects, creating stable foundations for families and communities to thrive. Your luxury experience directly supports dignity and security for others.
@@ -304,8 +304,8 @@ export default function Experiences() {
 
           {/* GivBux */}
           <ScrollReveal delay={0.2}>
-            <div className="mt-12 border border-primary/20 p-8 md:p-10 text-center bg-background">
-              <span className="font-body text-[10px] tracking-[0.3em] uppercase text-primary">Powered by GivBux</span>
+            <div className="mt-12 border border-accent/25 p-8 md:p-10 text-center bg-background">
+              <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-medium">Powered by GivBux</span>
               <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-4 mb-5">
                 Transparent Impact, Verified Results
               </h3>
