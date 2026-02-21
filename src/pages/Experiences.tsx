@@ -93,7 +93,7 @@ export default function Experiences() {
 
       {/* Hero */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-deep-forest/40 via-background to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
         <div className="absolute inset-0 grain-overlay" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <motion.div
@@ -116,7 +116,7 @@ export default function Experiences() {
       <div ref={tabBarRef} className="relative z-30">
         <div className={cn(
           "transition-all duration-500 border-b border-border/30",
-          tabBarSticky ? "fixed top-20 md:top-24 left-0 right-0 bg-background/95 backdrop-blur-md z-40" : "bg-near-black"
+          tabBarSticky ? "fixed top-20 md:top-24 left-0 right-0 bg-background/95 backdrop-blur-md z-40" : "bg-card"
         )}>
           <div className="max-w-7xl mx-auto px-6 flex overflow-x-auto scrollbar-hide">
             {tabs.map((tab, i) => (
@@ -170,7 +170,7 @@ export default function Experiences() {
       </section>
 
       {/* Wellness */}
-      <section ref={(el) => { sectionRefs.current[1] = el; }} className="py-20 md:py-32 px-6 bg-near-black scroll-mt-40">
+      <section ref={(el) => { sectionRefs.current[1] = el; }} className="py-20 md:py-32 px-6 bg-card scroll-mt-40">
         <div className="max-w-7xl mx-auto">
           <SectionHeading title="A Holistic Approach to Renewal" />
 
@@ -241,7 +241,7 @@ export default function Experiences() {
       </section>
 
       {/* Curations */}
-      <section ref={(el) => { sectionRefs.current[3] = el; }} className="py-20 md:py-32 px-6 bg-near-black scroll-mt-40">
+      <section ref={(el) => { sectionRefs.current[3] = el; }} className="py-20 md:py-32 px-6 bg-card scroll-mt-40">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             title="Journeys of Profound Discovery"
@@ -283,7 +283,7 @@ export default function Experiences() {
 
           <div className="grid md:grid-cols-2 gap-8 mt-16">
             <ScrollReveal>
-              <div className="border border-border/20 p-8 md:p-10 h-full bg-deep-forest/30">
+              <div className="border border-border/20 p-8 md:p-10 h-full bg-primary/5">
                 <span className="font-body text-[10px] tracking-[0.3em] uppercase text-primary">Clean Water Initiative</span>
                 <h3 className="font-heading text-2xl font-light text-foreground mt-4 mb-5">CharityWater.org Partnership</h3>
                 <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">
@@ -292,7 +292,7 @@ export default function Experiences() {
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <div className="border border-border/20 p-8 md:p-10 h-full bg-deep-forest/30">
+              <div className="border border-border/20 p-8 md:p-10 h-full bg-primary/5">
                 <span className="font-body text-[10px] tracking-[0.3em] uppercase text-primary">Housing Initiative</span>
                 <h3 className="font-heading text-2xl font-light text-foreground mt-4 mb-5">Affordable Housing Initiative</h3>
                 <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">
@@ -318,7 +318,7 @@ export default function Experiences() {
       </section>
 
       {/* Closing CTA */}
-      <section className="py-28 md:py-40 px-6 bg-deep-forest">
+      <section className="py-28 md:py-40 px-6 bg-primary/5">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <div className="divider-gold mx-auto mb-10" />

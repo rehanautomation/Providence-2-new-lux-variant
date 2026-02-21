@@ -45,12 +45,12 @@ export default function Index() {
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-deep-forest/60 via-background to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-background to-background" />
         <div className="absolute inset-0 grain-overlay" />
         
         {/* Subtle mirror villa in hero background */}
-        <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[300px] md:w-[500px] h-[200px] md:h-[320px] opacity-20">
-          <div className="w-full h-full border-glass bg-foreground/[0.02]" />
+        <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[300px] md:w-[500px] h-[200px] md:h-[320px] opacity-10">
+          <div className="w-full h-full border-glass bg-primary/[0.03]" />
         </div>
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -122,7 +122,7 @@ export default function Index() {
       </section>
 
       {/* Sanctuaries Grid */}
-      <section className="py-20 md:py-32 px-6 bg-near-black">
+      <section className="py-20 md:py-32 px-6 bg-card">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             title="Each Villa, A World of Its Own"
@@ -167,7 +167,7 @@ export default function Index() {
       </section>
 
       {/* Membership */}
-      <section className="py-20 md:py-32 px-6 bg-deep-forest">
+      <section className="py-20 md:py-32 px-6 bg-primary/5">
         <div className="max-w-4xl mx-auto text-center">
           <SectionHeading
             title="Joining Our Community Unlocks More Than Destinations"
@@ -232,7 +232,7 @@ export default function Index() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 md:py-32 px-6 bg-near-black">
+      <section className="py-20 md:py-32 px-6 bg-card">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 mb-20">
             {testimonials.map((t, i) => (
