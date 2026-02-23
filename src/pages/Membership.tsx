@@ -202,7 +202,7 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 4 — MEMBERSHIP BENEFITS ═══════ */}
-      <section className="py-20 md:py-32 px-6 bg-obsidian text-cream">
+      <section className="py-20 md:py-32 px-6 bg-primary/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             {/* Image */}
@@ -212,7 +212,7 @@ export default function Membership() {
             {/* Benefits */}
             <ScrollReveal delay={0.15}>
               <div className="divider-gold mb-8" />
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-cream leading-tight mb-10">
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-10">
                 What Membership Unlocks
               </h2>
               <ul className="space-y-6">
@@ -220,8 +220,8 @@ export default function Membership() {
                   <li key={b.title} className="flex items-start gap-4">
                     <span className="w-6 h-px bg-accent mt-3 flex-shrink-0" />
                     <div>
-                      <span className="font-body text-sm font-medium text-cream tracking-wide">{b.title}</span>
-                      <p className="font-body text-sm font-light text-cream/60 mt-1">{b.desc}</p>
+                      <span className="font-body text-sm font-medium text-foreground tracking-wide">{b.title}</span>
+                      <p className="font-body text-sm font-light text-muted-foreground mt-1">{b.desc}</p>
                     </div>
                   </li>
                 ))}
@@ -232,12 +232,12 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 5 — INCLUDED WITH EVERY STAY ═══════ */}
-      <section className="py-20 md:py-32 px-6 bg-obsidian text-cream">
+      <section className="py-20 md:py-32 px-6 bg-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <ScrollReveal>
               <div className="divider-gold mx-auto mb-8" />
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-cream leading-tight mb-3">
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-3">
                 Included With Every Stay
               </h2>
               <p className="font-heading text-lg text-accent italic">The Standard</p>
@@ -247,16 +247,16 @@ export default function Membership() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {includedCards.map((c, i) => (
               <ScrollReveal key={c.title} delay={i * 0.1}>
-                <div className="border border-cream/10 p-8 h-full hover:border-accent/30 transition-colors duration-500">
-                  <h3 className="font-heading text-lg md:text-xl font-light text-cream mb-4">{c.title}</h3>
-                  <p className="font-body text-sm font-light text-cream/50 leading-relaxed">{c.copy}</p>
+                <div className="border border-accent/20 p-8 h-full hover:border-accent/40 transition-colors duration-500 bg-background">
+                  <h3 className="font-heading text-lg md:text-xl font-light text-foreground mb-4">{c.title}</h3>
+                  <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">{c.copy}</p>
                 </div>
               </ScrollReveal>
             ))}
           </div>
 
           <ScrollReveal delay={0.3}>
-            <p className="font-body text-xs md:text-sm font-light text-cream/40 text-center leading-relaxed max-w-4xl mx-auto">
+            <p className="font-body text-xs md:text-sm font-light text-muted-foreground text-center leading-relaxed max-w-4xl mx-auto">
               Private airport transfers. 24-hour service. Daily housekeeping. Discreet concierge. Signature wellness sessions. Curated local experiences — cultural, natural, unforgettable.
             </p>
           </ScrollReveal>
@@ -264,14 +264,14 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 6 — HOW IT WORKS ═══════ */}
-      <section className="py-20 md:py-32 px-6 bg-primary text-primary-foreground">
+      <section className="py-20 md:py-32 px-6 bg-primary/5">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <div className="divider-gold mx-auto mb-10" />
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-primary-foreground leading-tight mb-8">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-8">
               Simple. Exclusive.<br />Designed Around You.
             </h2>
-            <p className="font-body text-sm md:text-base font-light text-primary-foreground/80 leading-relaxed max-w-2xl mx-auto">
+            <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               One membership. One monthly fee. A world of sanctuaries that keeps growing with you already inside it. No ownership burdens, no timeshare complexity, no fine print designed to confuse. Just rare access, preserved for those who claimed it early.
             </p>
           </ScrollReveal>
@@ -279,7 +279,7 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 7 — FOUNDING MEMBERS ═══════ */}
-      <section className="py-20 md:py-32 px-6 bg-obsidian text-cream">
+      <section className="py-20 md:py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <ScrollReveal>
@@ -287,13 +287,13 @@ export default function Membership() {
             </ScrollReveal>
             <ScrollReveal delay={0.15}>
               <div className="divider-gold mb-8" />
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-cream leading-tight mb-8">
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-8">
                 Founding Members
               </h2>
-              <p className="font-body text-sm md:text-base font-light text-cream/70 leading-relaxed mb-8">
+              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-8">
                 The first 100 members don't just join, they arrive. A complimentary all-inclusive week at a Providence destination is our welcome to those who recognize something extraordinary before the rest of the world catches on. After your first year, preferred Members-only rates are locked across every current and future destination. Your decision today protects your access tomorrow.
               </p>
-              <p className="font-body text-xs font-light text-cream/30 tracking-wider uppercase">
+              <p className="font-body text-xs font-light text-muted-foreground/50 tracking-wider uppercase">
                 Limited to the first 100 Members.
               </p>
             </ScrollReveal>
@@ -302,15 +302,15 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 8 — DESTINATIONS ═══════ */}
-      <section className="py-20 md:py-32 px-6 bg-obsidian text-cream">
+      <section className="py-20 md:py-32 px-6 bg-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <ScrollReveal>
               <div className="divider-gold mx-auto mb-8" />
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-cream leading-tight mb-6">
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-6">
                 A World Being Built Around You
               </h2>
-              <p className="font-body text-sm md:text-base font-light text-cream/60 leading-relaxed max-w-3xl mx-auto">
+              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                 Begin in Costa Rica, one of the most breathtaking, biodiverse sanctuaries on earth. Then follow us across continents, each new destination hand-selected for its privacy, its beauty, and its power to restore. You won't find these places on a travel algorithm. You'll find them because you belong here.
               </p>
             </ScrollReveal>
@@ -326,12 +326,12 @@ export default function Membership() {
                     className="w-full mb-5 transition-transform duration-700 group-hover:scale-[1.02]"
                   />
                   <div className="flex items-center gap-3 mb-2">
-                    <h3 className="font-heading text-xl md:text-2xl font-light text-cream">{d.name}</h3>
+                    <h3 className="font-heading text-xl md:text-2xl font-light text-foreground">{d.name}</h3>
                     <span className="font-body text-[9px] tracking-[0.2em] uppercase text-accent px-2 py-0.5 border border-accent/30">
                       {d.status}
                     </span>
                   </div>
-                  <p className="font-body text-xs font-light text-cream/50 leading-relaxed">{d.desc}</p>
+                  <p className="font-body text-xs font-light text-muted-foreground leading-relaxed">{d.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -340,17 +340,17 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 9 — PRIORITY. ALWAYS. ═══════ */}
-      <section className="py-20 md:py-32 px-6 bg-obsidian text-cream">
+      <section className="py-20 md:py-32 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <div className="divider-gold mx-auto mb-10" />
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-cream leading-tight mb-8">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-8">
               Priority. Always.
             </h2>
-            <p className="font-body text-sm md:text-base font-light text-cream/70 leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
               As a Member, priority booking, exclusive offers, and preferred pricing are simply part of the standard. Because luxury without value isn't luxury, it's performance.
             </p>
-            <p className="font-heading text-base md:text-lg font-light text-cream/50 italic max-w-2xl mx-auto">
+            <p className="font-heading text-base md:text-lg font-light text-muted-foreground/70 italic max-w-2xl mx-auto">
               This is the smarter, more intentional way to experience the world. One membership. Zero compromise. This is Club Providence.
             </p>
           </ScrollReveal>
@@ -359,40 +359,38 @@ export default function Membership() {
 
       {/* ═══════ SECTION 10 — FINAL CTA ═══════ */}
       <section className="relative py-28 md:py-40 px-6 overflow-hidden">
-        {/* Golden hour cinematic bg */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[hsl(37,40%,25%)] via-obsidian to-obsidian" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_40%,hsl(37,47%,55%,0.15),transparent_70%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-background to-background" />
         <div className="absolute inset-0 grain-overlay" />
 
         {/* Mirror villa bg element */}
-        <div className="absolute right-[10%] top-[15%] w-[35%] h-[60%] opacity-10 hidden md:block">
-          <div className="w-full h-full border-glass bg-white/[0.06]" />
+        <div className="absolute right-[10%] top-[15%] w-[35%] h-[60%] opacity-[0.06] hidden md:block">
+          <div className="w-full h-full border-glass bg-primary/[0.03]" />
         </div>
 
         <div className="relative z-10 max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <div className="divider-gold mx-auto mb-10" />
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-cream leading-tight mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-6">
               Your Journey Begins<br />With One Decision.
             </h2>
-            <p className="font-body text-sm md:text-base font-light text-cream/60 mb-12">
+            <p className="font-body text-sm md:text-base font-light text-muted-foreground mb-12">
               Limited founding memberships available.
             </p>
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button variant="hero" size="lg" className="bg-accent text-accent-foreground hover:bg-accent/85">
+              <Button variant="hero" size="lg">
                 Claim Your Membership
               </Button>
-              <Button variant="outline-light" size="lg" className="border-cream/30 text-cream hover:border-cream/60 hover:text-cream">
+              <Button variant="outline-light" size="lg">
                 Begin a Conversation
               </Button>
             </div>
           </ScrollReveal>
 
           <ScrollReveal delay={0.4}>
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-cream/30 mt-16">
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-muted-foreground/50 mt-16">
               Live Vigorously · Live Abundantly · Live Empowered
             </p>
           </ScrollReveal>
