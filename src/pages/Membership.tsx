@@ -88,22 +88,18 @@ export default function Membership() {
       <Header />
 
       {/* ═══════ SECTION 1 — HERO ═══════ */}
-      <section className="relative min-h-screen flex items-end md:items-center overflow-hidden">
-        {/* Dark cinematic bg */}
-        <div className="absolute inset-0 bg-obsidian" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,hsl(145,28%,18%,0.35),transparent_70%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,hsl(145,20%,14%,0.25),transparent_60%)]" />
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Light bg matching homepage */}
+        <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-background to-background" />
         <div className="absolute inset-0 grain-overlay" />
 
         {/* Mirror villa — right side */}
-        <div className="absolute right-0 top-0 bottom-0 w-full md:w-1/2 flex items-center justify-center opacity-20 md:opacity-30">
-          <div className="w-[70%] h-[50%]">
-            <div className="w-full h-full border-glass bg-white/[0.08] backdrop-blur-[2px]" />
-            <div className="w-full h-[20%] mt-px bg-white/[0.04] border-x border-b border-white/[0.08] scale-y-[-0.5] origin-top" />
-          </div>
+        <div className="absolute right-[5%] top-1/2 -translate-y-1/2 w-[280px] md:w-[420px] h-[180px] md:h-[280px] opacity-10">
+          <div className="w-full h-full border-glass bg-primary/[0.03]" />
+          <div className="w-full h-[20%] mt-px bg-primary/[0.02] border-x border-b border-primary/[0.06] scale-y-[-0.5] origin-top" />
         </div>
 
-        <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-0 max-w-3xl">
+        <div className="relative z-10 px-6 md:px-12 max-w-3xl pt-32 md:pt-0">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -112,16 +108,16 @@ export default function Membership() {
             <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-6 block">
               Club Providence · Membership
             </span>
-            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-light text-cream leading-[1.1] mb-8">
+            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-light text-foreground leading-[1.1] mb-8">
               The Smartest Way<br />To Travel
             </h1>
-            <p className="font-body text-sm md:text-base font-light text-cream/70 leading-relaxed mb-4 max-w-xl">
+            <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-4 max-w-xl">
               This isn't about traveling more, it's about never settling again. One membership unlocks private access to a global collection of luxury eco-sanctuaries, preferred rates, and priority privileges without ownership burdens, planning fatigue, or compromise.
             </p>
-            <p className="font-heading text-base md:text-lg font-light text-cream/50 italic mb-12">
+            <p className="font-heading text-base md:text-lg font-light text-muted-foreground/70 italic mb-12">
               This is not a vacation club. This is simply a better way to live.
             </p>
-            <Button variant="hero" size="lg" className="bg-accent text-accent-foreground hover:bg-accent/85">
+            <Button variant="hero" size="lg">
               Claim Your Membership
             </Button>
           </motion.div>
