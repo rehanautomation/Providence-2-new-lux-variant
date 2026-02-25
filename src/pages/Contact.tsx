@@ -53,7 +53,7 @@ export default function Contact() {
       <Header />
 
       {/* ═══════ SECTION 1 — HERO ═══════ */}
-      <section className="relative h-[55vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden pt-24">
         <div className="absolute inset-0 bg-[hsl(var(--obsidian))]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_40%_50%,hsl(145,28%,22%,0.3),transparent_70%)]" />
         <div className="absolute inset-0 grain-overlay" />
