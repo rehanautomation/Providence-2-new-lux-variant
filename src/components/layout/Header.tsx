@@ -6,7 +6,7 @@ const navLinks = [
   { label: "Home", path: "/", active: true },
   { label: "Experiences", path: "/experiences", active: true },
   { label: "Membership", path: "/membership", active: true },
-  { label: "Community", path: "#", active: false },
+  { label: "Our Responsibility", path: "/responsibility", active: true },
   { label: "Contact", path: "#", active: false },
 ];
 
