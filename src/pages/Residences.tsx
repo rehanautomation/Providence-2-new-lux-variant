@@ -32,9 +32,9 @@ export default function Residences() {
       {/* ═══════ SECTION 1 — HERO ═══════ */}
       <section className="relative h-screen flex items-end overflow-hidden">
         {/* bg layers */}
-        <div className="absolute inset-0 bg-[hsl(var(--obsidian))]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_40%,hsl(33,27%,30%,0.25),transparent_65%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_80%,hsl(35,25%,28%,0.15),transparent_60%)]" />
+        <div className="absolute inset-0 bg-primary" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_40%,hsl(var(--gold),0.15),transparent_65%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_80%,hsl(var(--bronze),0.1),transparent_60%)]" />
         <div className="absolute inset-0 grain-overlay" />
 
         {/* landscape placeholder right */}
@@ -63,7 +63,7 @@ export default function Residences() {
       </section>
 
       {/* ═══════ SECTION 2 — PHILOSOPHY ═══════ */}
-      <section className="bg-[hsl(var(--obsidian))] py-28 md:py-36">
+      <section className="bg-primary py-28 md:py-36">
         <div className="max-w-3xl mx-auto px-6 md:px-12 text-center space-y-8">
           <ScrollReveal>
             <p className="font-heading text-xl md:text-2xl font-light text-primary-foreground/80 leading-relaxed italic">
@@ -84,7 +84,7 @@ export default function Residences() {
       </section>
 
       {/* ═══════ SECTION 3A — COSTA RICA ═══════ */}
-      <section className="bg-[hsl(var(--deep-forest))] py-24 md:py-32">
+      <section className="bg-primary py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           {/* Header row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-20">
@@ -143,7 +143,7 @@ export default function Residences() {
       </section>
 
       {/* ═══════ SECTION 3B — GRENADA ═══════ */}
-      <section className="bg-[hsl(220,25%,14%)] py-24 md:py-32">
+      <section className="bg-primary py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           {/* Header row — reversed */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-20">
@@ -218,11 +218,11 @@ export default function Residences() {
 
       {/* ═══════ SECTION 5 — CLOSING ═══════ */}
       <section className="relative py-32 md:py-44 overflow-hidden">
-        <div className="absolute inset-0 bg-[hsl(var(--obsidian))]" />
+        <div className="absolute inset-0 bg-primary" />
         <div className="absolute inset-0 opacity-30">
           <MirrorVillaPlaceholder landscape="valley" className="w-full h-full rounded-none" aspectRatio="auto" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--obsidian))] via-[hsl(var(--obsidian),0.6)] to-[hsl(var(--obsidian),0.4)]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-primary/40" />
         <div className="absolute inset-0 grain-overlay" />
 
         <div className="relative z-10 max-w-3xl mx-auto px-6 md:px-12 text-center">
