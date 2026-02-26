@@ -8,6 +8,7 @@ import Experiences from "./pages/Experiences";
 import Membership from "./pages/Membership";
 import Responsibility from "./pages/Responsibility";
 import Contact from "./pages/Contact";
+import Residences from "./pages/Residences";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/membership" element={<Membership />} />
           <Route path="/responsibility" element={<Responsibility />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/residences" element={<Residences />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

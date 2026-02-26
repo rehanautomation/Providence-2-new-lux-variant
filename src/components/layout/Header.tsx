@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Experiences", path: "/experiences", active: true },
   { label: "Membership", path: "/membership", active: true },
   { label: "Our Responsibility", path: "/responsibility", active: true },
+  { label: "Residences", path: "/residences", active: true },
   { label: "Contact", path: "/contact", active: true },
 ];
 
