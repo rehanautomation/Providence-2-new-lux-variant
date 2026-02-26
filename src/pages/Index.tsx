@@ -6,6 +6,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SectionHeading from "@/components/SectionHeading";
 import MirrorVillaPlaceholder from "@/components/MirrorVillaPlaceholder";
 import { motion } from "framer-motion";
+import heroHome from "@/assets/hero-home.png";
 
 const villas = [
   { tag: "Forest Sanctuary", name: "The Verdant Mirror", features: "Private Thermal Pool · King Sanctuary · Forest View", landscape: "forest" as const },
@@ -45,13 +46,9 @@ export default function Index() {
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-background to-background" />
+        <img src={heroHome} alt="Luxury glass villa nestled in tropical jungle overlooking the ocean" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
         <div className="absolute inset-0 grain-overlay" />
-        
-        {/* Subtle mirror villa in hero background */}
-        <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[300px] md:w-[500px] h-[200px] md:h-[320px] opacity-10">
-          <div className="w-full h-full border-glass bg-primary/[0.03]" />
-        </div>
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <motion.div
