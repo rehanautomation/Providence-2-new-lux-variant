@@ -4,17 +4,23 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionHeading from "@/components/SectionHeading";
-import MirrorVillaPlaceholder from "@/components/MirrorVillaPlaceholder";
 import { motion } from "framer-motion";
 import heroHome from "@/assets/hero-home.png";
+import mirrorHouseNature from "@/assets/mirror-house-nature.jpg";
+import villaForest from "@/assets/villa-forest.png";
+import villaOcean from "@/assets/villa-ocean.png";
+import villaDesert from "@/assets/villa-desert.png";
+import villaMountain from "@/assets/villa-mountain.png";
+import villaValley from "@/assets/villa-valley.png";
+import villaCliff from "@/assets/villa-cliff.png";
 
 const villas = [
-  { tag: "Forest Sanctuary", name: "The Verdant Mirror", features: "Private Thermal Pool · King Sanctuary · Forest View", landscape: "forest" as const },
-  { tag: "Coastal Reserve", name: "The Horizon Reflection", features: "Ocean Vista · Private Terrace · Sunrise Facing", landscape: "ocean" as const },
-  { tag: "Desert Retreat", name: "The Dune Mirror", features: "Stargazing Deck · Outdoor Jacuzzi · Golden Hour View", landscape: "desert" as const },
-  { tag: "Mountain Perch", name: "The Summit Glass", features: "Peak Panorama · Heated Floors · Alpine Serenity", landscape: "mountain" as const },
-  { tag: "Valley Refuge", name: "The Canopy Mirror", features: "Garden Integration · Rain Shower · Valley Views", landscape: "valley" as const },
-  { tag: "Clifftop Estate", name: "The Edge Reflection", features: "Infinity Pool · Butler Service · 360° Vistas", landscape: "cliff" as const },
+  { tag: "Forest Sanctuary", name: "The Verdant Mirror", features: "Private Thermal Pool · King Sanctuary · Forest View", image: villaForest },
+  { tag: "Coastal Reserve", name: "The Horizon Reflection", features: "Ocean Vista · Private Terrace · Sunrise Facing", image: villaOcean },
+  { tag: "Desert Retreat", name: "The Dune Mirror", features: "Stargazing Deck · Outdoor Jacuzzi · Golden Hour View", image: villaDesert },
+  { tag: "Mountain Perch", name: "The Summit Glass", features: "Peak Panorama · Heated Floors · Alpine Serenity", image: villaMountain },
+  { tag: "Valley Refuge", name: "The Canopy Mirror", features: "Garden Integration · Rain Shower · Valley Views", image: villaValley },
+  { tag: "Clifftop Estate", name: "The Edge Reflection", features: "Infinity Pool · Butler Service · 360° Vistas", image: villaCliff },
 ];
 
 const pillars = [
@@ -99,7 +105,10 @@ export default function Index() {
       <section className="py-20 md:py-32 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <ScrollReveal>
-            <MirrorVillaPlaceholder landscape="forest" aspectRatio="3/4" className="w-full" />
+            <div className="relative overflow-hidden rounded-sm" style={{ aspectRatio: "3/4" }}>
+              <img src={mirrorHouseNature} alt="Two guests relaxing on the deck of a mirror villa by the lake" className="absolute inset-0 w-full h-full object-cover" />
+              <div className="absolute inset-0 grain-overlay" />
+            </div>
           </ScrollReveal>
           <div>
             <ScrollReveal>
@@ -130,7 +139,10 @@ export default function Index() {
             {villas.map((villa, i) => (
               <ScrollReveal key={villa.name} delay={i * 0.1}>
                 <div className="group">
-              <MirrorVillaPlaceholder landscape={villa.landscape} className="w-full mb-5 transition-transform duration-700 group-hover:scale-[1.02]" />
+                  <div className="relative overflow-hidden rounded-sm mb-5 transition-transform duration-700 group-hover:scale-[1.02]" style={{ aspectRatio: "4/3" }}>
+                    <img src={villa.image} alt={villa.name} className="absolute inset-0 w-full h-full object-cover" />
+                    <div className="absolute inset-0 grain-overlay" />
+                  </div>
                    <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villa.tag}</span>
                   <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-2 mb-2">{villa.name}</h3>
                   <p className="font-body text-xs font-light text-muted-foreground tracking-wide">{villa.features}</p>
