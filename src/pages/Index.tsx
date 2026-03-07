@@ -25,16 +25,20 @@ const villas = [
 
 const pillars = [
   {
-    title: "Wellness & Renewal",
-    body: "Wellness is not an amenity. It is a journey of personal renewal. Our retreats heal, inspire, and rediscover — inviting you to explore the depths of your potential through carefully designed experiences.",
+    title: "Nature-First Sanctuaries",
+    body: "Breathtaking. Private. Quiet by design. This is hushpitality — where presence replaces performance.",
   },
   {
-    title: "Cultural Discovery",
-    body: "Intimate encounters with local wisdom. We curate moments that connect you deeply with cultures, landscapes, and the subtle rhythms of extraordinary destinations.",
+    title: "Sleep-Optimized Residences",
+    body: "Blackout environments. Zero-gravity beds. Spa-level bathrooms. Outdoor soaking under open sky. Rest, finally done right.",
   },
   {
-    title: "Mindful Adventure",
-    body: "For those who seek more than relaxation — thoughtful expeditions that blend mindful exploration with sustainable travel, creating experiences that resonate long after the journey ends.",
+    title: "Wellness as a Way of Life",
+    body: "Thermal therapies. Movement. Recovery. Spaces that reset the mind as fluently as the body.",
+  },
+  {
+    title: "Culinary Excellence",
+    body: "Chef-curated dining and refined non-alcoholic experiences that nourish as beautifully as they satisfy.",
   },
 ];
 
@@ -63,12 +67,9 @@ export default function Index() {
             transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <div className="divider-gold mx-auto mb-10" />
-            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-light text-foreground leading-[1.1] mb-6">
-              Extraordinary Journeys<br /><span className="text-gradient-gold">Begin Here</span>
+            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-light text-foreground leading-[1.1] mb-12">
+              Designed for Restoration. <span className="text-gradient-gold">Defined by Intention.</span>
             </h1>
-            <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-xl mx-auto leading-relaxed mb-12">
-              A sanctuary of transformation. A mirror to your most authentic self.
-            </p>
             <Button variant="hero" size="lg" asChild>
               <Link to="/experiences">Begin Your Journey</Link>
             </Button>
@@ -90,12 +91,7 @@ export default function Index() {
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <p className="font-heading text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-relaxed italic">
-              "Providence Resort is not a destination. It is a doorway to your most authentic self."
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.2}>
-            <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mt-10 max-w-2xl mx-auto">
-              We believe true luxury is not about possessions, but about moments of genuine connection. Our sanctuaries are designed to transform perspectives — offering a profound respite from the ordinary.
+              "Providence is built for one kind of person, the one who's done chasing and started choosing. Three pillars. One standard: rare access, refined living, enduring well-being. Every sanctuary secluded. Every detail deliberate. Every moment yours."
             </p>
           </ScrollReveal>
         </div>
@@ -153,15 +149,15 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Three Pillars */}
+      {/* Four Pillars */}
       <section className="py-20 md:py-32 px-6">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
-            title="Three Pathways to Transformation"
+            title="What Defines Our Resorts"
             subtitle="Every journey at Providence is a deeply personal one"
           />
 
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12 mt-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mt-16">
             {pillars.map((pillar, i) => (
               <ScrollReveal key={pillar.title} delay={i * 0.15}>
                 <div className="border border-accent/20 p-8 md:p-10 h-full hover:border-accent/40 transition-colors duration-500">
@@ -183,24 +179,9 @@ export default function Index() {
           />
           <ScrollReveal delay={0.1}>
             <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-14">
-              You gain access to personalized wellness experiences, global connections, and a lifestyle of intentional living. Each membership is a key to unlock your most authentic self.
+              Private access to a global collection of sanctuaries, no crowds, no compromise. Rate lock across every current and future destination. A dedicated planning ambassador who knows you before you arrive. Global eSIM connectivity seamless when you need it, invisible when you don't. Preferred access to Providence residences worldwide.
             </p>
           </ScrollReveal>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-14">
-            {[
-              { stat: "5, 10 & 20", label: "Year Membership Pathways" },
-              { stat: "< 250", label: "Founding Members" },
-              { stat: "10%", label: "of Every Membership Funds Global Change" },
-            ].map((item, i) => (
-              <ScrollReveal key={item.label} delay={0.1 + i * 0.1}>
-                <div className="text-center">
-                  <span className="font-heading text-3xl md:text-4xl text-gradient-gold">{item.stat}</span>
-                  <p className="font-body text-xs font-light text-muted-foreground mt-2 tracking-wide">{item.label}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
 
           <ScrollReveal delay={0.3}>
             <Button variant="hero" size="lg">Explore Membership</Button>
@@ -221,7 +202,7 @@ export default function Index() {
             {[
               { stat: "10%", desc: "of every membership funds global initiatives" },
               { stat: "H₂O", desc: "Clean water projects via CharityWater.org" },
-              { stat: "∞", desc: "Ripple effect of every journey taken" },
+              { stat: "∞", desc: "Curated local experiences — cultural, natural, unforgettable." },
             ].map((item, i) => (
               <ScrollReveal key={item.stat} delay={i * 0.1}>
                 <div className="text-center">
@@ -280,7 +261,7 @@ export default function Index() {
               Life is too short for mere existence.
             </h2>
             <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12">
-              Whether you seek luxurious serenity, transformative journeys, cultural immersion, or personal growth — Providence Resort is your gateway to a life less ordinary.
+             It's a life, chosen deliberately by those who value time above all else, and refuse to spend it anywhere that doesn't deserve it.
             </p>
           </ScrollReveal>
 

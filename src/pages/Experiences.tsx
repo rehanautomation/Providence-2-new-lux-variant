@@ -9,48 +9,52 @@ import MirrorVillaPlaceholder from "@/components/MirrorVillaPlaceholder";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
-const tabs = ["Accommodations", "Wellness", "Culinary", "Curations", "Community Impact"];
+const tabs = ["Service", "Culinary", "Wellness", "Activities", "Stays", "Community Impact"];
 
-const accommodationFeatures = [
-  "Oversized King Sanctuaries",
-  "Private Thermal Pools",
-  "Spa-Inspired Bathrooms",
-  "Curated Outdoor Terraces",
-  "Precision-Filtered Water",
-  "Advanced Climate Control",
-  "Refined Modern Kitchenette",
-  "Expansive Natural Lighting",
-];
-
-const wellnessOfferings = [
+const activityCards = [
   {
-    title: "Personal Fitness Sessions",
-    desc: "Our expert fitness guides become partners in your physical transformation. Customized sessions in open-air pavilions integrate movement, breathwork, and mindful practice — designed to reconnect you with your body's innate intelligence.",
+    title: "Luxurious",
+    body: "Nature has never felt like this. Immersed in breathtaking landscapes yet wrapped in every comfort you refuse to leave behind — this is the wild, refined. Where the untamed world meets impeccable service, and adventure feels less like a departure from your life and more like the fullest expression of it.",
+    closing: "Your Vacation. Your Rules.",
   },
   {
-    title: "Nutritionist Consultations",
-    desc: "Personalized nutritional guidance that honors your unique biology. Our practitioners craft bespoke wellness protocols using locally sourced ingredients, blending ancient wisdom with modern nutritional science.",
+    title: "Tranquillo",
+    body: "This is stillness with taste. A sanctuary where time slows, nature breathes, and you finally do too. No agenda but your own. No noise but the kind that heals. Tranquillo is where couples rediscover each other, and individuals rediscover themselves in the most beautifully indulgent way possible.",
+    closing: "Your Health. Your Wealth.",
   },
   {
-    title: "Permaculture Immersion",
-    desc: "Walk our regenerative gardens with expert guides who reveal the interconnected systems of sustainable living. Harvest ingredients for your meals, learn composting techniques, and discover how harmony with the land creates abundance.",
+    title: "Transformative",
+    body: "The most successful people know that the greatest investment is the one you make in yourself. This isn't a spa weekend, it's a shift. In perspective. In vitality. In the way you move through the world. You'll leave not just rested, but recalibrated, carrying new clarity, new habits, and a version of yourself you didn't know was waiting.",
+    closing: "Adventure Awaits You.",
+  },
+  {
+    title: "Adventure",
+    body: "For those who've conquered the boardroom and now hunger for the mountain. This is luxury with a pulse where horseback rides trace volcanic ridgelines, zip lines cut through jungle canopies, and white water doesn't care about your title. Every heart-pounding moment is expertly guided, flawlessly executed, and utterly unforgettable. Because the most extraordinary lives aren't just built in offices, they're lived out there.",
+    closing: "Personalized Adventure.",
   },
 ];
 
-const culinaryExperiences = [
-  { title: "Garden to Plate", desc: "Harvest ingredients steps from your table and watch our chefs transform them into extraordinary dishes that tell the story of the land." },
-  { title: "Artisan Mocktails", desc: "Handcrafted botanical beverages using herbs, flowers, and fruits from our gardens — each drink a celebration of flavor and intention." },
-  { title: "Cooking Workshops", desc: "Intimate sessions with local chefs who share generational techniques and cultural narratives through the universal language of food." },
-  { title: "Artisanal Desserts", desc: "Edible art created with precision and passion — desserts that honor local traditions while pushing the boundaries of taste and presentation." },
-];
-
-const curationCards = [
-  { title: "Integrative Health Retreats", desc: "Multi-day journeys combining traditional healing, modern wellness science, and immersive nature therapy to reset your entire being." },
-  { title: "Silent Wilderness Retreats", desc: "Guided journeys into profound stillness. Disconnect from noise, reconnect with inner wisdom through curated silence in pristine wilderness." },
-  { title: "Indigenous Knowledge Exchanges", desc: "Respectful, reciprocal encounters with local communities. Share stories, learn ancient practices, and gain perspectives that transform how you see the world." },
-  { title: "Ecological Restoration Journeys", desc: "Hands-on participation in conservation projects that restore ecosystems. Your contribution leaves a lasting, tangible legacy in the landscapes you visit." },
-  { title: "Relationship Renewal Retreats", desc: "Guided experiences designed for couples seeking deeper connection. Through shared adventures and facilitated reflection, rediscover the foundation of your partnership." },
-  { title: "Regenerative Leadership Workshops", desc: "For visionary leaders seeking sustainable approaches. Learn how regenerative principles can transform your leadership style and organizational impact." },
+const stayCards = [
+  {
+    status: "Under Construction",
+    title: "Costa Rica",
+    body: "Secretly tucked away from tourist hotspots lays a nature lovers sanctuary that whispers of untamed luxury with its iconic Whale's Tail sandbar, where young affluent explorers revel in private mountain villas with ocean vistas, intimate humpback whale encounters, cascading hidden waterfalls, and eco-chic retreats amid lush rainforests teeming with wildlife.",
+  },
+  {
+    status: "Coming Soon",
+    title: "Panama",
+    body: "Panama's emerald Chiriquí Highlands enchants with its eternal spring climate, mist-kissed cloud forests, and world-renowned Geisha coffee estates, where young affluent adventurers indulge in exclusive luxury villas, private volcano summits, cascading waterfalls, and refined outdoor escapades beneath the majestic Volcán Barú.",
+  },
+  {
+    status: "Coming Soon",
+    title: "Grenada",
+    body: "Perched in the sun-kissed Caribbean as the seductive Spice Isle, Grenada charms its explorers with heady scents of nutmeg, cinnamon, and cocoa drifting from verdant plantations, iconic powdery shores, elite underwater sculpture dives, rainforest waterfalls, Creole gourmet feasts, yacht escapes, and pulsing island rhythm.",
+  },
+  {
+    status: "Coming Soon",
+    title: "Belize",
+    body: "Hidden on the turquoise-lapped west coast of Ambergris Caye, lures escapists to its crystalline shallows, over-water swings, pineapple-garnished concoctions at chic beach bars, and laid-back Caribbean vibes, private sun-drenched oases, golf-cart adventures, reef-proximate luxury, and effortless barefoot sophistication amid Belize's iconic island allure.",
+  },
 ];
 
 export default function Experiences() {
@@ -66,7 +70,6 @@ export default function Experiences() {
         setTabBarSticky(rect.top <= 80);
       }
 
-      // Determine active section
       for (let i = sectionRefs.current.length - 1; i >= 0; i--) {
         const el = sectionRefs.current[i];
         if (el) {
@@ -137,150 +140,124 @@ export default function Experiences() {
         </div>
       </div>
 
-      {/* Accommodations */}
+      {/* Service */}
       <section ref={(el) => { sectionRefs.current[0] = el; }} className="py-20 md:py-32 px-6 scroll-mt-40">
         <div className="max-w-7xl mx-auto">
-          <SectionHeading title="An Intimate Collection of Mirror Villas" />
-
+          <SectionHeading title="Travel Made Intimate" />
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 mt-16 items-center">
             <ScrollReveal>
               <MirrorVillaPlaceholder landscape="forest" aspectRatio="3/4" className="w-full" />
             </ScrollReveal>
             <ScrollReveal delay={0.15}>
-              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
-                Providence Resorts offers an exclusive 5-star eco sanctuary — meticulously designed havens that represent the pinnacle of sustainable luxury. Our mirror glass villas dissolve into their natural surroundings, reflecting the landscape as perfectly as they reflect your innermost self.
-              </p>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-8">
-                With an intentional focus on only ten couples per site, we ensure unparalleled personal attention, intuitive service, and tailored experiences. Your individuality is our devotion.
+                At Club Providence, luxury isn't measured in stars, it's measured in how deeply known you feel. While others serve hundreds, we serve you. Not as a booking, not as a room number, but as an individual whose preferences, rhythms, and desires we understand before you've even thought to ask. This is the essence of true luxury, not the grandness of the gesture, but the intimacy behind it.
               </p>
-              <p className="font-heading text-lg text-gradient-gold italic mb-10">
-                30% Accommodation Privilege for Members
-              </p>
-              <div className="grid grid-cols-2 gap-3">
-                {accommodationFeatures.map((f) => (
-                  <span key={f} className="font-body text-xs font-light text-muted-foreground/80 flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 bg-accent/60 rounded-full flex-shrink-0" />
-                    {f}
-                  </span>
-                ))}
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Wellness */}
-      <section ref={(el) => { sectionRefs.current[1] = el; }} className="py-20 md:py-32 px-6 bg-card scroll-mt-40">
-        <div className="max-w-7xl mx-auto">
-          <SectionHeading title="A Holistic Approach to Renewal" />
-
-          <div className="max-w-3xl mx-auto text-center mt-12 mb-16">
-            <ScrollReveal>
-              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
-                Our amenities are designed as portals to profound personal transformation. Each space is an invitation to reconnect, restore, and reimagine your potential.
-              </p>
+              <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-8 mb-4">Vacation Minutes Are Precious.</h3>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed">
-                Our team of experts transcends traditional approaches. Fitness instructors become guides to your physical potential, nutritionists craft personalized approaches to nourishment, and permaculture guides offer insights into sustainable living.
+                Ten couples. Zero compromise. Every detail from arrivals, meals, wellness, transport all handled in moments from your member portal. No waiting, no repeating yourself, no friction between wanting something and having it. Your concierge already knows you.
               </p>
             </ScrollReveal>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {wellnessOfferings.map((item, i) => (
-              <ScrollReveal key={item.title} delay={i * 0.1}>
-                <div className="border border-accent/20 p-8 md:p-10 h-full hover:border-accent/40 transition-colors duration-500">
-                  <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-medium">0{i + 1}</span>
-                  <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-4 mb-5">{item.title}</h3>
-                  <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
           </div>
         </div>
       </section>
 
       {/* Culinary */}
-      <section ref={(el) => { sectionRefs.current[2] = el; }} className="py-20 md:py-32 px-6 scroll-mt-40">
+      <section ref={(el) => { sectionRefs.current[1] = el; }} className="py-20 md:py-32 px-6 bg-card scroll-mt-40">
         <div className="max-w-7xl mx-auto">
-          <SectionHeading title="A Narrative of Flavor and Meaning" />
-
+          <SectionHeading title="The Culinary Experience" />
           <div className="max-w-3xl mx-auto text-center mt-12 mb-8">
             <ScrollReveal>
-              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
-                Food is a universal language — a bridge between cultures, a reflection of landscape, and a path to understanding.
-              </p>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed">
-                Local chefs become storytellers, bringing cultural narratives to life through innovative cuisine that challenges and delights the palate. Every meal is all-inclusive — crafted with intention and expertise, featuring ingredients harvested steps from your table.
+                Indulge in a tantalizing array of exotic, plant-based cuisine that will ignite your senses with our all-inclusive menu. Experience a symphony of flavors that will leave your taste buds dancing in bliss. Our team of masterful chefs craft each meal with care, ensuring the finest desserts and exquisite mocktail drinks to accompany your culinary experience.
               </p>
             </ScrollReveal>
           </div>
-
           <ScrollReveal delay={0.15}>
             <blockquote className="text-center my-16">
               <p className="font-heading text-2xl md:text-3xl font-light text-gradient-gold tracking-wider">
-                SEE. TASTE. SAVOR. CONNECT.
-              </p>
-              <p className="font-body text-sm font-light text-muted-foreground mt-4 italic">
-                Culinary art is our medium. Transformation is our message.
+                SEE. TASTE. SAVOR.
               </p>
             </blockquote>
           </ScrollReveal>
+        </div>
+      </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {culinaryExperiences.map((item, i) => (
-              <ScrollReveal key={item.title} delay={i * 0.1}>
-                <div className="border border-accent/15 p-6 h-full group hover:border-accent/40 transition-colors duration-500">
-                  <MirrorVillaPlaceholder landscape={["forest", "ocean", "desert", "valley"][i] as any} aspectRatio="16/10" className="w-full mb-5" />
-                  <h3 className="font-heading text-lg font-light text-foreground mb-3">{item.title}</h3>
-                  <p className="font-body text-xs font-light text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
+      {/* Wellness */}
+      <section ref={(el) => { sectionRefs.current[2] = el; }} className="py-20 md:py-32 px-6 scroll-mt-40">
+        <div className="max-w-7xl mx-auto">
+          <SectionHeading title="The Wellness Experience" />
+          <div className="max-w-3xl mx-auto text-center mt-12 mb-16">
+            <ScrollReveal>
+               <blockquote className="text-center my-16">
+                <p className="font-heading text-2xl md:text-3xl font-light text-gradient-gold tracking-wider">
+                  REST. RELAX. REPEAT.
+                </p>
+              </blockquote>
+              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed">
+                Escape the hustle and bustle of everyday life and immerse yourself in pure bliss at our crafted sanctuaries to rejuvenate your mind, body, heart, and soul. Cease the opportunity to learn practical skills to live a healthier life with onsite Health & Wellness Experts. Indulge in discovery, pampering, and the serenity of nature as you embark on an unforgettable experience.
+              </p>
+            </ScrollReveal>
           </div>
         </div>
       </section>
 
-      {/* Curations */}
+      {/* Activities */}
       <section ref={(el) => { sectionRefs.current[3] = el; }} className="py-20 md:py-32 px-6 bg-card scroll-mt-40">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
-            title="Journeys of Profound Discovery"
-            subtitle="We believe true exploration transcends physical movement. Each experience is a carefully orchestrated journey designed to discover your authentic self."
+            title="Choose Your Vibe"
+            subtitle="Extraordinary journeys tailored exclusively for you."
           />
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-            {curationCards.map((card, i) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+            {activityCards.map((card, i) => (
               <ScrollReveal key={card.title} delay={i * 0.08}>
-                <div className="border border-accent/15 p-8 h-full group hover:border-accent/40 transition-colors duration-500">
+                <div className="border border-accent/15 p-8 h-full group hover:border-accent/40 transition-colors duration-500 flex flex-col">
                   <h3 className="font-heading text-xl font-light text-foreground mb-4">{card.title}</h3>
-                  <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">{card.desc}</p>
+                  <p className="font-body text-sm font-light text-muted-foreground leading-relaxed flex-grow">{card.body}</p>
+                  {card.closing && <p className="font-heading text-sm text-gradient-gold italic mt-6">{card.closing}</p>}
                 </div>
               </ScrollReveal>
             ))}
           </div>
+          <div className="mt-12 border border-accent/25 p-8 md:p-10 text-center bg-background">
+            <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-4 mb-5">
+              Personalized Adventure.
+            </h3>
+            <p className="font-body text-sm font-light text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Some dreams deserve a professional. From weeklong escapes to the bucket list you've been quietly building for years, our world class travel planners orchestrate every detail so you arrive as a guest, not a planner. Your itinerary, your vision, your pace handled with the same precision and care you bring to everything else that matters. This one's for you.
+            </p>
+          </div>
+        </div>
+      </section>
 
-          <div className="text-center mt-20">
-            <ScrollReveal>
-              <div className="divider-gold mx-auto mb-8" />
-              <p className="font-heading text-2xl md:text-3xl font-light text-foreground italic mb-4">
-                An Experience is a Conversation with the Unseen
-              </p>
-              <p className="font-body text-sm font-light text-muted-foreground">
-                We don't create experiences. We craft moments of profound revelation.
-              </p>
-            </ScrollReveal>
+       {/* Stays */}
+      <section ref={(el) => { sectionRefs.current[4] = el; }} className="py-20 md:py-32 px-6 scroll-mt-40">
+        <div className="max-w-7xl mx-auto">
+          <SectionHeading
+            title="Our Collection"
+            subtitle="Travel Made Intimate. At Providence Resorts, we delve deeply into what moves our members, crafting bespoke escapes that transcend mere luxury. Each residence is thoughtfully woven into breathtaking nature to deliver the serene bliss of true Quiet-Cations and our signature five-star Hushpitality, where every whisper of indulgence and every moment of hushed tranquility is yours to savor in effortless, elevated sophistication."
+          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+            {stayCards.map((card, i) => (
+              <ScrollReveal key={card.title} delay={i * 0.08}>
+                <div className="border border-accent/15 p-8 h-full group hover:border-accent/40 transition-colors duration-500">
+                  <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-medium">{card.status}</span>
+                  <h3 className="font-heading text-xl font-light text-foreground mt-4 mb-3">{card.title}</h3>
+                  <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">{card.body}</p>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Community Impact */}
-      <section ref={(el) => { sectionRefs.current[4] = el; }} className="py-20 md:py-32 px-6 scroll-mt-40">
+      <section ref={(el) => { sectionRefs.current[5] = el; }} className="py-20 md:py-32 px-6 bg-card scroll-mt-40">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             title="Your Journey Creates Change"
             subtitle="Ten percent of your membership supports critical global initiatives. Every stay becomes a bridge between personal discovery and global responsibility."
           />
-
           <div className="grid md:grid-cols-2 gap-8 mt-16">
             <ScrollReveal>
               <div className="border border-border/20 p-8 md:p-10 h-full bg-primary/5">
@@ -301,8 +278,6 @@ export default function Experiences() {
               </div>
             </ScrollReveal>
           </div>
-
-          {/* GivBux */}
           <ScrollReveal delay={0.2}>
             <div className="mt-12 border border-accent/25 p-8 md:p-10 text-center bg-background">
               <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-medium">Powered by GivBux</span>
