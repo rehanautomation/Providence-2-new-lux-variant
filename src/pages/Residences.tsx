@@ -67,7 +67,7 @@ export default function Residences() {
         <div className="max-w-3xl mx-auto px-6 md:px-12 text-center space-y-8">
           <ScrollReveal>
             <p className="font-heading text-xl md:text-2xl font-light text-primary-foreground/80 leading-relaxed italic">
-              "Some people vacation to escape their lives. The rarest ones build a life worth never escaping from."
+              \"Some people vacation to escape their lives. The rarest ones build a life worth never escaping from.\"
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
@@ -136,7 +136,7 @@ export default function Residences() {
           </div>
           <ScrollReveal className="text-center">
             <p className="font-heading text-lg md:text-xl font-light text-primary-foreground/70 italic max-w-2xl mx-auto">
-              "This is where the world slows down just enough for you to remember what you actually want from it."
+              \"This is where the world slows down just enough for you to remember what you actually want from it.\"
             </p>
           </ScrollReveal>
         </div>
@@ -185,11 +185,11 @@ export default function Residences() {
             <LifestylePoint title="A Culture That Restores You" body="Life here moves at the pace your nervous system has been quietly begging for. Warm, welcoming, and community-rooted. Grenada doesn't just accept expats, it folds them in." />
             <LifestylePoint title="Fresh, Real, Effortless Nourishment" body="The Spice Isle earns its name daily — abundant fruits, fresh-caught fish, organic produce, and flavors that make healthy eating feel less like discipline and more like joy." />
             <LifestylePoint title="A Financial Environment Built for the Intentional" body="No capital gains tax. No inheritance or wealth tax. Favorable structures for investors and entrepreneurs who've earned the right to protect what they've built intelligently, legally, and beautifully." />
-            <LifestylePoint title="A Passport That Opens the World" body="Grenada's Citizenship by Investment program unlocks visa-free access to 140+ countries, eligibility for the U.S. E-2 Investor Visa, and the freedom of dual citizenship. For the globally mobile, this isn't a perk, it's a strategy." />
+            <LifestylePoint title="A Passport That Opens the World" body="Grenada's CBI program unlocks visa-free access to 140+ countries, eligibility for the U.S. E-2 Investor Visa, and the freedom of dual citizenship. For the globally mobile, this isn't a perk, it's a strategy." />
           </div>
           <ScrollReveal className="text-center">
             <p className="font-heading text-lg md:text-xl font-light text-primary-foreground/70 italic max-w-2xl mx-auto">
-              "Some islands are destinations. Grenada is a decision — one that quietly changes everything."
+              \"Some islands are destinations. Grenada is a decision — one that quietly changes everything.\"
             </p>
           </ScrollReveal>
         </div>
