@@ -217,7 +217,7 @@ export default function Index() {
                   <p className="font-body text-sm font-light text-muted-foreground mt-3 leading-relaxed">{item.desc}</p>
                 </div>
               </ScrollReveal>
-            ))}\
+            ))}
           </div>
 
           <ScrollReveal delay={0.2}>
@@ -243,7 +243,7 @@ export default function Index() {
                   </footer>
                 </blockquote>
               </ScrollReveal>
-            ))}\
+            ))}
           </div>
 
           {/* Press */}
@@ -253,7 +253,7 @@ export default function Index() {
                 <span key={name} className="font-heading text-lg md:text-xl font-light text-muted-foreground/50 tracking-wider italic">
                   {name}
                 </span>
-              ))}\
+              ))}
             </div>
           </ScrollReveal>
         </div>
