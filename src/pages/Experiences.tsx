@@ -87,9 +87,9 @@ export default function Experiences() {
       <Header />
 
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-primary">
+      <section className="relative min-h-[70vh] flex items-start justify-center overflow-hidden bg-primary pt-16 md:pt-20">
         <div className="absolute inset-0 grain-overlay" />
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24 md:pt-32">
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0, duration: 0.8 }}>
             <div className="divider-gold mx-auto mb-10" />
             <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-light text-[hsl(var(--cream))] leading-[1.1] mb-6">
