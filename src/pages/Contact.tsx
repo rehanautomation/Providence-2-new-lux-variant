@@ -202,14 +202,13 @@ export default function Contact() {
       </section>
 
       {/* ═══════ SECTION 3 — YOUR STORY MATTERS ═══════ */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-primary" />
+      <section className="relative py-24 md:py-32 overflow-hidden bg-card">
         <div className="absolute inset-0 grain-overlay" />
         <ScrollReveal className="relative z-10 text-center px-6">
-          <h2 className="font-heading text-3xl md:text-4xl font-light text-primary-foreground leading-tight mb-6">
+          <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground leading-tight mb-6">
             Your Story Matters
           </h2>
-          <p className="font-body text-sm md:text-base font-light text-primary-foreground/60 max-w-xl mx-auto">
+          <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-xl mx-auto">
             Every journey begins with a single step. Let this be yours.
           </p>
         </ScrollReveal>

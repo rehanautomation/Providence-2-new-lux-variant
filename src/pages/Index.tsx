@@ -5,7 +5,6 @@ import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionHeading from "@/components/SectionHeading";
 import { motion } from "framer-motion";
-import heroHome from "@/assets/hero-home.png";
 import mirrorHouseNature from "@/assets/mirror-house-nature.jpg";
 import villaForest from "@/assets/villa-forest.png";
 import villaOcean from "@/assets/villa-ocean.png";
@@ -57,7 +56,6 @@ export default function Index() {
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <img src={heroHome} alt="Luxury glass villa nestled in tropical jungle overlooking the ocean" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-background/95" />
         <div className="absolute inset-0 grain-overlay" />
 

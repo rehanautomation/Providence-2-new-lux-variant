@@ -159,17 +159,17 @@ export default function Responsibility() {
               </span>
               <div className="divider-gold mb-8" />
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-8">
-                The Most Meaningful Luxury Doesn\'t Just Elevate Your Life.
+                The Most Meaningful Luxury Doesn't Just Elevate Your Life.
               </h2>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
                 Membership at Club Providence extends far beyond the sanctuary you sleep in. A portion of every annual revenue is intentionally directed toward vetted nonprofits and community-led initiatives tackling the global affordable housing crisis, not as a marketing moment, but as a founding principle.
               </p>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-10">
-                Borders don\'t limit this commitment. Families across the world gain access, stability, and opportunity because you chose to belong here. At Providence, impact isn\'t a campaign we run seasonally or a line item we debate annually. It\'s embedded in how we build, how we operate, and how we grow.
+                Borders don't limit this commitment. Families across the world gain access, stability, and opportunity because you chose to belong here. At Providence, impact isn't a campaign we run seasonally or a line item we debate annually. It's embedded in how we build, how we operate, and how we grow.
               </p>
               <blockquote className="border-l-2 border-accent/50 pl-6">
                 <p className="font-heading text-xl md:text-2xl font-light text-foreground italic leading-relaxed">
-                  The most meaningful luxury doesn\'t just elevate your life, it quietly, deliberately, changes someone else\'s.
+                  The most meaningful luxury doesn't just elevate your life, it quietly, deliberately, changes someone else's.
                 </p>
               </blockquote>
             </ScrollReveal>
@@ -224,10 +224,10 @@ export default function Responsibility() {
                 Providence is where the extraordinary couple escapes the noise not just to unwind, but to reconnect. With each other. With nature. With what actually matters.
               </p>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
-                We\'ve reimagined luxury as something deeper than thread counts and champagne towers. Here, it\'s the guided breath at sunrise. The skill learned. The digital silence that finally lets you think.
+                We've reimagined luxury as something deeper than thread counts and champagne towers. Here, it's the guided breath at sunrise. The skill learned. The digital silence that finally lets you think.
               </p>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed">
-                Our Members don\'t just vacation, they belong to something rare. A curated world where world class experience meets genuine purpose: clean water flowing into communities that need it, roofs over heads that deserve them. This is luxury with a conscience & Exclusivity with a soul.
+                Our Members don't just vacation, they belong to something rare. A curated world where world class experience meets genuine purpose: clean water flowing into communities that need it, roofs over heads that deserve them. This is luxury with a conscience & Exclusivity with a soul.
               </p>
             </ScrollReveal>
             {/* Image placeholder — golden hour, intimate */}

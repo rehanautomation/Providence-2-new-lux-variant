@@ -67,7 +67,7 @@ export default function Residences() {
         <div className="max-w-3xl mx-auto px-6 md:px-12 text-center space-y-8">
           <ScrollReveal>
             <p className="font-heading text-xl md:text-2xl font-light text-primary-foreground/80 leading-relaxed italic">
-              \"Some people vacation to escape their lives. The rarest ones build a life worth never escaping from.\"
+              Some people vacation to escape their lives. The rarest ones build a life worth never escaping from.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.15}>
@@ -136,14 +136,14 @@ export default function Residences() {
           </div>
           <ScrollReveal className="text-center">
             <p className="font-heading text-lg md:text-xl font-light text-primary-foreground/70 italic max-w-2xl mx-auto">
-              \"This is where the world slows down just enough for you to remember what you actually want from it.\"
+              This is where the world slows down just enough for you to remember what you actually want from it.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
       {/* ═══════ SECTION 3B — GRENADA ═══════ */}
-      <section className="bg-primary py-24 md:py-32">
+      <section className="bg-background py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           {/* Header row — reversed */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 mb-20">
@@ -153,8 +153,8 @@ export default function Residences() {
                 <span className="inline-block font-body text-[10px] tracking-[0.3em] uppercase text-accent border border-accent/30 px-4 py-1.5 rounded-full mb-6 w-fit">
                   Coming Soon
                 </span>
-                <h2 className="font-heading text-4xl md:text-5xl font-light text-primary-foreground mb-6">Grenada</h2>
-                <p className="font-body text-sm md:text-base font-light text-primary-foreground/60 leading-relaxed mb-10">
+                <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-6">Grenada</h2>
+                <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-10">
                   Perched in the sun-kissed Spice Isle of Grenada with stunning ocean views, natural breeze on a peninsula sits twelve luxurious modern homes ready for like-minded owners to call home.
                 </p>
               </ScrollReveal>
@@ -162,9 +162,9 @@ export default function Residences() {
               {/* Residency option */}
               <ScrollReveal delay={0.15}>
                 <h3 className="font-body text-[10px] tracking-[0.3em] uppercase text-accent mb-5">Residency Option</h3>
-                <div className="border border-primary-foreground/10 rounded-sm p-5">
-                  <h4 className="font-heading text-lg text-primary-foreground font-light mb-1">Citizenship by Investment <span className="text-accent text-sm">(CBI)</span></h4>
-                  <p className="font-body text-xs text-primary-foreground/50">Grenada's CBI program unlocks visa-free access to 140+ countries, eligibility for the U.S. E-2 Investor Visa, and the freedom of dual citizenship.</p>
+                <div className="border border-border/10 rounded-sm p-5">
+                  <h4 className="font-heading text-lg text-foreground font-light mb-1">Citizenship by Investment <span className="text-accent text-sm">(CBI)</span></h4>
+                  <p className="font-body text-xs text-muted-foreground">Grenada's CBI program unlocks visa-free access to 140+ countries, eligibility for the U.S. E-2 Investor Visa, and the freedom of dual citizenship.</p>
                 </div>
               </ScrollReveal>
             </div>
@@ -176,7 +176,7 @@ export default function Residences() {
 
           {/* Lifestyle */}
           <ScrollReveal>
-            <h3 className="font-heading text-2xl md:text-3xl font-light text-primary-foreground mb-12 text-center">The Grenada Way of Life</h3>
+            <h3 className="font-heading text-2xl md:text-3xl font-light text-foreground mb-12 text-center">The Grenada Way of Life</h3>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-8 mb-16">
             <LifestylePoint title="Unspoiled, Low-Density Living" body="No mega-resorts. No mass tourism. Just space, stillness, and an island that has refused to be ruined. This is the Caribbean as it was always meant to feel." />
@@ -188,8 +188,8 @@ export default function Residences() {
             <LifestylePoint title="A Passport That Opens the World" body="Grenada's CBI program unlocks visa-free access to 140+ countries, eligibility for the U.S. E-2 Investor Visa, and the freedom of dual citizenship. For the globally mobile, this isn't a perk, it's a strategy." />
           </div>
           <ScrollReveal className="text-center">
-            <p className="font-heading text-lg md:text-xl font-light text-primary-foreground/70 italic max-w-2xl mx-auto">
-              \"Some islands are destinations. Grenada is a decision — one that quietly changes everything.\"
+            <p className="font-heading text-lg md:text-xl font-light text-muted-foreground italic max-w-2xl mx-auto">
+              Some islands are destinations. Grenada is a decision — one that quietly changes everything.
             </p>
           </ScrollReveal>
         </div>

@@ -24,6 +24,11 @@ const activityCards = [
   {
     title: "Transformative",
     body: "The most successful people know that the greatest investment is the one you make in yourself. This isn't a spa weekend, it's a shift. In perspective. In vitality. In the way you move through the world. You'll leave not just rested, but recalibrated, carrying new clarity, new habits, and a version of yourself you didn't know was waiting.",
+    closing: "Invest in Yourself.",
+  },
+  {
+    title: "Adventure",
+    body: "Some dreams deserve a professional. From weeklong escapes to the bucket list you've been quietly building for years, our world class travel planners orchestrate every detail so you arrive as a guest, not a planner. Your itinerary, your vision, your pace handled with the same precision and care you bring to everything else that matters. This one's for you.",
     closing: "Adventure Awaits You.",
   },
 ];
@@ -82,10 +87,9 @@ export default function Experiences() {
       <Header />
 
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0e1810] to-[#1a2318]" />
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-primary">
         <div className="absolute inset-0 grain-overlay" />
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-32 md:pt-40">
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-24 md:pt-32">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0, duration: 0.8 }}>
             <div className="divider-gold mx-auto mb-10" />
             <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-light text-[hsl(var(--cream))] leading-[1.1] mb-6">
@@ -188,17 +192,6 @@ export default function Experiences() {
                 </div>
               </ScrollReveal>
             ))}
-          </div>
-
-          <div className="mt-24 text-center">
-            <ScrollReveal delay={0.3}>
-              <h3 className="font-heading text-3xl md:text-5xl font-light text-foreground mt-4 mb-5">
-                Personalized Adventure.
-              </h3>
-              <p className="font-body text-sm font-light text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-                Some dreams deserve a professional. From weeklong escapes to the bucket list you've been quietly building for years, our world class travel planners orchestrate every detail so you arrive as a guest, not a planner. Your itinerary, your vision, your pace handled with the same precision and care you bring to everything else that matters. This one's for you.
-              </p>
-            </ScrollReveal>
           </div>
         </div>
       </section>
