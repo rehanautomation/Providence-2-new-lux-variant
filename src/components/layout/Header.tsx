@@ -38,13 +38,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
-          <Link to="/" className="flex flex-col items-start">
-            <span className="font-heading text-xl md:text-2xl tracking-[0.3em] text-foreground font-light">
-              PROVIDENCE
-            </span>
-            <span className="font-body text-[8px] md:text-[9px] tracking-[0.5em] text-muted-foreground font-light uppercase">
-              Resort
-            </span>
+          <Link to="/" className="flex items-center">
+            <div className="flex flex-col items-start">
+              <span className="font-heading text-xl md:text-2xl tracking-[0.3em] text-foreground font-light">
+                PROVIDENCE
+              </span>
+              <span className="font-body text-[8px] md:text-[9px] tracking-[0.5em] text-muted-foreground font-light uppercase">
+                Resorts
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}

@@ -1,13 +1,4 @@
-Polish the Residences page. Do not change any copy. Do not change section order. Here's what to change:
-Hero: Stagger the eyebrow, h1, and subline into separate motion.div elements with 0.3s delay between each. Make h1 bigger — text-5xl md:text-6xl lg:text-7xl.
-Philosophy section (Section 2): Remove the " opening and closing quote characters from the first italic paragraph — it's a declaration not a quote. Increase padding to py-40 md:py-52.
-Costa Rica and Grenada sections: Both are currently bg-primary — change Costa Rica to bg-primary and Grenada to bg-card so the two destinations alternate and the page has visual rhythm instead of one long dark block. On the Grenada section, all text that currently uses text-primary-foreground variants should switch to text-foreground and text-muted-foreground to match the lighter background.
-Residency option boxes in both destinations: Remove the border border-primary-foreground/10 rounded-sm boxes. Replace with simple clean rows — a thin border-t border-accent/20 line above each, the title in Cormorant at text-xl font-light, the description in small muted body text below. No boxes, no rounded corners.
-Lifestyle points (LifestylePoint component): Remove the border-l border-accent/30 left border. Replace with a thin top line border-t border-accent/15 pt-6 on each point. Increase the title to text-xl md:text-2xl. This makes the lifestyle grid feel editorial rather than listed.
-Closing quotes on both destinations — "This is where the world slows down..." and "Some islands are destinations..." — remove the " characters from both.
-Community section: Increase padding to py-40. The three CommunityValue items are good — keep them exactly. Just add more space.
-Closing section: The buttons are already correctly linked — keep them. Change the mantra from text-accent/60 to text-accent/50. Increase padding to py-44 md:py-56.
-Do not change any copy. Do not touch other pages or files.import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -101,7 +92,7 @@ export default function Responsibility() {
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mt-10 max-w-2xl mx-auto">
-              Every detail, down to the simplest touch; the linens, the cutlery, the cleaning supplies is chosen with the same intentionality we bring to everything bearing the Providence name. Because those who\'ve built extraordinary lives understand that how you do the small things is how you do everything.
+              Every detail, down to the simplest touch; the linens, the cutlery, the cleaning supplies is chosen with the same intentionality we bring to everything bearing the Providence name. Because those who've built extraordinary lives understand that how you do the small things is how you do everything.
             </p>
           </ScrollReveal>
         </div>
