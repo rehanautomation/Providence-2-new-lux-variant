@@ -102,44 +102,42 @@ export default function Membership() {
 
       {/* ═══════ SECTION 1 — HERO ═══════ */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Light bg matching homepage */}
         <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-background to-background" />
         <div className="absolute inset-0 grain-overlay" />
-
-        {/* Mirror villa — right side */}
-        <div className="absolute right-[5%] top-1/2 -translate-y-1/2 w-[280px] md:w-[550px] h-auto opacity-80">
-          <img src="https://image2url.com/r2/default/images/1773325888097-362faa3e-be9c-42c0-af18-0de2bd1c7c6d.png" alt="Membership Hero" className="w-full h-full object-cover" />
+        <div className="container mx-auto px-6 w-full relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-start py-24">
+            <div className="pt-16 md:pt-0">
+              <motion.div {...motionProps(0)}>
+                <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-6 block">
+                  Club Providence · Membership
+                </span>
+              </motion.div>
+              <motion.div {...motionProps(0.2)}>
+                <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-light text-foreground leading-[1.1] mb-8">
+                  The Smartest Way<br />To Travel
+                </h1>
+              </motion.div>
+              <motion.div {...motionProps(0.4)}>
+                <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-4 max-w-xl">
+                  This isn't about traveling more, it's about never settling again. One membership unlocks private access to a global collection of luxury eco-sanctuaries, preferred rates, and priority privileges without ownership burdens, planning fatigue, or compromise.
+                </p>
+              </motion.div>
+              <motion.div {...motionProps(0.6)}>
+                <p className="font-heading text-base md:text-lg font-light text-muted-foreground/70 italic mb-12">
+                  This is not a vacation club. This is simply a better way to live.
+                </p>
+              </motion.div>
+              <motion.div {...motionProps(0.8)}>
+                <Button variant="hero" size="lg" asChild>
+                  <Link to="/contact">Claim Your Membership</Link>
+                </Button>
+              </motion.div>
+            </div>
+            <motion.div {...motionProps(0.2)} className="hidden md:block h-full p-8">
+              <img src="https://image2url.com/r2/default/images/1773342203677-c3e35392-d196-400d-9d86-7dba13129fcb.jpeg" alt="Membership Hero" className="w-full h-full object-cover" />
+            </motion.div>
+          </div>
         </div>
-
-        <div className="relative z-10 px-6 md:px-12 max-w-3xl pt-32 md:pt-40">
-          <motion.div {...motionProps(0)}>
-            <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-6 block">
-              Club Providence · Membership
-            </span>
-          </motion.div>
-          <motion.div {...motionProps(0.2)}>
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-light text-foreground leading-[1.1] mb-8">
-              The Smartest Way<br />To Travel
-            </h1>
-          </motion.div>
-          <motion.div {...motionProps(0.4)}>
-            <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-4 max-w-xl">
-              This isn't about traveling more, it's about never settling again. One membership unlocks private access to a global collection of luxury eco-sanctuaries, preferred rates, and priority privileges without ownership burdens, planning fatigue, or compromise.
-            </p>
-          </motion.div>
-          <motion.div {...motionProps(0.6)}>
-            <p className="font-heading text-base md:text-lg font-light text-muted-foreground/70 italic mb-12">
-              This is not a vacation club. This is simply a better way to live.
-            </p>
-          </motion.div>
-          <motion.div {...motionProps(0.8)}>
-            <Button variant="hero" size="lg" asChild>
-              <Link to="/contact">Claim Your Membership</Link>
-            </Button>
-          </motion.div>
-        </div>
-
-        {/* Scroll indicator */}
         <motion.div
           className="absolute bottom-10 left-1/2 -translate-x-1/2"
           animate={{ y: [0, 8, 0] }}
@@ -367,17 +365,18 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 9 — PRIORITY. ALWAYS. ═══════ */}
-      <section className="py-40 px-6">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="py-40 px-6 relative bg-cover bg-center" style={{ backgroundImage: "url(https://image2url.com/r2/default/images/1773325888097-362faa3e-be9c-42c0-af18-0de2bd1c7c6d.png)" }}>
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="max-w-3xl mx-auto text-center relative">
           <ScrollReveal>
             <div className="divider-gold mx-auto mb-10" />
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-8">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight mb-8">
               Priority. Always.
             </h2>
-            <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto">
               As a Member, priority booking, exclusive offers, and preferred pricing are simply part of the standard. Because luxury without value isn't luxury, it's performance.
             </p>
-            <p className="font-heading text-xl md:text-2xl font-light text-muted-foreground/70 italic max-w-2xl mx-auto">
+            <p className="font-heading text-xl md:text-2xl font-light text-white/70 italic max-w-2xl mx-auto">
               This is the smarter, more intentional way to experience the world. One membership. Zero compromise. This is Club Providence.
             </p>
           </ScrollReveal>

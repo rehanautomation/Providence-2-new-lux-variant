@@ -156,7 +156,7 @@ export default function Experiences() {
             </ScrollReveal>
             <ScrollReveal>
               <div className="relative w-full overflow-hidden" style={{ aspectRatio: "3/4" }}>
-                <img src="https://image2url.com/r2/default/images/1773278787403-55951812-72e2-4dbf-829b-73d2573dc995.jpeg" alt="Luxury travel setting" className="absolute inset-0 w-full h-full object-cover" />
+                <img src="https://image2url.com/r2/default/images/1773340815158-51e5dbf2-76d2-40c9-85b9-06985e84f74c.jpeg" alt="Luxury travel setting" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 grain-overlay" />
               </div>
             </ScrollReveal>
@@ -165,11 +165,20 @@ export default function Experiences() {
       </section>
 
       {/* Culinary */}
-      <section ref={(el) => { sectionRefs.current[1] = el; }} className="py-40 px-6 bg-background text-center">
-        <div className="max-w-7xl mx-auto">
+      <section
+        ref={(el) => { sectionRefs.current[1] = el; }}
+        className="py-40 px-6 bg-background text-center relative"
+        style={{
+          backgroundImage: `url(https://image2url.com/r2/default/images/1773341341932-f3624c8f-c208-48ce-8a4c-1656d6da5fa7.jpeg)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="max-w-7xl mx-auto relative z-10">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-heading font-light tracking-[0.2em] text-gradient-gold mb-8">SEE. TASTE. SAVOR.</h2>
-            <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed max-w-2xl mx-auto">
               Indulge in a tantalizing array of exotic, plant-based cuisine that will ignite your senses with our all-inclusive menu. Experience a symphony of flavors that will leave your taste buds dancing in bliss. Our team of masterful chefs craft each meal with care, ensuring the finest desserts and exquisite mocktail drinks to accompany your culinary experience.
             </p>
           </ScrollReveal>
