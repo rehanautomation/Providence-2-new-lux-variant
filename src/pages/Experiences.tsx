@@ -7,7 +7,6 @@ import ScrollReveal from "@/components/ScrollReveal";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
-import travelMadeIntimate from "@/assets/travel-made-intimate.jpeg";
 import tranquilloActivity from "@/assets/tranquillo-activity.jpeg";
 import transformativeActivity from "@/assets/transformative-activity.jpeg";
 import adventureActivity from "@/assets/adventure-activity.jpeg";
@@ -157,7 +156,7 @@ export default function Experiences() {
             </ScrollReveal>
             <ScrollReveal>
               <div className="relative w-full overflow-hidden" style={{ aspectRatio: "3/4" }}>
-                <img src={travelMadeIntimate} alt="Luxury travel setting" className="absolute inset-0 w-full h-full object-cover" />
+                <img src="https://image2url.com/r2/default/images/1773278787403-55951812-72e2-4dbf-829b-73d2573dc995.jpeg" alt="Luxury travel setting" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 grain-overlay" />
               </div>
             </ScrollReveal>
