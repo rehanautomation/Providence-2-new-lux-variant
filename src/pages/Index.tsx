@@ -16,9 +16,9 @@ import { cn } from "@/lib/utils";
 const villas = [
   { tag: "Forest Sanctuary", name: "The Verdant Mirror", features: "Private Thermal Pool · King Sanctuary · Forest View", image: villaForest2 },
   { tag: "Coastal Reserve", name: "The Horizon Reflection", features: "Ocean Vista · Private Terrace · Sunrise Facing", image: villaOcean },
-  { tag: "Desert Retreat", name: "The Dune Mirror", features: "Stargazing Deck · Outdoor Jacuzzi · Golden Hour View", image: "https://image2url.com/r2/default/images/1773281331937-befc7c1b-5cf9-47e1-ba65-abe7d989d0e5.png" },
-  { tag: "Mountain Perch", name: "The Summit Glass", features: "Peak Panorama · Heated Floors · Alpine Serenity", image: villaMountain },
-  { tag: "Valley Refuge", name: "The Canopy Mirror", features: "Garden Integration · Rain Shower · Valley Views", image: villaValley },
+  { tag: "Desert Retreat", name: "The Dune Mirror", features: "Stargazing Deck · Outdoor Jacuzzi · Golden Hour View", image: "https://image2url.com/r2/default/images/1773298372039-c9391dfb-358c-43a6-9fd2-bbf1538f82d5.png" },
+  { tag: "Mountain Perch", name: "The Summit Glass", features: "Peak Panorama · Heated Floors · Alpine Serenity", image: "https://image2url.com/r2/default/images/1773323526710-c2d98a22-a667-459e-8790-4a747c8b064d.jpeg" },
+  { tag: "Valley Refuge", name: "The Canopy Mirror", features: "Garden Integration · Rain Shower · Valley Views", image: "https://image2url.com/r2/default/images/1773323394344-ace41f63-188e-43eb-9234-b5f88b3f718e.jpeg" },
   { tag: "Clifftop Estate", name: "The Edge Reflection", features: "Infinity Pool · Butler Service · 360° Vistas", image: villaCliff2 },
 ];
 

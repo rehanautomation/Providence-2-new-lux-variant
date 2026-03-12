@@ -21,7 +21,7 @@ const pillars = [
     copy: "Every residence is a sanctuary, eco-conscious by design, five-star by standard. Our curated collection of luxury suites exists at the intersection of sustainable living and unapologetic comfort. Thoughtfully crafted, carbon-light, and exclusively yours with a guaranteed 30% member discount, because belonging here should feel as good as it looks.",
     landscape: "desert" as const,
     gradient: "from-[hsl(35,35%,55%)] via-[hsl(37,30%,62%)] to-[hsl(30,25%,50%)]",
-    image: "https://image2url.com/r2/default/images/1773198763773-3ebf9426-d05d-436f-b416-4778f8b5884e.jpeg",
+    image: "https://image2url.com/r2/default/images/1773298658097-c04e5b7f-f696-4c3f-b0a9-faf8fbb8feb0.png",
   },
   {
     title: "Wellness",
@@ -106,9 +106,8 @@ export default function Membership() {
         <div className="absolute inset-0 grain-overlay" />
 
         {/* Mirror villa — right side */}
-        <div className="absolute right-[5%] top-1/2 -translate-y-1/2 w-[280px] md:w-[420px] h-[180px] md:h-[280px] opacity-10">
-          <div className="w-full h-full border-glass bg-primary/[0.03]" />
-          <div className="w-full h-[20%] mt-px bg-primary/[0.02] border-x border-b border-primary/[0.06] scale-y-[-0.5] origin-top" />
+        <div className="absolute right-[5%] top-1/2 -translate-y-1/2 w-[280px] md:w-[420px] h-auto opacity-80">
+          <img src="https://image2url.com/r2/default/images/1773325165645-7184058b-1d8e-481a-b078-20a627707516.png" alt="Membership Hero" className="w-full h-full object-cover" />
         </div>
 
         <div className="relative z-10 px-6 md:px-12 max-w-3xl pt-32 md:pt-40">
@@ -282,11 +281,15 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 6 — HOW IT WORKS ═══════ */}
-      <section className="py-40 md:py-56 px-6 bg-card">
-        <div className="max-w-3xl mx-auto text-center">
+      <section
+        className="py-40 md:py-56 px-6 bg-card relative bg-cover bg-center"
+        style={{ backgroundImage: "url(https://image2url.com/r2/default/images/1773322316842-28111289-9c23-4746-a726-9d5c2638bfda.jpeg)" }}
+      >
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="max-w-3xl mx-auto text-center relative">
           <ScrollReveal>
             <div className="divider-gold mx-auto mb-10" />
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-light text-foreground leading-tight mb-8">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-light text-gradient-gold leading-tight mb-8">
               Simple. Exclusive.<br />Designed Around You.
             </h2>
             <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-2xl mx-auto">
@@ -346,7 +349,7 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 9 — PRIORITY. ALWAYS. ═══════ */}
-      <section className="py-40 px-6">
+      <section className.py-40 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <div className="divider-gold mx-auto mb-10" />
