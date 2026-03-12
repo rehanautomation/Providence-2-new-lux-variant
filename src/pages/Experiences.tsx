@@ -47,6 +47,7 @@ const stayCards = [
     title: "Costa Rica",
     body: "Secretly tucked away from tourist hotspots lays a nature lovers sanctuary that whispers of untamed luxury with its iconic Whale\'s Tail sandbar, where young affluent explorers revel in private mountain villas with ocean vistas, intimate humpback whale encounters, cascading hidden waterfalls, and eco-chic retreats amid lush rainforests teeming with wildlife.",
     gradient: "bg-gradient-to-br from-[#0e1810] via-[#1a3020] to-[#0d1f12]",
+    bgImage: "https://image2url.com/r2/default/images/1773280969793-278f82f2-338d-4578-960d-778e1eaee9e4.jpg"
   },
   {
     status: "Coming Soon",
