@@ -11,7 +11,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 const pillars = [
   {
     title: "Privacy",
-    copy: "Some of the world's most coveted addresses aren't on any map you'd find online. Acres of untouched nature. Vistas that silence a room. An atmosphere so intentionally private it feels like the world was paused just for you. We welcome only a select few because extraordinary experiences demand it.",
+    copy: "Some of the world\'s most coveted addresses aren\'t on any map you\'d find online. Acres of untouched nature. Vistas that silence a room. An atmosphere so intentionally private it feels like the world was paused just for you. We welcome only a select few because extraordinary experiences demand it.",
     landscape: "forest" as const,
     gradient: "from-[hsl(145,30%,22%)] via-[hsl(140,20%,30%)] to-[hsl(145,25%,18%)]",
     image: "https://image2url.com/r2/default/images/1773280007435-e8ad6b2e-8cc6-4aa1-b750-7eb27d8cb9c8.jpg",
@@ -25,28 +25,28 @@ const pillars = [
   },
   {
     title: "Wellness",
-    copy: "This is where burnout meets its match. Each resort hosts a resident team of wellness experts, fitness, nutrition with world-class specialists rotating through regularly. This isn't a spa add-on. It's a full recalibration of how you feel, how you eat, and how you see the life you're returning to.",
+    copy: "This is where burnout meets its match. Each resort hosts a resident team of wellness experts, fitness, nutrition with world-class specialists rotating through regularly. This isn\'t a spa add-on. It\'s a full recalibration of how you feel, how you eat, and how you see the life you\'re returning to.",
     landscape: "valley" as const,
     gradient: "from-[hsl(145,25%,35%)] via-[hsl(130,20%,42%)] to-[hsl(145,22%,30%)]",
     image: "https://image2url.com/r2/default/images/1773198873050-dfe406f8-c416-4687-a3b5-0ebec289280f.jpeg",
   },
   {
     title: "Concierge Services",
-    copy: "Your time is your most valuable asset and we treat it accordingly. Whether you're planning a spontaneous escape or mapping out an entire year of restorative travel, your dedicated Travel Ambassador handles every detail with precision and genuine care. Peak season. Off-peak solitude. Last-minute or long-planned. We're already on it.",
+    copy: "Your time is your most valuable asset and we treat it accordingly. Whether you\'re planning a spontaneous escape or mapping out an entire year of restorative travel, your dedicated Travel Ambassador handles every detail with precision and genuine care. Peak season. Off-peak solitude. Last-minute or long-planned. We\'re already on it.",
     landscape: "mountain" as const,
     gradient: "from-[hsl(33,27%,38%)] via-[hsl(30,22%,45%)] to-[hsl(35,25%,35%)]",
     image: "https://image2url.com/r2/default/images/1773198904925-c7c21b3d-02a5-4205-9a2f-648d7c143043.jpeg",
   },
   {
     title: "Culinary Experience",
-    copy: "This is food as philosophy. Plant-based, chef-crafted, and grown steps from your table. Every plate tells the story of the land it came from. Michelin star & local chefs compose each meal with artistry and intention, from vibrant harvest bowls to exquisite desserts and handcrafted mocktails that rival anything you've sipped anywhere in the world. Nourishment, elevated to an experience.",
+    copy: "This is food as philosophy. Plant-based, chef-crafted, and grown steps from your table. Every plate tells the story of the land it came from. Michelin star & local chefs compose each meal with artistry and intention, from vibrant harvest bowls to exquisite desserts and handcrafted mocktails that rival anything you\'ve sipped anywhere in the world. Nourishment, elevated to an experience.",
     landscape: "desert" as const,
     gradient: "from-[hsl(37,40%,50%)] via-[hsl(35,35%,58%)] to-[hsl(33,30%,45%)]",
     image: "https://image2url.com/r2/default/images/1773198966777-e483cf36-23da-4914-a0de-c161352d2d44.jpeg",
   },
   {
     title: "Entertainment",
-    copy: "The evenings here are alive. Dancing nights under open skies. Campfire conversations that last until the stars demand you look up. Live local artists, cooking experiences, mocktail parties, and connections formed with people who simply get it. This is community for those who've outgrown the ordinary, where every gathering feels like the best night of a trip you never want to end.",
+    copy: "The evenings here are alive. Dancing nights under open skies. Campfire conversations that last until the stars demand you look up. Live local artists, cooking experiences, mocktail parties, and connections formed with people who simply get it. This is community for those who\'ve outgrown the ordinary, where every gathering feels like the best night of a trip you never want to end.",
     landscape: "ocean" as const,
     gradient: "from-[hsl(220,25%,22%)] via-[hsl(210,20%,30%)] to-[hsl(33,20%,35%)]",
     image: "https://image2url.com/r2/default/images/1773279080738-eedc0934-e9b9-476b-af97-9766f0629f86.jpeg",
@@ -82,10 +82,10 @@ const includedCards = [
 
 /* ── Section 8 — Destinations ── */
 const destinations = [
-  { name: "Costa Rica", status: "Under Construction", desc: "Secretly tucked away from tourist hotspots lays a nature lover's sanctuary that whispers of untamed luxury with its iconic Whale's Tail sandbar, where young affluent explorers revel in private mountain villas with ocean vistas, intimate humpback whale encounters, cascading hidden waterfalls, and eco-chic retreats amid lush rainforests teeming with wildlife.", landscape: "forest" as const },
-  { name: "Panama", status: "Coming Soon", desc: "Panama's emerald Chiriquí Highlands enchants with its eternal spring climate, mist-kissed cloud forests, and world-renowned Geisha coffee estates, where young affluent adventurers indulge in exclusive luxury villas, private volcano summits, cascading waterfalls, and refined outdoor escapades beneath the majestic Volcán Barú.", landscape: "mountain" as const },
+  { name: "Costa Rica", status: "Under Construction", desc: "Secretly tucked away from tourist hotspots lays a nature lover\'s sanctuary that whispers of untamed luxury with its iconic Whale\'s Tail sandbar, where young affluent explorers revel in private mountain villas with ocean vistas, intimate humpback whale encounters, cascading hidden waterfalls, and eco-chic retreats amid lush rainforests teeming with wildlife.", landscape: "forest" as const },
+  { name: "Panama", status: "Coming Soon", desc: "Panama\'s emerald Chiriquí Highlands enchants with its eternal spring climate, mist-kissed cloud forests, and world-renowned Geisha coffee estates, where young affluent adventurers indulge in exclusive luxury villas, private volcano summits, cascading waterfalls, and refined outdoor escapades beneath the majestic Volcán Barú.", landscape: "mountain" as const },
   { name: "Grenada", status: "Coming Soon", desc: "Perched in the sun-kissed Caribbean as the seductive Spice Isle, Grenada charms its explorers with heady scents of nutmeg, cinnamon, and cocoa drifting from verdant plantations, iconic powdery shores, elite underwater sculpture dives, rainforest waterfalls, Creole gourmet feasts, yacht escapes, and pulsing island rhythm.", landscape: "ocean" as const },
-  { name: "Belize", status: "Coming Soon", desc: "Hidden on the turquoise-lapped west coast of Ambergris Caye, lures escapists to its crystalline shallows, over-water swings, pineapple-garnished concoctions at chic beach bars, and laid-back Caribbean vibes, private sun-drenched oases, golf-cart adventures, reef-proximate luxury, and effortless barefoot sophistication amid Belize's iconic island allure.", landscape: "valley" as const },
+  { name: "Belize", status: "Coming Soon", desc: "Hidden on the turquoise-lapped west coast of Ambergris Caye, lures escapists to its crystalline shallows, over-water swings, pineapple-garnished concoctions at chic beach bars, and laid-back Caribbean vibes, private sun-drenched oases, golf-cart adventures, reef-proximate luxury, and effortless barefoot sophistication amid Belize\'s iconic island allure.", landscape: "valley" as const },
 ];
 
 const motionProps = (delay: number) => ({
@@ -106,8 +106,8 @@ export default function Membership() {
         <div className="absolute inset-0 grain-overlay" />
 
         {/* Mirror villa — right side */}
-        <div className="absolute right-[5%] top-1/2 -translate-y-1/2 w-[280px] md:w-[420px] h-auto opacity-80">
-          <img src="https://image2url.com/r2/default/images/1773325165645-7184058b-1d8e-481a-b078-20a627707516.png" alt="Membership Hero" className="w-full h-full object-cover" />
+        <div className="absolute right-[5%] top-1/2 -translate-y-1/2 w-[280px] md:w-[550px] h-auto opacity-80">
+          <img src="https://image2url.com/r2/default/images/1773325888097-362faa3e-be9c-42c0-af18-0de2bd1c7c6d.png" alt="Membership Hero" className="w-full h-full object-cover" />
         </div>
 
         <div className="relative z-10 px-6 md:px-12 max-w-3xl pt-32 md:pt-40">
@@ -123,7 +123,7 @@ export default function Membership() {
           </motion.div>
           <motion.div {...motionProps(0.4)}>
             <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-4 max-w-xl">
-              This isn't about traveling more, it's about never settling again. One membership unlocks private access to a global collection of luxury eco-sanctuaries, preferred rates, and priority privileges without ownership burdens, planning fatigue, or compromise.
+              This isn\'t about traveling more, it\'s about never settling again. One membership unlocks private access to a global collection of luxury eco-sanctuaries, preferred rates, and priority privileges without ownership burdens, planning fatigue, or compromise.
             </p>
           </motion.div>
           <motion.div {...motionProps(0.6)}>
@@ -282,17 +282,17 @@ export default function Membership() {
 
       {/* ═══════ SECTION 6 — HOW IT WORKS ═══════ */}
       <section
-        className="py-40 md:py-56 px-6 bg-card relative bg-cover bg-center"
+        className="py-40 md:py-56 px-6 relative bg-cover bg-center"
         style={{ backgroundImage: "url(https://image2url.com/r2/default/images/1773322316842-28111289-9c23-4746-a726-9d5c2638bfda.jpeg)" }}
       >
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="max-w-3xl mx-auto text-center relative">
           <ScrollReveal>
             <div className="divider-gold mx-auto mb-10" />
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-light text-gradient-gold leading-tight mb-8">
-              Simple. Exclusive.<br />Designed Around You.
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-8">
+              <span className="text-gradient-gold">Simple. Exclusive.</span><br />Designed Around You.
             </h2>
-            <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed max-w-2xl mx-auto">
               One membership. One monthly fee. A world of sanctuaries that keeps growing with you already inside it. No ownership burdens, no timeshare complexity, no fine print designed to confuse. Just rare access, preserved for those who claimed it early.
             </p>
           </ScrollReveal>
@@ -308,7 +308,7 @@ export default function Membership() {
               Founding Members
             </h2>
             <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-8">
-              The first 100 members don't just join, they arrive. A complimentary all-inclusive week at a Providence destination is our welcome to those who recognize something extraordinary before the rest of the world catches on. After your first year, preferred Members-only rates are locked across every current and future destination. Your decision today protects your access tomorrow.
+              The first 100 members don\'t just join, they arrive. A complimentary all-inclusive week at a Providence destination is our welcome to those who recognize something extraordinary before the rest of the world catches on. After your first year, preferred Members-only rates are locked across every current and future destination. Your decision today protects your access tomorrow.
             </p>
             <p className="font-heading text-base text-accent/80 italic">
               Limited to the first 100 Members.
@@ -327,7 +327,7 @@ export default function Membership() {
                 A World Being Built Around You
               </h2>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Begin in Costa Rica, one of the most breathtaking, biodiverse sanctuaries on earth. Then follow us across continents, each new destination hand-selected for its privacy, its beauty, and its power to restore. You won't find these places on a travel algorithm. You'll find them because you belong here.
+                Begin in Costa Rica, one of the most breathtaking, biodiverse sanctuaries on earth. Then follow us across continents, each new destination hand-selected for its privacy, its beauty, and its power to restore. You won\'t find these places on a travel algorithm. You\'ll find them because you belong here.
               </p>
             </ScrollReveal>
           </div>
@@ -349,7 +349,7 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 9 — PRIORITY. ALWAYS. ═══════ */}
-      <section className.py-40 px-6">
+      <section className="py-40 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <ScrollReveal>
             <div className="divider-gold mx-auto mb-10" />
@@ -357,7 +357,7 @@ export default function Membership() {
               Priority. Always.
             </h2>
             <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto">
-              As a Member, priority booking, exclusive offers, and preferred pricing are simply part of the standard. Because luxury without value isn't luxury, it's performance.
+              As a Member, priority booking, exclusive offers, and preferred pricing are simply part of the standard. Because luxury without value isn\'t luxury, it\'s performance.
             </p>
             <p className="font-heading text-xl md:text-2xl font-light text-muted-foreground/70 italic max-w-2xl mx-auto">
               This is the smarter, more intentional way to experience the world. One membership. Zero compromise. This is Club Providence.
