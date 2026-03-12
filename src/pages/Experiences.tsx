@@ -28,13 +28,13 @@ const activityCards = [
   },
   {
     title: "Transformative",
-    body: "The most successful people know that the greatest investment is the one you make in yourself. This isn\'t a spa weekend, it\'s a shift. In perspective. In vitality. In the way you move through the world. You\'ll leave not just rested, but recalibrated, carrying new clarity, new habits, and a version of yourself you didn\'t know was waiting.",
+    body: "The most successful people know that the greatest investment is the one you make in yourself. This isn't a spa weekend, it's a shift. In perspective. In vitality. In the way you move through the world. You'll leave not just rested, but recalibrated, carrying new clarity, new habits, and a version of yourself you didn't know was waiting.",
     closing: "Invest in Yourself.",
     image: transformativeActivity,
   },
   {
     title: "Adventure",
-    body: "Some dreams deserve a professional. From weeklong escapes to the bucket list you\'ve been quietly building for years, our world class travel planners orchestrate every detail so you arrive as a guest, not a planner. Your itinerary, your vision, your pace handled with the same precision and care you bring to everything else that matters. This one\'s for you.",
+    body: "Some dreams deserve a professional. From weeklong escapes to the bucket list you've been quietly building for years, our world class travel planners orchestrate every detail so you arrive as a guest, not a planner. Your itinerary, your vision, your pace handled with the same precision and care you bring to everything else that matters. This one's for you.",
     closing: "Adventure Awaits You.",
     image: adventureActivity,
   },
@@ -44,14 +44,14 @@ const stayCards = [
   {
     status: "Under Construction",
     title: "Costa Rica",
-    body: "Secretly tucked away from tourist hotspots lays a nature lovers sanctuary that whispers of untamed luxury with its iconic Whale\'s Tail sandbar, where young affluent explorers revel in private mountain villas with ocean vistas, intimate humpback whale encounters, cascading hidden waterfalls, and eco-chic retreats amid lush rainforests teeming with wildlife.",
+    body: "Secretly tucked away from tourist hotspots lays a nature lovers sanctuary that whispers of untamed luxury with its iconic Whale's Tail sandbar, where young affluent explorers revel in private mountain villas with ocean vistas, intimate humpback whale encounters, cascading hidden waterfalls, and eco-chic retreats amid lush rainforests teeming with wildlife.",
     gradient: "bg-gradient-to-br from-[#0e1810] via-[#1a3020] to-[#0d1f12]",
     bgImage: "https://image2url.com/r2/default/images/1773280969793-278f82f2-338d-4578-960d-778e1eaee9e4.jpg"
   },
   {
     status: "Coming Soon",
     title: "Panama",
-    body: "Panama\'s emerald Chiriquí Highlands enchants with its eternal spring climate, mist-kissed cloud forests, and world-renowned Geisha coffee estates, where young affluent adventurers indulge in exclusive luxury villas, private volcano summits, cascading waterfalls, and refined outdoor escapades beneath the majestic Volcán Barú.",
+    body: "Panama's emerald Chiriquí Highlands enchants with its eternal spring climate, mist-kissed cloud forests, and world-renowned Geisha coffee estates, where young affluent adventurers indulge in exclusive luxury villas, private volcano summits, cascading waterfalls, and refined outdoor escapades beneath the majestic Volcán Barú.",
     gradient: "bg-gradient-to-br from-[#0f1a14] via-[#1a2d1e] to-[#0a1510]",
     bgImage: "https://image2url.com/r2/default/images/1773278152952-1fecba0f-9634-4c3d-8d01-eaa64bd789e8.jpg"
   },
@@ -65,7 +65,7 @@ const stayCards = [
   {
     status: "Coming Soon",
     title: "Belize",
-    body: "Hidden on the turquoise-lapped west coast of Ambergris Caye, lures escapists to its crystalline shallows, over-water swings, pineapple-garnished concoctions at chic beach bars, and laid-back Caribbean vibes, private sun-drenched oases, golf-cart adventures, reef-proximate luxury, and effortless barefoot sophistication amid Belize\'s iconic island allure.",
+    body: "Hidden on the turquoise-lapped west coast of Ambergris Caye, lures escapists to its crystalline shallows, over-water swings, pineapple-garnished concoctions at chic beach bars, and laid-back Caribbean vibes, private sun-drenched oases, golf-cart adventures, reef-proximate luxury, and effortless barefoot sophistication amid Belize's iconic island allure.",
     gradient: "bg-gradient-to-br from-[#0a1a18] via-[#152d28] to-[#0a1515]",
     bgImage: "https://image2url.com/r2/default/images/1773278410060-9fc8a799-1806-4f88-8150-ad880ad73a01.jpg"
   },
@@ -147,7 +147,7 @@ export default function Experiences() {
             <ScrollReveal delay={0.15}>
               <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-8">Travel Made Intimate</h2>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-8">
-                At Club Providence, luxury isn\'t measured in stars, it\'s measured in how deeply known you feel. While others serve hundreds, we serve you. Not as a booking, not as a room number, but as an individual whose preferences, rhythms, and desires we understand before you\'ve even thought to ask. This is the essence of true luxury, not the grandness of the gesture, but the intimacy behind it.
+                At Club Providence, luxury isn't measured in stars, it's measured in how deeply known you feel. While others serve hundreds, we serve you. Not as a booking, not as a room number, but as an individual whose preferences, rhythms, and desires we understand before you've even thought to ask. This is the essence of true luxury, not the grandness of the gesture, but the intimacy behind it.
               </p>
               <p className="font-heading text-2xl md:text-3xl italic text-accent mb-4">Vacation Minutes Are Precious.</p>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed">

@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 const villas = [
   { tag: "Forest Sanctuary", name: "The Verdant Mirror", features: "Private Thermal Pool · King Sanctuary · Forest View", image: villaForest2 },
   { tag: "Coastal Reserve", name: "The Horizon Reflection", features: "Ocean Vista · Private Terrace · Sunrise Facing", image: villaOcean },
-  { tag: "Desert Retreat", name: "The Dune Mirror", features: "Stargazing Deck · Outdoor Jacuzzi · Golden Hour View", image: "https://image2url.com/r2/default/images/1773298372039-c9391dfb-358c-43a6-9fd2-bbf1538f82d5.png" },
+  { tag: "Desert Retreat", name: "The Dune Mirror", features: "Stargazing Deck · Outdoor Jacuzzi · Golden Hour View", image: "https://image2url.com/r2/default/images/1773336759992-2c5cde98-9d0a-4a38-bef0-4c55434a5be7.png" },
   { tag: "Mountain Perch", name: "The Summit Glass", features: "Peak Panorama · Heated Floors · Alpine Serenity", image: "https://image2url.com/r2/default/images/1773323526710-c2d98a22-a667-459e-8790-4a747c8b064d.jpeg" },
   { tag: "Valley Refuge", name: "The Canopy Mirror", features: "Garden Integration · Rain Shower · Valley Views", image: "https://image2url.com/r2/default/images/1773323394344-ace41f63-188e-43eb-9234-b5f88b3f718e.jpeg" },
   { tag: "Clifftop Estate", name: "The Edge Reflection", features: "Infinity Pool · Butler Service · 360° Vistas", image: villaCliff2 },
@@ -60,7 +60,7 @@ export default function Index() {
 
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.8 }}>
-            <p className="font-body text-[10px] tracking-[0.4em] uppercase text-accent/80 mb-8">Club Providence · Est. 2025</p>
+            <p className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-8">Club Providence · Est. 2025</p>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.8 }}>
             <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-light text-foreground leading-[1.1]">

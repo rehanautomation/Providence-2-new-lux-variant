@@ -155,7 +155,7 @@ export default function Responsibility() {
             {/* Image placeholder */}
             <ScrollReveal>
               <div className="w-full aspect-[3/4]">
-                <img src="https://image2url.com/r2/default/images/1773279714393-d6a00570-8964-45a9-bfe0-53886bb63ac8.jpeg" alt="Affordable Housing Initiative" className="w-full h-full object-cover" />
+                <img src="https://image2url.com/r2/default/images/1773322534005-e0d0dcc7-035e-4942-a45d-255c743b4da1.jpeg" alt="Affordable Housing Initiative" className="w-full h-full object-cover" />
               </div>
             </ScrollReveal>
             {/* Copy */}
@@ -238,7 +238,9 @@ export default function Responsibility() {
             </ScrollReveal>
             {/* Image placeholder — golden hour, intimate */}
             <ScrollReveal delay={0.15}>
-              <div className="w-full aspect-[3/4] bg-gradient-to-br from-[hsl(37,40%,50%)] via-[hsl(35,35%,58%)] to-[hsl(30,25%,40%)] grain-overlay" />
+               <div className="w-full aspect-[3/4]">
+                <img src="https://image2url.com/r2/default/images/1773323051295-48dc24c1-23f2-4ac4-86c9-738c3d32a8b1.jpg" alt="Our Philosophy" className="w-full h-full object-cover" />
+              </div>
             </ScrollReveal>
           </div>
         </div>
