@@ -4,9 +4,14 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
-import MirrorVillaPlaceholder from "@/components/MirrorVillaPlaceholder";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+
+import travelMadeIntimate from "@/assets/travel-made-intimate.jpeg";
+import luxuriousActivity from "@/assets/luxurious-activity.jpeg";
+import tranquilloActivity from "@/assets/tranquillo-activity.jpeg";
+import transformativeActivity from "@/assets/transformative-activity.jpeg";
+import adventureActivity from "@/assets/adventure-activity.jpeg";
 
 const tabs = ["Service", "Culinary", "Wellness", "Activities", "Stays", "Community Impact"];
 
@@ -15,21 +20,25 @@ const activityCards = [
     title: "Luxurious",
     body: "Nature has never felt like this. Immersed in breathtaking landscapes yet wrapped in every comfort you refuse to leave behind — this is the wild, refined. Where the untamed world meets impeccable service, and adventure feels less like a departure from your life and more like the fullest expression of it.",
     closing: "Your Vacation. Your Rules.",
+    image: luxuriousActivity,
   },
   {
     title: "Tranquillo",
     body: "This is stillness with taste. A sanctuary where time slows, nature breathes, and you finally do too. No agenda but your own. No noise but the kind that heals. Tranquillo is where couples rediscover each other, and individuals rediscover themselves in the most beautifully indulgent way possible.",
     closing: "Your Health. Your Wealth.",
+    image: tranquilloActivity,
   },
   {
     title: "Transformative",
-    body: "The most successful people know that the greatest investment is the one you make in yourself. This isn't a spa weekend, it's a shift. In perspective. In vitality. In the way you move through the world. You'll leave not just rested, but recalibrated, carrying new clarity, new habits, and a version of yourself you didn't know was waiting.",
+    body: "The most successful people know that the greatest investment is the one you make in yourself. This isn\'t a spa weekend, it\'s a shift. In perspective. In vitality. In the way you move through the world. You\'ll leave not just rested, but recalibrated, carrying new clarity, new habits, and a version of yourself you didn\'t know was waiting.",
     closing: "Invest in Yourself.",
+    image: transformativeActivity,
   },
   {
     title: "Adventure",
-    body: "Some dreams deserve a professional. From weeklong escapes to the bucket list you've been quietly building for years, our world class travel planners orchestrate every detail so you arrive as a guest, not a planner. Your itinerary, your vision, your pace handled with the same precision and care you bring to everything else that matters. This one's for you.",
+    body: "Some dreams deserve a professional. From weeklong escapes to the bucket list you\'ve been quietly building for years, our world class travel planners orchestrate every detail so you arrive as a guest, not a planner. Your itinerary, your vision, your pace handled with the same precision and care you bring to everything else that matters. This one\'s for you.",
     closing: "Adventure Awaits You.",
+    image: adventureActivity,
   },
 ];
 
@@ -37,22 +46,26 @@ const stayCards = [
   {
     status: "Under Construction",
     title: "Costa Rica",
-    body: "Secretly tucked away from tourist hotspots lays a nature lovers sanctuary that whispers of untamed luxury with its iconic Whale's Tail sandbar, where young affluent explorers revel in private mountain villas with ocean vistas, intimate humpback whale encounters, cascading hidden waterfalls, and eco-chic retreats amid lush rainforests teeming with wildlife.",
+    body: "Secretly tucked away from tourist hotspots lays a nature lovers sanctuary that whispers of untamed luxury with its iconic Whale\'s Tail sandbar, where young affluent explorers revel in private mountain villas with ocean vistas, intimate humpback whale encounters, cascading hidden waterfalls, and eco-chic retreats amid lush rainforests teeming with wildlife.",
+    gradient: "bg-gradient-to-br from-[#0e1810] via-[#1a3020] to-[#0d1f12]",
   },
   {
     status: "Coming Soon",
     title: "Panama",
-    body: "Panama's emerald Chiriquí Highlands enchants with its eternal spring climate, mist-kissed cloud forests, and world-renowned Geisha coffee estates, where young affluent adventurers indulge in exclusive luxury villas, private volcano summits, cascading waterfalls, and refined outdoor escapades beneath the majestic Volcán Barú.",
+    body: "Panama\'s emerald Chiriquí Highlands enchants with its eternal spring climate, mist-kissed cloud forests, and world-renowned Geisha coffee estates, where young affluent adventurers indulge in exclusive luxury villas, private volcano summits, cascading waterfalls, and refined outdoor escapades beneath the majestic Volcán Barú.",
+    gradient: "bg-gradient-to-br from-[#0f1a14] via-[#1a2d1e] to-[#0a1510]",
   },
   {
     status: "Coming Soon",
     title: "Grenada",
     body: "Perched in the sun-kissed Caribbean as the seductive Spice Isle, Grenada charms its explorers with heady scents of nutmeg, cinnamon, and cocoa drifting from verdant plantations, iconic powdery shores, elite underwater sculpture dives, rainforest waterfalls, Creole gourmet feasts, yacht escapes, and pulsing island rhythm.",
+    gradient: "bg-gradient-to-br from-[#0e1520] via-[#1a2535] to-[#0a1018]",
   },
   {
     status: "Coming Soon",
     title: "Belize",
-    body: "Hidden on the turquoise-lapped west coast of Ambergris Caye, lures escapists to its crystalline shallows, over-water swings, pineapple-garnished concoctions at chic beach bars, and laid-back Caribbean vibes, private sun-drenched oases, golf-cart adventures, reef-proximate luxury, and effortless barefoot sophistication amid Belize's iconic island allure.",
+    body: "Hidden on the turquoise-lapped west coast of Ambergris Caye, lures escapists to its crystalline shallows, over-water swings, pineapple-garnished concoctions at chic beach bars, and laid-back Caribbean vibes, private sun-drenched oases, golf-cart adventures, reef-proximate luxury, and effortless barefoot sophistication amid Belize\'s iconic island allure.",
+    gradient: "bg-gradient-to-br from-[#0a1a18] via-[#152d28] to-[#0a1515]",
   },
 ];
 
@@ -132,7 +145,7 @@ export default function Experiences() {
             <ScrollReveal delay={0.15}>
               <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-8">Travel Made Intimate</h2>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-8">
-                At Club Providence, luxury isn't measured in stars, it's measured in how deeply known you feel. While others serve hundreds, we serve you. Not as a booking, not as a room number, but as an individual whose preferences, rhythms, and desires we understand before you've even thought to ask. This is the essence of true luxury, not the grandness of the gesture, but the intimacy behind it.
+                At Club Providence, luxury isn\'t measured in stars, it\'s measured in how deeply known you feel. While others serve hundreds, we serve you. Not as a booking, not as a room number, but as an individual whose preferences, rhythms, and desires we understand before you\'ve even thought to ask. This is the essence of true luxury, not the grandness of the gesture, but the intimacy behind it.
               </p>
               <p className="font-heading text-2xl md:text-3xl italic text-accent mb-4">Vacation Minutes Are Precious.</p>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed">
@@ -140,7 +153,10 @@ export default function Experiences() {
               </p>
             </ScrollReveal>
             <ScrollReveal>
-              <MirrorVillaPlaceholder landscape="forest" aspectRatio="3/4" className="w-full" />
+              <div className="relative w-full overflow-hidden" style={{ aspectRatio: "3/4" }}>
+                <img src={travelMadeIntimate} alt="Luxury travel setting" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 grain-overlay" />
+              </div>
             </ScrollReveal>
           </div>
         </div>
@@ -171,52 +187,75 @@ export default function Experiences() {
       </section>
 
       {/* Activities */}
-      <section ref={(el) => { sectionRefs.current[3] = el; }} className="py-32 md:py-48 px-6 bg-background">
-        <div className="max-w-5xl mx-auto">
+      <section ref={(el) => { sectionRefs.current[3] = el; }} className="bg-background">
+        <div className="max-w-5xl mx-auto py-32 md:py-48 px-6">
           <div className="text-center mb-24">
             <ScrollReveal>
               <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-4">Choose Your Vibe</h2>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-xl mx-auto">Extraordinary journeys tailored exclusively for you.</p>
             </ScrollReveal>
           </div>
+        </div>
 
-          <div className="flex flex-col gap-16">
-            {activityCards.map((card, i) => (
-              <ScrollReveal key={card.title} delay={i * 0.1}>
-                <div className="border-t border-accent/20 pt-10">
-                  <div className="flex justify-between items-start mb-4 gap-8">
-                    <h3 className="font-heading text-3xl md:text-5xl font-light text-foreground">{card.title}</h3>
-                    {card.closing && <p className="font-heading text-sm text-gradient-gold italic text-right shrink-0">{card.closing}</p>}
+        <div className="flex flex-col">
+          {activityCards.map((card, i) => (
+            <ScrollReveal key={card.title}>
+              <div className="border-t border-accent/15">
+                <div className="grid md:grid-cols-5 md:min-h-[560px] overflow-hidden">
+                  <div className={cn(
+                    "md:col-span-2",
+                    i % 2 !== 0 && "md:order-last"
+                  )}>
+                    <div className="relative w-full h-full">
+                      <img src={card.image} alt={card.title} className="w-full h-64 md:h-full md:min-h-[560px] object-cover" />
+                      <div className="absolute inset-0 grain-overlay" />
+                    </div>
                   </div>
-                  <p className="font-body text-sm font-light text-muted-foreground leading-relaxed max-w-3xl">{card.body}</p>
+
+                  <div className="md:col-span-3 flex flex-col h-full p-12 md:p-16 lg:p-20">
+                    <div>
+                      <div className="w-8 h-px bg-accent mb-8" />
+                      <h3 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-6">{card.title}</h3>
+                      <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed">{card.body}</p>
+                    </div>
+                    {card.closing && (
+                      <p className="font-heading text-lg italic text-accent mt-auto pt-8">{card.closing}</p>
+                    )}
+                  </div>
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
       </section>
 
       {/* Stays */}
-      <section ref={(el) => { sectionRefs.current[4] = el; }} className="py-32 md:py-48 px-6 bg-card">
-        <div className="max-w-5xl mx-auto">
+      <section ref={(el) => { sectionRefs.current[4] = el; }} className="bg-card">
+        <div className="max-w-5xl mx-auto py-32 md:py-48 px-6">
           <div className="text-center mb-24">
             <ScrollReveal>
               <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-4">Our Collection</h2>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-3xl mx-auto">Travel Made Intimate. At Providence Resorts, we delve deeply into what moves our members, crafting bespoke escapes that transcend mere luxury. Each residence is thoughtfully woven into breathtaking nature to deliver the serene bliss of true Quiet-Cations and our signature five-star Hushpitality, where every whisper of indulgence and every moment of hushed tranquility is yours to savor in effortless, elevated sophistication.</p>
             </ScrollReveal>
           </div>
+        </div>
 
-          <div className="flex flex-col">
-            {stayCards.map((card, i) => (
-              <ScrollReveal key={card.title} delay={i * 0.1}>
-                <div className="border-t border-border/20 py-10">
-                  <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-medium">{card.status}</span>
-                  <h3 className="font-heading text-4xl md:text-5xl font-light text-foreground mt-3 mb-4">{card.title}</h3>
-                  <p className="font-body text-sm font-light text-muted-foreground leading-relaxed max-w-3xl">{card.body}</p>
+        <div>
+          {stayCards.map((card, i) => (
+            <ScrollReveal key={card.title}>
+              <div className="relative min-h-[60vh] md:min-h-[80vh] overflow-hidden">
+                <div className={cn("absolute inset-0 transition-transform duration-[1200ms] ease-out hover:scale-[1.02]", card.gradient)} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                <div className="absolute inset-0 grain-overlay" />
+                <div className="relative z-10 flex flex-col justify-end h-full min-h-[60vh] md:min-h-[80vh] pb-16 md:pb-24 px-8 md:px-20 lg:px-28 text-left">
+                  <p className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-5">{card.status}</p>
+                  <h3 className="font-heading text-6xl md:text-8xl lg:text-9xl font-light text-[hsl(var(--cream))] leading-none mb-6">{card.title}</h3>
+                  <div className="w-12 h-px bg-accent mb-6" />
+                  <p className="font-body text-sm font-light text-[hsl(var(--cream))]/65 leading-relaxed max-w-2xl">{card.body}</p>
                 </div>
-              </ScrollReveal>
-            ))}
-          </div>
+              </div>
+            </ScrollReveal>
+          ))}
         </div>
       </section>
 

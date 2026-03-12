@@ -5,22 +5,22 @@ import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionHeading from "@/components/SectionHeading";
 import { motion } from "framer-motion";
-import mirrorHouseNature from "@/assets/mirror-house-nature.jpg";
-import villaForest from "@/assets/villa-forest.png";
+import heroHome2 from "@/assets/hero-home-2.jpeg";
+import villaForest2 from "@/assets/villa-forest-2.jpeg";
 import villaOcean from "@/assets/villa-ocean.png";
 import villaDesert from "@/assets/villa-desert.png";
 import villaMountain from "@/assets/villa-mountain.png";
 import villaValley from "@/assets/villa-valley.png";
-import villaCliff from "@/assets/villa-cliff.png";
+import villaCliff2 from "@/assets/villa-cliff-2.jpeg";
 import { cn } from "@/lib/utils";
 
 const villas = [
-  { tag: "Forest Sanctuary", name: "The Verdant Mirror", features: "Private Thermal Pool · King Sanctuary · Forest View", image: villaForest },
+  { tag: "Forest Sanctuary", name: "The Verdant Mirror", features: "Private Thermal Pool · King Sanctuary · Forest View", image: villaForest2 },
   { tag: "Coastal Reserve", name: "The Horizon Reflection", features: "Ocean Vista · Private Terrace · Sunrise Facing", image: villaOcean },
   { tag: "Desert Retreat", name: "The Dune Mirror", features: "Stargazing Deck · Outdoor Jacuzzi · Golden Hour View", image: villaDesert },
   { tag: "Mountain Perch", name: "The Summit Glass", features: "Peak Panorama · Heated Floors · Alpine Serenity", image: villaMountain },
   { tag: "Valley Refuge", name: "The Canopy Mirror", features: "Garden Integration · Rain Shower · Valley Views", image: villaValley },
-  { tag: "Clifftop Estate", name: "The Edge Reflection", features: "Infinity Pool · Butler Service · 360° Vistas", image: villaCliff },
+  { tag: "Clifftop Estate", name: "The Edge Reflection", features: "Infinity Pool · Butler Service · 360° Vistas", image: villaCliff2 },
 ];
 
 const pillars = [
@@ -68,9 +68,6 @@ export default function Index() {
               Designed for Restoration. <span className="text-gradient-gold">Defined by Intention.</span>
             </h1>
           </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8, duration: 0.8 }}>
-            <p className="font-body text-sm tracking-[0.15em] text-muted-foreground mt-4 mb-10">Extraordinary Journeys Begin Here</p>
-          </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1, duration: 0.8 }}>
             <Button variant="hero" size="lg" asChild>
               <Link to="/experiences">Begin Your Journey</Link>
@@ -104,7 +101,7 @@ export default function Index() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <ScrollReveal>
             <div className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
-              <img src={mirrorHouseNature} alt="Two guests relaxing on the deck of a mirror villa by the lake" className="absolute inset-0 w-full h-full object-cover" />
+              <img src={heroHome2} alt="Two guests relaxing on the deck of a mirror villa by the lake" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 grain-overlay" />
             </div>
           </ScrollReveal>
