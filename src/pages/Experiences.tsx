@@ -211,19 +211,25 @@ export default function Experiences() {
         <div className="flex flex-col">
           {activityCards.map((card, i) => (
             <ScrollReveal key={card.title}>
-              <div className="border-t border-accent/15">
+              <div className="border-t border-accent/15 group">
                 <div className="grid md:grid-cols-5 md:min-h-[560px] overflow-hidden">
-                  <div className={cn(
-                    "md:col-span-2",
-                    i % 2 !== 0 && "md:order-last"
-                  )}>
-                    <div className="relative w-full h-full">
-                      <img src={card.image} alt={card.title} className="w-full h-64 md:h-full md:min-h-[560px] object-cover" />
-                      <div className="absolute inset-0 grain-overlay" />
+                  <div
+                    className={cn(
+                      "md:col-span-2 flex items-center justify-center bg-background",
+                      i % 2 !== 0
+                        ? "md:order-last md:py-10 md:pr-10 md:pl-6"
+                        : "md:py-10 md:pr-6 md:pl-10"
+                    )}
+                  >
+                    <div className="w-full h-full min-h-[256px] md:min-h-[460px] overflow-hidden rounded-sm shadow-2xl relative">
+                      <div className="absolute inset-0 w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-105">
+                        <img src={card.image} alt={card.title} className="absolute inset-0 w-full h-full object-cover" />
+                        <div className="absolute inset-0 grain-overlay" />
+                      </div>
                     </div>
                   </div>
 
-                  <div className="md:col-span-3 flex flex-col h-full p-12 md:p-16 lg:p-20">
+                  <div className="md:col-span-3 flex flex-col h-full p-12 md:p-16 lg:p-20 bg-background">
                     <div>
                       <div className="w-8 h-px bg-accent mb-8" />
                       <h3 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-6">{card.title}</h3>

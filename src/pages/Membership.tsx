@@ -6,6 +6,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import SectionHeading from "@/components/SectionHeading";
 import { motion } from "framer-motion";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { cn } from "@/lib/utils";
 
 /* ── Section 2 — Six Pillars ── */
 const pillars = [
@@ -82,10 +83,10 @@ const includedCards = [
 
 /* ── Section 8 — Destinations ── */
 const destinations = [
-  { name: "Costa Rica", status: "Under Construction", desc: "Secretly tucked away from tourist hotspots lays a nature lover\'s sanctuary that whispers of untamed luxury with its iconic Whale\'s Tail sandbar, where young affluent explorers revel in private mountain villas with ocean vistas, intimate humpback whale encounters, cascading hidden waterfalls, and eco-chic retreats amid lush rainforests teeming with wildlife.", landscape: "forest" as const },
-  { name: "Panama", status: "Coming Soon", desc: "Panama\'s emerald Chiriquí Highlands enchants with its eternal spring climate, mist-kissed cloud forests, and world-renowned Geisha coffee estates, where young affluent adventurers indulge in exclusive luxury villas, private volcano summits, cascading waterfalls, and refined outdoor escapades beneath the majestic Volcán Barú.", landscape: "mountain" as const },
-  { name: "Grenada", status: "Coming Soon", desc: "Perched in the sun-kissed Caribbean as the seductive Spice Isle, Grenada charms its explorers with heady scents of nutmeg, cinnamon, and cocoa drifting from verdant plantations, iconic powdery shores, elite underwater sculpture dives, rainforest waterfalls, Creole gourmet feasts, yacht escapes, and pulsing island rhythm.", landscape: "ocean" as const },
-  { name: "Belize", status: "Coming Soon", desc: "Hidden on the turquoise-lapped west coast of Ambergris Caye, lures escapists to its crystalline shallows, over-water swings, pineapple-garnished concoctions at chic beach bars, and laid-back Caribbean vibes, private sun-drenched oases, golf-cart adventures, reef-proximate luxury, and effortless barefoot sophistication amid Belize\'s iconic island allure.", landscape: "valley" as const },
+  { name: "Costa Rica", status: "Under Construction", tagline: "Where the untamed world whispers of luxury.", desc: "Secretly tucked away from tourist hotspots lays a nature lover\'s sanctuary that whispers of untamed luxury with its iconic Whale\'s Tail sandbar, where young affluent explorers revel in private mountain villas with ocean vistas, intimate humpback whale encounters, cascading hidden waterfalls, and eco-chic retreats amid lush rainforests teeming with wildlife.", landscape: "forest" as const },
+  { name: "Panama", status: "Coming Soon", tagline: "Eternal spring. Mist-kissed cloud forests.", desc: "Panama\'s emerald Chiriquí Highlands enchants with its eternal spring climate, mist-kissed cloud forests, and world-renowned Geisha coffee estates, where young affluent adventurers indulge in exclusive luxury villas, private volcano summits, cascading waterfalls, and refined outdoor escapades beneath the majestic Volcán Barú.", landscape: "mountain" as const },
+  { name: "Grenada", status: "Coming Soon", tagline: "The seductive Spice Isle of the Caribbean.", desc: "Perched in the sun-kissed Caribbean as the seductive Spice Isle, Grenada charms its explorers with heady scents of nutmeg, cinnamon, and cocoa drifting from verdant plantations, iconic powdery shores, elite underwater sculpture dives, rainforest waterfalls, Creole gourmet feasts, yacht escapes, and pulsing island rhythm.", landscape: "ocean" as const },
+  { name: "Belize", status: "Coming Soon", tagline: "Barefoot sophistication on turquoise shores.", desc: "Hidden on the turquoise-lapped west coast of Ambergris Caye, lures escapists to its crystalline shallows, over-water swings, pineapple-garnished concoctions at chic beach bars, and laid-back Caribbean vibes, private sun-drenched oases, golf-cart adventures, reef-proximate luxury, and effortless barefoot sophistication amid Belize\'s iconic island allure.", landscape: "valley" as const },
 ];
 
 const motionProps = (delay: number) => ({
@@ -318,9 +319,9 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 8 — DESTINATIONS ═══════ */}
-      <section className="py-20 md:py-32 px-6 bg-card">
+      <section className="py-20 md:py-32 bg-card">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 px-6">
             <ScrollReveal>
               <div className="divider-gold mx-auto mb-8" />
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-6">
@@ -332,15 +333,32 @@ export default function Membership() {
             </ScrollReveal>
           </div>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="border-t border-border">
             {destinations.map((d, i) => (
-              <ScrollReveal key={d.name} delay={i * 0.1}>
-                <div className="py-12 border-b border-white/10">
-                  <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent mb-4 block">
-                    {d.status}
-                  </span>
-                  <h3 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-4">{d.name}</h3>
-                  <p className="font-body text-sm font-light text-muted-foreground leading-relaxed max-w-2xl">{d.desc}</p>
+              <ScrollReveal key={d.name}>
+                <div className={cn("group", i % 2 !== 0 ? 'bg-background' : 'bg-card')}>
+                  <div className="grid grid-cols-[140px_1fr] min-h-[320px] border-b border-border">
+                    {/* Left Column */}
+                    <div className="flex items-center justify-center border-r border-border py-10">
+                      <span className="font-heading text-5xl md:text-6xl font-light text-foreground [writing-mode:vertical-rl] [transform:rotate(180deg)] tracking-widest whitespace-nowrap opacity-85 transition-colors duration-500 group-hover:text-accent">
+                        {d.name}
+                      </span>
+                    </div>
+                    {/* Right Column */}
+                    <div className="flex flex-col justify-between p-12 md:p-16">
+                      <div>
+                        <p className="font-body text-[9px] tracking-[0.4em] uppercase text-accent mb-4">{d.status}</p>
+                        <p className="font-heading text-2xl md:text-3xl font-light italic text-foreground mb-5">{d.tagline}</p>
+                        <p className="font-body text-xs md:text-sm font-light text-muted-foreground leading-relaxed max-w-2xl">{d.desc}</p>
+                      </div>
+                      <div className="flex items-center gap-5 mt-8 pt-6 border-t border-border">
+                        <div className="divider-gold" />
+                        <span className="font-heading text-xs tracking-[0.3em] text-accent/40">
+                          0{i + 1} / 0{destinations.length}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </ScrollReveal>
             ))}
