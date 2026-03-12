@@ -47,9 +47,13 @@ export default function Responsibility() {
       <Header />
 
       {/* ═══════ SECTION 1 — HERO ═══════ */}
-      <section className="relative min-h-screen flex items-end md:items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-end md:items-center overflow-hidden" style={{
+        backgroundImage: `url(https://image2url.com/r2/default/images/1773279788870-cc9ba665-8203-4372-abb7-2212873c0130.jpeg)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}>
         {/* Deep forest green dominant bg */}
-        <div className="absolute inset-0 bg-primary" />
+        <div className="absolute inset-0 bg-primary/70" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,hsl(145,28%,24%,0.6),transparent_70%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_70%,hsl(145,20%,14%,0.4),transparent_60%)]" />
         <div className="absolute inset-0 grain-overlay" />
@@ -150,7 +154,9 @@ export default function Responsibility() {
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             {/* Image placeholder */}
             <ScrollReveal>
-              <div className="w-full aspect-[3/4] bg-gradient-to-br from-[hsl(25,30%,35%)] via-[hsl(15,25%,45%)] to-[hsl(30,20%,30%)] grain-overlay" />
+              <div className="w-full aspect-[3/4]">
+                <img src="https://image2url.com/r2/default/images/1773279714393-d6a00570-8964-45a9-bfe0-53886bb63ac8.jpeg" alt="Affordable Housing Initiative" className="w-full h-full object-cover" />
+              </div>
             </ScrollReveal>
             {/* Copy */}
             <ScrollReveal delay={0.15}>

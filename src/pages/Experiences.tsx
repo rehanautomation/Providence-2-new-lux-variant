@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 import travelMadeIntimate from "@/assets/travel-made-intimate.jpeg";
-import luxuriousActivity from "@/assets/luxurious-activity.jpeg";
 import tranquilloActivity from "@/assets/tranquillo-activity.jpeg";
 import transformativeActivity from "@/assets/transformative-activity.jpeg";
 import adventureActivity from "@/assets/adventure-activity.jpeg";
@@ -20,7 +19,7 @@ const activityCards = [
     title: "Luxurious",
     body: "Nature has never felt like this. Immersed in breathtaking landscapes yet wrapped in every comfort you refuse to leave behind — this is the wild, refined. Where the untamed world meets impeccable service, and adventure feels less like a departure from your life and more like the fullest expression of it.",
     closing: "Your Vacation. Your Rules.",
-    image: luxuriousActivity,
+    image: "https://image2url.com/r2/default/images/1773278020657-0cd2b50c-beb1-4005-980f-b0f9f0a96d32.jpg",
   },
   {
     title: "Tranquillo",
@@ -54,18 +53,21 @@ const stayCards = [
     title: "Panama",
     body: "Panama\'s emerald Chiriquí Highlands enchants with its eternal spring climate, mist-kissed cloud forests, and world-renowned Geisha coffee estates, where young affluent adventurers indulge in exclusive luxury villas, private volcano summits, cascading waterfalls, and refined outdoor escapades beneath the majestic Volcán Barú.",
     gradient: "bg-gradient-to-br from-[#0f1a14] via-[#1a2d1e] to-[#0a1510]",
+    bgImage: "https://image2url.com/r2/default/images/1773278152952-1fecba0f-9634-4c3d-8d01-eaa64bd789e8.jpg"
   },
   {
     status: "Coming Soon",
     title: "Grenada",
     body: "Perched in the sun-kissed Caribbean as the seductive Spice Isle, Grenada charms its explorers with heady scents of nutmeg, cinnamon, and cocoa drifting from verdant plantations, iconic powdery shores, elite underwater sculpture dives, rainforest waterfalls, Creole gourmet feasts, yacht escapes, and pulsing island rhythm.",
     gradient: "bg-gradient-to-br from-[#0e1520] via-[#1a2535] to-[#0a1018]",
+    bgImage: "https://image2url.com/r2/default/images/1773278336470-e83695d8-cb47-4040-acfa-77242fa2ed65.jpg"
   },
   {
     status: "Coming Soon",
     title: "Belize",
     body: "Hidden on the turquoise-lapped west coast of Ambergris Caye, lures escapists to its crystalline shallows, over-water swings, pineapple-garnished concoctions at chic beach bars, and laid-back Caribbean vibes, private sun-drenched oases, golf-cart adventures, reef-proximate luxury, and effortless barefoot sophistication amid Belize\'s iconic island allure.",
     gradient: "bg-gradient-to-br from-[#0a1a18] via-[#152d28] to-[#0a1515]",
+    bgImage: "https://image2url.com/r2/default/images/1773278410060-9fc8a799-1806-4f88-8150-ad880ad73a01.jpg"
   },
 ];
 
@@ -175,11 +177,20 @@ export default function Experiences() {
       </section>
 
       {/* Wellness */}
-      <section ref={(el) => { sectionRefs.current[2] = el; }} className="py-40 px-6 bg-card text-center">
-        <div className="max-w-7xl mx-auto">
+      <section 
+        ref={(el) => { sectionRefs.current[2] = el; }} 
+        className="py-40 px-6 text-center relative overflow-hidden"
+        style={{
+          backgroundImage: `url(https://image2url.com/r2/default/images/1773277847714-7db09845-56a5-42a5-a3a8-551b9227d316.png)`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 max-w-7xl mx-auto">
           <ScrollReveal>
             <h2 className="text-4xl md:text-6xl font-heading font-light tracking-[0.2em] text-gradient-gold mb-8">REST. RELAX. REPEAT.</h2>
-            <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+            <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed max-w-3xl mx-auto">
               Escape the hustle and bustle of everyday life and immerse yourself in pure bliss at our crafted sanctuaries to rejuvenate your mind, body, heart, and soul. Cease the opportunity to learn practical skills to live a healthier life with onsite Health & Wellness Experts. Indulge in discovery, pampering, and the serenity of nature as you embark on an unforgettable experience.
             </p>
           </ScrollReveal>
@@ -230,34 +241,34 @@ export default function Experiences() {
       </section>
 
       {/* Stays */}
-      <section ref={(el) => { sectionRefs.current[4] = el; }} className="bg-card">
-        <div className="max-w-5xl mx-auto py-32 md:py-48 px-6">
-          <div className="text-center mb-24">
-            <ScrollReveal>
-              <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-4">Our Collection</h2>
-              <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-3xl mx-auto">Travel Made Intimate. At Providence Resorts, we delve deeply into what moves our members, crafting bespoke escapes that transcend mere luxury. Each residence is thoughtfully woven into breathtaking nature to deliver the serene bliss of true Quiet-Cations and our signature five-star Hushpitality, where every whisper of indulgence and every moment of hushed tranquility is yours to savor in effortless, elevated sophistication.</p>
-            </ScrollReveal>
-          </div>
-        </div>
-
-        <div>
-          {stayCards.map((card, i) => (
-            <ScrollReveal key={card.title}>
-              <div className="relative min-h-[60vh] md:min-h-[80vh] overflow-hidden">
-                <div className={cn("absolute inset-0 transition-transform duration-[1200ms] ease-out hover:scale-[1.02]", card.gradient)} />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-                <div className="absolute inset-0 grain-overlay" />
-                <div className="relative z-10 flex flex-col justify-end h-full min-h-[60vh] md:min-h-[80vh] pb-16 md:pb-24 px-8 md:px-20 lg:px-28 text-left">
-                  <p className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-5">{card.status}</p>
-                  <h3 className="font-heading text-6xl md:text-8xl lg:text-9xl font-light text-[hsl(var(--cream))] leading-none mb-6">{card.title}</h3>
-                  <div className="w-12 h-px bg-accent mb-6" />
-                  <p className="font-body text-sm font-light text-[hsl(var(--cream))]/65 leading-relaxed max-w-2xl">{card.body}</p>
+        <section ref={(el) => { sectionRefs.current[4] = el; }} className="bg-card">
+            <div className="max-w-5xl mx-auto py-32 md:py-48 px-6">
+                <div className="text-center mb-24">
+                    <ScrollReveal>
+                        <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-4">Our Collection</h2>
+                        <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-3xl mx-auto">Travel Made Intimate. At Providence Resorts, we delve deeply into what moves our members, crafting bespoke escapes that transcend mere luxury. Each residence is thoughtfully woven into breathtaking nature to deliver the serene bliss of true Quiet-Cations and our signature five-star Hushpitality, where every whisper of indulgence and every moment of hushed tranquility is yours to savor in effortless, elevated sophistication.</p>
+                    </ScrollReveal>
                 </div>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-      </section>
+            </div>
+
+            <div>
+                {stayCards.map((card) => (
+                    <ScrollReveal key={card.title}>
+                        <div className="relative min-h-[60vh] md:min-h-[80vh] overflow-hidden">
+                            <div className={cn("absolute inset-0 transition-transform duration-[1200ms] ease-out hover:scale-[1.02]", card.gradient)} style={card.bgImage ? { backgroundImage: `url(${card.bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}} />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent" />
+                            <div className="absolute inset-0 grain-overlay" />
+                            <div className="relative z-10 flex flex-col justify-end h-full min-h-[60vh] md:min-h-[80vh] pb-16 md:pb-24 px-8 md:px-20 lg:px-28 text-left">
+                                <p className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-5">{card.status}</p>
+                                <h3 className="font-heading text-6xl md:text-8xl lg:text-9xl font-light text-[hsl(var(--cream))] leading-none mb-6">{card.title}</h3>
+                                <div className="w-12 h-px bg-accent mb-6" />
+                                <p className="font-body text-sm font-light text-[hsl(var(--cream))]/65 leading-relaxed max-w-2xl">{card.body}</p>
+                            </div>
+                        </div>
+                    </ScrollReveal>
+                ))}
+            </div>
+        </section>
 
       {/* Community Impact */}
       <section ref={(el) => { sectionRefs.current[5] = el; }} className="py-32 md:py-48 px-6 bg-background">

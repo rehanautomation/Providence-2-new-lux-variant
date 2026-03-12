@@ -14,36 +14,42 @@ const pillars = [
     copy: "Some of the world's most coveted addresses aren't on any map you'd find online. Acres of untouched nature. Vistas that silence a room. An atmosphere so intentionally private it feels like the world was paused just for you. We welcome only a select few because extraordinary experiences demand it.",
     landscape: "forest" as const,
     gradient: "from-[hsl(145,30%,22%)] via-[hsl(140,20%,30%)] to-[hsl(145,25%,18%)]",
+    image: "https://image2url.com/r2/default/images/1773280007435-e8ad6b2e-8cc6-4aa1-b750-7eb27d8cb9c8.jpg",
   },
   {
     title: "Suites",
     copy: "Every residence is a sanctuary, eco-conscious by design, five-star by standard. Our curated collection of luxury suites exists at the intersection of sustainable living and unapologetic comfort. Thoughtfully crafted, carbon-light, and exclusively yours with a guaranteed 30% member discount, because belonging here should feel as good as it looks.",
     landscape: "desert" as const,
     gradient: "from-[hsl(35,35%,55%)] via-[hsl(37,30%,62%)] to-[hsl(30,25%,50%)]",
+    image: "https://image2url.com/r2/default/images/1773198763773-3ebf9426-d05d-436f-b416-4778f8b5884e.jpeg",
   },
   {
     title: "Wellness",
     copy: "This is where burnout meets its match. Each resort hosts a resident team of wellness experts, fitness, nutrition with world-class specialists rotating through regularly. This isn't a spa add-on. It's a full recalibration of how you feel, how you eat, and how you see the life you're returning to.",
     landscape: "valley" as const,
     gradient: "from-[hsl(145,25%,35%)] via-[hsl(130,20%,42%)] to-[hsl(145,22%,30%)]",
+    image: "https://image2url.com/r2/default/images/1773198873050-dfe406f8-c416-4687-a3b5-0ebec289280f.jpeg",
   },
   {
     title: "Concierge Services",
     copy: "Your time is your most valuable asset and we treat it accordingly. Whether you're planning a spontaneous escape or mapping out an entire year of restorative travel, your dedicated Travel Ambassador handles every detail with precision and genuine care. Peak season. Off-peak solitude. Last-minute or long-planned. We're already on it.",
     landscape: "mountain" as const,
     gradient: "from-[hsl(33,27%,38%)] via-[hsl(30,22%,45%)] to-[hsl(35,25%,35%)]",
+    image: "https://image2url.com/r2/default/images/1773198904925-c7c21b3d-02a5-4205-9a2f-648d7c143043.jpeg",
   },
   {
     title: "Culinary Experience",
     copy: "This is food as philosophy. Plant-based, chef-crafted, and grown steps from your table. Every plate tells the story of the land it came from. Michelin star & local chefs compose each meal with artistry and intention, from vibrant harvest bowls to exquisite desserts and handcrafted mocktails that rival anything you've sipped anywhere in the world. Nourishment, elevated to an experience.",
     landscape: "desert" as const,
     gradient: "from-[hsl(37,40%,50%)] via-[hsl(35,35%,58%)] to-[hsl(33,30%,45%)]",
+    image: "https://image2url.com/r2/default/images/1773198966777-e483cf36-23da-4914-a0de-c161352d2d44.jpeg",
   },
   {
     title: "Entertainment",
     copy: "The evenings here are alive. Dancing nights under open skies. Campfire conversations that last until the stars demand you look up. Live local artists, cooking experiences, mocktail parties, and connections formed with people who simply get it. This is community for those who've outgrown the ordinary, where every gathering feels like the best night of a trip you never want to end.",
     landscape: "ocean" as const,
     gradient: "from-[hsl(220,25%,22%)] via-[hsl(210,20%,30%)] to-[hsl(33,20%,35%)]",
+    image: "https://image2url.com/r2/default/images/1773279080738-eedc0934-e9b9-476b-af97-9766f0629f86.jpeg",
   },
 ];
 
@@ -156,7 +162,13 @@ export default function Membership() {
                   <div className={`grid md:grid-cols-2 gap-8 md:gap-16 items-center py-16 md:py-24 ${i > 0 ? "border-t border-border/20" : ""}`}>
                     {/* Image */}
                     <div className={imageLeft ? "order-1" : "order-1 md:order-2"}>
-                      <AspectRatio ratio={16/10} className={`bg-gradient-to-br ${pillar.gradient} w-full`} />
+                      <AspectRatio ratio={16/10} className="w-full">
+                        {(pillar as any).image ? (
+                          <img src={(pillar as any).image} alt={pillar.title} className="w-full h-full object-cover" />
+                        ) : (
+                          <div className={`bg-gradient-to-br ${pillar.gradient} w-full h-full`} />
+                        )}
+                      </AspectRatio>
                     </div>
                     {/* Copy */}
                     <div className={imageLeft ? "order-2" : "order-2 md:order-1"}>
@@ -209,7 +221,9 @@ export default function Membership() {
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             {/* Image */}
             <ScrollReveal>
-              <AspectRatio ratio={3/4} className="w-full bg-gradient-to-b from-primary/20 to-accent/10" />
+              <AspectRatio ratio={3/4} className="w-full">
+                <img src="https://image2url.com/r2/default/images/1773279607629-cac4f8f5-58d0-4d8d-81c8-f3df6cc99889.jpeg" alt="What Membership Unlocks" className="w-full h-full object-cover" />
+              </AspectRatio>
             </ScrollReveal>
             {/* Benefits */}
             <ScrollReveal delay={0.15}>
@@ -223,7 +237,9 @@ export default function Membership() {
                     <span className="w-6 h-px bg-accent mt-3 flex-shrink-0" />
                     <div>
                       <span className="font-body text-sm font-medium text-foreground tracking-wide">{b.title}</span>
-                      <p className="font-body text-sm font-light text-muted-foreground mt-1">{b.desc}</p>
+                      <p className="font-body text-sm font-light text-muted-foreground mt-1">
+                        {b.desc}
+                      </p>
                     </div>
                   </li>
                 ))}
