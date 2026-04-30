@@ -96,21 +96,21 @@ export default function Index() {
       </section>
 
       {/* Mirror House */}
-      <section className="py-20 md:py-32 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          <ScrollReveal>
-            <div className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
-              <img src={heroHome2} alt="Two guests relaxing on the deck of a mirror villa by the lake" className="absolute inset-0 w-full h-full object-cover" />
-              <div className="absolute inset-0 grain-overlay" />
-            </div>
-          </ScrollReveal>
-          <div>
+      <section 
+        className="relative min-h-[85vh] flex items-center py-20 px-6"
+        style={{ backgroundImage: `url(${heroHome2})`, backgroundSize: "cover", backgroundPosition: "center" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        <div className="absolute inset-0 grain-overlay" />
+        
+        <div className="relative z-10 w-full max-w-7xl mx-auto">
+          <div className="max-w-xl">
             <ScrollReveal>
               <div className="divider-gold mb-8" />
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-6">
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight mb-6">
                 Where Architecture Disappears Into Nature
               </h2>
-              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-8">
+              <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed mb-8">
                 Our sanctuaries are not built upon the landscape. They are woven into it. Every villa is a living mirror — reflecting the sky, the forest, the mountains that surround it. A space that becomes invisible so that you can become visible.
               </p>
               <Button variant="ghost-gold" asChild className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-accent after:transition-all after:duration-500 hover:after:w-full">
@@ -129,21 +129,64 @@ export default function Index() {
             subtitle="Exclusively ten couples per site. Every unit meticulously designed for privacy, immersion, and transformation."
           />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mt-16">
-            {villas.map((villa, i) => (
-              <ScrollReveal key={villa.name} delay={i * 0.1}>
+          <div className="mt-16">
+            <div className="grid md:grid-cols-3 gap-8 md:gap-10 mb-8 md:mb-10">
+              {/* First villa */}
+              <ScrollReveal className="md:col-span-2">
                 <div className="group">
-                  <div className="relative overflow-hidden mb-5 transition-transform duration-700 group-hover:scale-[1.04]" style={{ aspectRatio: "4/3" }}>
-                    <img src={villa.image} alt={villa.name} className="absolute inset-0 w-full h-full object-cover" />
+                  <div className="relative overflow-hidden mb-5 transition-transform duration-700 group-hover:scale-[1.04]" style={{ aspectRatio: "16/9" }}>
+                    <img src={villas[0].image} alt={villas[0].name} className="absolute inset-0 w-full h-full object-cover" />
                     <div className="absolute inset-0 grain-overlay" />
                   </div>
-                  <div className="w-6 h-px bg-accent/60 mb-3" />
-                  <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villa.tag}</span>
-                  <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-2 mb-2">{villa.name}</h3>
-                  <p className="font-body text-xs font-light text-muted-foreground tracking-wide">{villa.features}</p>
+                  <div>
+                    <div className="w-6 h-px bg-accent/60 mb-3" />
+                    <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villas[0].tag}</span>
+                    <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-2 mb-2">{villas[0].name}</h3>
+                    <p className="font-body text-xs font-light text-muted-foreground tracking-wide">{villas[0].features}</p>
+                  </div>
                 </div>
               </ScrollReveal>
-            ))}
+
+              {/* Next two villas stacked */}
+              <div className="grid grid-rows-2 gap-8 md:gap-10">
+                {villas.slice(1, 3).map((villa, i) => (
+                  <ScrollReveal key={villa.name} delay={(i + 1) * 0.1}>
+                    <div className="group">
+                      <div className="relative overflow-hidden mb-5 transition-transform duration-700 group-hover:scale-[1.04]" style={{ aspectRatio: "4/3" }}>
+                        <img src={villa.image} alt={villa.name} className="absolute inset-0 w-full h-full object-cover" />
+                        <div className="absolute inset-0 grain-overlay" />
+                      </div>
+                      <div>
+                        <div className="w-6 h-px bg-accent/60 mb-3" />
+                        <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villa.tag}</span>
+                        <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-2 mb-2">{villa.name}</h3>
+                        <p className="font-body text-xs font-light text-muted-foreground tracking-wide">{villa.features}</p>
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom row: remaining 3 villas */}
+            <div className="grid md:grid-cols-3 gap-8 md:gap-10">
+              {villas.slice(3).map((villa, i) => (
+                <ScrollReveal key={villa.name} delay={(i + 3) * 0.1}>
+                  <div className="group">
+                    <div className="relative overflow-hidden mb-5 transition-transform duration-700 group-hover:scale-[1.04]" style={{ aspectRatio: "4/3" }}>
+                      <img src={villa.image} alt={villa.name} className="absolute inset-0 w-full h-full object-cover" />
+                      <div className="absolute inset-0 grain-overlay" />
+                    </div>
+                    <div>
+                      <div className="w-6 h-px bg-accent/60 mb-3" />
+                      <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villa.tag}</span>
+                      <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-2 mb-2">{villa.name}</h3>
+                      <p className="font-body text-xs font-light text-muted-foreground tracking-wide">{villa.features}</p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              ))}
+            </div>
           </div>
         </div>
       </section>
