@@ -18,13 +18,13 @@ const activityCards = [
     title: "Luxurious",
     body: "Nature has never felt like this. Immersed in breathtaking landscapes yet wrapped in every comfort you refuse to leave behind — this is the wild, refined. Where the untamed world meets impeccable service, and adventure feels less like a departure from your life and more like the fullest expression of it.",
     closing: "Your Vacation. Your Rules.",
-    image: "https://image2url.com/r2/default/images/1773278020657-0cd2b50c-beb1-4005-980f-b0f9f0a96d32.jpg",
+    image: "/images/experence page Choose Your Vibe luxirious.png",
   },
   {
     title: "Tranquillo",
     body: "This is stillness with taste. A sanctuary where time slows, nature breathes, and you finally do too. No agenda but your own. No noise but the kind that heals. Tranquillo is where couples rediscover each other, and individuals rediscover themselves in the most beautifully indulgent way possible.",
     closing: "Your Health. Your Wealth.",
-    image: tranquilloActivity,
+    image: "/images/experence page Choose Your Vibe tranquillo.png",
   },
   {
     title: "Transformative",
@@ -36,7 +36,7 @@ const activityCards = [
     title: "Adventure",
     body: "Some dreams deserve a professional. From weeklong escapes to the bucket list you've been quietly building for years, our world class travel planners orchestrate every detail so you arrive as a guest, not a planner. Your itinerary, your vision, your pace handled with the same precision and care you bring to everything else that matters. This one's for you.",
     closing: "Adventure Awaits You.",
-    image: adventureActivity,
+    image: "/images/experence page Choose Your Vibe adventure.png",
   },
 ];
 
@@ -46,7 +46,7 @@ const stayCards = [
     title: "Costa Rica",
     body: "Secretly tucked away from tourist hotspots lays a nature lovers sanctuary that whispers of untamed luxury with its iconic Whale's Tail sandbar, where young affluent explorers revel in private mountain villas with ocean vistas, intimate humpback whale encounters, cascading hidden waterfalls, and eco-chic retreats amid lush rainforests teeming with wildlife.",
     gradient: "bg-gradient-to-br from-[#0e1810] via-[#1a3020] to-[#0d1f12]",
-    bgImage: "https://image2url.com/r2/default/images/1773280969793-278f82f2-338d-4578-960d-778e1eaee9e4.jpg"
+    bgImage: "/images/Experience page costa rica image.png"
   },
   {
     status: "Coming Soon",
@@ -67,7 +67,7 @@ const stayCards = [
     title: "Belize",
     body: "Hidden on the turquoise-lapped west coast of Ambergris Caye, lures escapists to its crystalline shallows, over-water swings, pineapple-garnished concoctions at chic beach bars, and laid-back Caribbean vibes, private sun-drenched oases, golf-cart adventures, reef-proximate luxury, and effortless barefoot sophistication amid Belize's iconic island allure.",
     gradient: "bg-gradient-to-br from-[#0a1a18] via-[#152d28] to-[#0a1515]",
-    bgImage: "https://image2url.com/r2/default/images/1773278410060-9fc8a799-1806-4f88-8150-ad880ad73a01.jpg"
+    bgImage: "/images/Experience page belize image.png"
   },
 ];
 
@@ -156,7 +156,7 @@ export default function Experiences() {
             </ScrollReveal>
             <ScrollReveal>
               <div className="relative w-full overflow-hidden" style={{ aspectRatio: "3/4" }}>
-                <img src="https://image2url.com/r2/default/images/1773340815158-51e5dbf2-76d2-40c9-85b9-06985e84f74c.jpeg" alt="Luxury travel setting" className="absolute inset-0 w-full h-full object-cover" />
+                <img src="/images/Experience page travel made intimate .png" alt="Luxury travel setting" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 grain-overlay" />
               </div>
             </ScrollReveal>
@@ -270,7 +270,7 @@ export default function Experiences() {
                 {stayCards.map((card) => (
                     <ScrollReveal key={card.title}>
                         <div className="relative min-h-[60vh] md:min-h-[80vh] overflow-hidden">
-                            <div className={cn("absolute inset-0 transition-transform duration-[1200ms] ease-out hover:scale-[1.02]", card.gradient)} style={card.bgImage ? { backgroundImage: `url(${card.bgImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}} />
+                            <div className={cn("absolute inset-0 transition-transform duration-[1200ms] ease-out hover:scale-[1.02]", card.gradient)} style={card.bgImage ? { backgroundImage: `url('${card.bgImage}')`, backgroundSize: 'cover', backgroundPosition: 'center' } : {}} />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent" />
                             <div className="absolute inset-0 grain-overlay" />
                             <div className="relative z-10 flex flex-col justify-end h-full min-h-[60vh] md:min-h-[80vh] pb-16 md:pb-24 px-8 md:px-20 lg:px-28 text-left">

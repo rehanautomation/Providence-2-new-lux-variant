@@ -48,14 +48,12 @@ export default function Responsibility() {
 
       {/* ═══════ SECTION 1 — HERO ═══════ */}
       <section className="relative min-h-screen flex items-end md:items-center overflow-hidden" style={{
-        backgroundImage: `url(https://image2url.com/r2/default/images/1773279788870-cc9ba665-8203-4372-abb7-2212873c0130.jpeg)`,
+        backgroundImage: `url('/images/our responsibility page hero image.png')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}>
-        {/* Deep forest green dominant bg */}
-        <div className="absolute inset-0 bg-primary/70" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,hsl(145,28%,24%,0.6),transparent_70%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_70%,hsl(145,20%,14%,0.4),transparent_60%)]" />
+        {/* Slight dark filter for text readability */}
+        <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 grain-overlay" />
 
         <div className="relative z-10 px-6 md:px-12 pb-20 md:pb-0 max-w-3xl mx-auto md:mx-0">

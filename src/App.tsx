@@ -27,7 +27,7 @@ const App = () => (
           <Route path="/membership" element={<Membership />} />
           <Route path="/responsibility" element={<Responsibility />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/residences" element={<Residences />} />
+          {/* <Route path="/residences" element={<Residences />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

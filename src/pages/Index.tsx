@@ -5,21 +5,15 @@ import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import SectionHeading from "@/components/SectionHeading";
 import { motion } from "framer-motion";
-import heroHome2 from "@/assets/hero-home-2.jpeg";
-import villaForest2 from "@/assets/villa-forest-2.jpeg";
-import villaOcean from "@/assets/villa-ocean.png";
-import villaMountain from "@/assets/villa-mountain.png";
-import villaValley from "@/assets/villa-valley.png";
-import villaCliff2 from "@/assets/villa-cliff-2.jpeg";
 import { cn } from "@/lib/utils";
 
 const villas = [
-  { tag: "Forest Sanctuary", name: "The Verdant Mirror", features: "Private Thermal Pool · King Sanctuary · Forest View", image: villaForest2 },
-  { tag: "Coastal Reserve", name: "The Horizon Reflection", features: "Ocean Vista · Private Terrace · Sunrise Facing", image: villaOcean },
+  { tag: "Forest Sanctuary", name: "The Verdant Mirror", features: "Private Thermal Pool · King Sanctuary · Forest View", image: "/images/Home page Forest sanctuaryThe Verdant Mirror.png" },
+  { tag: "Coastal Reserve", name: "The Horizon Reflection", features: "Ocean Vista · Private Terrace · Sunrise Facing", image: "/images/Home page Coastal ReserveThe Horizon Reflection.png" },
   { tag: "Desert Retreat", name: "The Dune Mirror", features: "Stargazing Deck · Outdoor Jacuzzi · Golden Hour View", image: "https://image2url.com/r2/default/images/1773336759992-2c5cde98-9d0a-4a38-bef0-4c55434a5be7.png" },
   { tag: "Mountain Perch", name: "The Summit Glass", features: "Peak Panorama · Heated Floors · Alpine Serenity", image: "https://image2url.com/r2/default/images/1773323526710-c2d98a22-a667-459e-8790-4a747c8b064d.jpeg" },
   { tag: "Valley Refuge", name: "The Canopy Mirror", features: "Garden Integration · Rain Shower · Valley Views", image: "https://image2url.com/r2/default/images/1773323394344-ace41f63-188e-43eb-9234-b5f88b3f718e.jpeg" },
-  { tag: "Clifftop Estate", name: "The Edge Reflection", features: "Infinity Pool · Butler Service · 360° Vistas", image: villaCliff2 },
+  { tag: "Clifftop Estate", name: "The Edge Reflection", features: "Infinity Pool · Butler Service · 360° Vistas", image: "/images/Home page Clifftop EstateThe Edge Reflection.png" },
 ];
 
 const pillars = [
@@ -98,7 +92,7 @@ export default function Index() {
       {/* Mirror House */}
       <section 
         className="relative min-h-[85vh] flex items-center py-20 px-6"
-        style={{ backgroundImage: `url(${heroHome2})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        style={{ backgroundImage: `url('/images/Home page Where Architecture Disappears Into Nature.png')`, backgroundSize: "cover", backgroundPosition: "center" }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
         <div className="absolute inset-0 grain-overlay" />
@@ -130,37 +124,40 @@ export default function Index() {
           />
 
           <div className="mt-16">
+            {/* Top section: Magazine asymmetric layout */}
             <div className="grid md:grid-cols-3 gap-8 md:gap-10 mb-8 md:mb-10">
-              {/* First villa */}
+              {/* Hero card spans md:col-span-2 at aspect 4/3 */}
               <ScrollReveal className="md:col-span-2">
                 <div className="group">
-                  <div className="relative overflow-hidden mb-5 transition-transform duration-700 group-hover:scale-[1.04]" style={{ aspectRatio: "16/9" }}>
+                  <div className="relative overflow-hidden mb-5 transition-transform duration-700 group-hover:scale-[1.04]" style={{ aspectRatio: "4/3" }}>
                     <img src={villas[0].image} alt={villas[0].name} className="absolute inset-0 w-full h-full object-cover" />
                     <div className="absolute inset-0 grain-overlay" />
-                  </div>
-                  <div>
-                    <div className="w-6 h-px bg-accent/60 mb-3" />
-                    <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villas[0].tag}</span>
-                    <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-2 mb-2">{villas[0].name}</h3>
-                    <p className="font-body text-xs font-light text-muted-foreground tracking-wide">{villas[0].features}</p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                    <div className="absolute bottom-0 left-0 p-6">
+                      <div className="w-6 h-px bg-accent/60 mb-3" />
+                      <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villas[0].tag}</span>
+                      <h3 className="font-heading text-xl md:text-2xl font-light text-white mt-2 mb-2">{villas[0].name}</h3>
+                      <p className="font-body text-xs font-light text-white/70 tracking-wide">{villas[0].features}</p>
+                    </div>
                   </div>
                 </div>
               </ScrollReveal>
 
-              {/* Next two villas stacked */}
-              <div className="grid grid-rows-2 gap-8 md:gap-10">
+              {/* Right column: 2 instances stacked to match height */}
+              <div className="flex flex-col gap-8 h-full">
                 {villas.slice(1, 3).map((villa, i) => (
-                  <ScrollReveal key={villa.name} delay={(i + 1) * 0.1}>
-                    <div className="group">
-                      <div className="relative overflow-hidden mb-5 transition-transform duration-700 group-hover:scale-[1.04]" style={{ aspectRatio: "4/3" }}>
+                  <ScrollReveal key={villa.name} delay={(i + 1) * 0.1} className="flex-1 w-full h-full">
+                    <div className="group flex-1 w-full h-full flex flex-col">
+                      <div className="relative overflow-hidden transition-transform duration-700 group-hover:scale-[1.04] flex-1 w-full h-full">
                         <img src={villa.image} alt={villa.name} className="absolute inset-0 w-full h-full object-cover" />
                         <div className="absolute inset-0 grain-overlay" />
-                      </div>
-                      <div>
-                        <div className="w-6 h-px bg-accent/60 mb-3" />
-                        <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villa.tag}</span>
-                        <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-2 mb-2">{villa.name}</h3>
-                        <p className="font-body text-xs font-light text-muted-foreground tracking-wide">{villa.features}</p>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                        <div className="absolute bottom-0 left-0 p-6">
+                          <div className="w-6 h-px bg-accent/60 mb-3" />
+                          <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villa.tag}</span>
+                          <h3 className="font-heading text-xl md:text-2xl font-light text-white mt-2 mb-2">{villa.name}</h3>
+                          <p className="font-body text-xs font-light text-white/70 tracking-wide">{villa.features}</p>
+                        </div>
                       </div>
                     </div>
                   </ScrollReveal>
@@ -168,20 +165,21 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Bottom row: remaining 3 villas */}
-            <div className="grid md:grid-cols-3 gap-8 md:gap-10">
+            {/* Bottom section: remaining 3 villas in equal columns */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
               {villas.slice(3).map((villa, i) => (
                 <ScrollReveal key={villa.name} delay={(i + 3) * 0.1}>
                   <div className="group">
                     <div className="relative overflow-hidden mb-5 transition-transform duration-700 group-hover:scale-[1.04]" style={{ aspectRatio: "4/3" }}>
                       <img src={villa.image} alt={villa.name} className="absolute inset-0 w-full h-full object-cover" />
                       <div className="absolute inset-0 grain-overlay" />
-                    </div>
-                    <div>
-                      <div className="w-6 h-px bg-accent/60 mb-3" />
-                      <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villa.tag}</span>
-                      <h3 className="font-heading text-xl md:text-2xl font-light text-foreground mt-2 mb-2">{villa.name}</h3>
-                      <p className="font-body text-xs font-light text-muted-foreground tracking-wide">{villa.features}</p>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                      <div className="absolute bottom-0 left-0 p-6">
+                        <div className="w-6 h-px bg-accent/60 mb-3" />
+                        <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villa.tag}</span>
+                        <h3 className="font-heading text-xl md:text-2xl font-light text-white mt-2 mb-2">{villa.name}</h3>
+                        <p className="font-body text-xs font-light text-white/70 tracking-wide">{villa.features}</p>
+                      </div>
                     </div>
                   </div>
                 </ScrollReveal>

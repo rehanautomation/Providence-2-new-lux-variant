@@ -36,21 +36,21 @@ const pillars = [
     copy: "Your time is your most valuable asset and we treat it accordingly. Whether you're planning a spontaneous escape or mapping out an entire year of restorative travel, your dedicated Travel Ambassador handles every detail with precision and genuine care. Peak season. Off-peak solitude. Last-minute or long-planned. We're already on it.",
     landscape: "mountain" as const,
     gradient: "from-[hsl(33,27%,38%)] via-[hsl(30,22%,45%)] to-[hsl(35,25%,35%)]",
-    image: "https://image2url.com/r2/default/images/1773198904925-c7c21b3d-02a5-4205-9a2f-648d7c143043.jpeg",
+    image: "/images/membership page conceriege service.png",
   },
   {
     title: "Culinary Experience",
     copy: "This is food as philosophy. Plant-based, chef-crafted, and grown steps from your table. Every plate tells the story of the land it came from. Michelin star & local chefs compose each meal with artistry and intention, from vibrant harvest bowls to exquisite desserts and handcrafted mocktails that rival anything you've sipped anywhere in the world. Nourishment, elevated to an experience.",
     landscape: "desert" as const,
     gradient: "from-[hsl(37,40%,50%)] via-[hsl(35,35%,58%)] to-[hsl(33,30%,45%)]",
-    image: "https://image2url.com/r2/default/images/1773198966777-e483cf36-23da-4914-a0de-c161352d2d44.jpeg",
+    image: "/images/Culinary Experience section of memebership page .png",
   },
   {
     title: "Entertainment",
     copy: "The evenings here are alive. Dancing nights under open skies. Campfire conversations that last until the stars demand you look up. Live local artists, cooking experiences, mocktail parties, and connections formed with people who simply get it. This is community for those who've outgrown the ordinary, where every gathering feels like the best night of a trip you never want to end.",
     landscape: "ocean" as const,
     gradient: "from-[hsl(220,25%,22%)] via-[hsl(210,20%,30%)] to-[hsl(33,20%,35%)]",
-    image: "https://image2url.com/r2/default/images/1773279080738-eedc0934-e9b9-476b-af97-9766f0629f86.jpeg",
+    image: "/images/Entertainment section memebership page .png",
   },
 ];
 
