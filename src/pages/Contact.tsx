@@ -11,6 +11,8 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import villaCliff2 from "@/assets/villa-cliff-2.jpeg";
+import heroHome2 from "@/assets/hero-home-2.jpeg";
 
 const interests = [
   "Membership Information",
@@ -228,14 +230,16 @@ export default function Contact() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {[
-              { landscape: "forest" as const, label: "Private Sanctuaries" },
-              { landscape: "desert" as const, label: "Culinary Experiences" },
-              { landscape: "valley" as const, label: "Wellness & Renewal" },
-              { landscape: "mountain" as const, label: "Founding Membership" },
+              { image: villaCliff2, label: "Private Sanctuaries" },
+              { image: "https://image2url.com/r2/default/images/1773198966777-e483cf36-23da-4914-a0de-c161352d2d44.jpeg", label: "Culinary Experiences" },
+              { image: "https://image2url.com/r2/default/images/1773198873050-dfe406f8-c416-4687-a3b5-0ebec289280f.jpeg", label: "Wellness & Renewal" },
+              { image: heroHome2, label: "Founding Membership" },
             ].map((tile, i) => (
               <ScrollReveal key={tile.label} delay={i * 0.1}>
                 <div className="group">
-                  <MirrorVillaPlaceholder landscape={tile.landscape} aspectRatio="4/3" className="mb-4 opacity-80" />
+                  <div className="relative overflow-hidden mb-4 rounded-sm" style={{ aspectRatio: "4/3" }}>
+                    <img src={tile.image} alt={tile.label} className="w-full h-full object-cover absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+                  </div>
                   <p className="font-body text-[11px] tracking-[0.15em] uppercase text-[hsl(var(--cream))]/50 text-center">
                     {tile.label}
                   </p>

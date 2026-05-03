@@ -34,9 +34,15 @@ const activityCards = [
   },
   {
     title: "Adventure",
+    body: "For those who've conquered the boardroom and now hunger for the mountain. From horseback riding through mist-covered trails and summiting dormant volcanoes, to ziplining across ancient rainforest canopies, we curate high-octane experiences that push boundaries. Your adrenaline, perfectly orchestrated.",
+    closing: "Personalized Adventure.",
+    image: "/images/experence page Choose Your Vibe adventure.png",
+  },
+  {
+    title: "Personalized",
     body: "Some dreams deserve a professional. From weeklong escapes to the bucket list you've been quietly building for years, our world class travel planners orchestrate every detail so you arrive as a guest, not a planner. Your itinerary, your vision, your pace handled with the same precision and care you bring to everything else that matters. This one's for you.",
     closing: "Adventure Awaits You.",
-    image: "/images/experence page Choose Your Vibe adventure.png",
+    image: "/images/personalized section of experience page.png",
   },
 ];
 
@@ -230,10 +236,11 @@ export default function Experiences() {
                         : "md:py-10 md:pr-6 md:pl-10"
                     )}
                   >
-                    <div className="w-full h-full min-h-[256px] md:min-h-[460px] overflow-hidden rounded-sm shadow-2xl relative">
+                    <div className="w-full h-full min-h-[256px] md:min-h-[460px] overflow-hidden rounded-sm shadow-2xl transition-shadow duration-700 group-hover:shadow-[0_25px_60px_rgba(0,0,0,0.5)] relative">
                       <div className="absolute inset-0 w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-105">
                         <img src={card.image} alt={card.title} className="absolute inset-0 w-full h-full object-cover" />
                         <div className="absolute inset-0 grain-overlay" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                       </div>
                     </div>
                   </div>
@@ -314,14 +321,7 @@ export default function Experiences() {
             </ScrollReveal>
           </div>
 
-          <ScrollReveal delay={0.3}>
-            <div className="mt-20 text-center">
-              <p className="font-body text-xs font-light text-muted-foreground/80 leading-relaxed max-w-md mx-auto">
-                <span className="font-medium text-accent/80">Powered by GivBux</span><br/>
-                Through our partnership with GivBux, every charitable contribution is tracked, verified, and reported back to you. Complete transparency ensures that your impact is real, measurable, and meaningful.
-              </p>
-            </div>
-          </ScrollReveal>
+
         </div>
       </section>
 

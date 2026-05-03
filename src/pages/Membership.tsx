@@ -29,7 +29,7 @@ const pillars = [
     copy: "This is where burnout meets its match. Each resort hosts a resident team of wellness experts, fitness, nutrition with world-class specialists rotating through regularly. This isn't a spa add-on. It's a full recalibration of how you feel, how you eat, and how you see the life you're returning to.",
     landscape: "valley" as const,
     gradient: "from-[hsl(145,25%,35%)] via-[hsl(130,20%,42%)] to-[hsl(145,22%,30%)]",
-    image: "https://image2url.com/r2/default/images/1773198873050-dfe406f8-c416-4687-a3b5-0ebec289280f.jpeg",
+    image: "/images/membershp page wellnes section .png",
   },
   {
     title: "Concierge Services",
@@ -101,43 +101,41 @@ export default function Membership() {
       <Header />
 
       {/* ═══════ SECTION 1 — HERO ═══════ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-background to-background" />
+      <section className="relative min-h-screen overflow-hidden">
+        <img src="/images/membership page hero image .png" alt="Membership Hero" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-transparent" />
         <div className="absolute inset-0 grain-overlay" />
-        <div className="container mx-auto px-6 w-full relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-start py-24">
-            <div className="pt-16 md:pt-0">
-              <motion.div {...motionProps(0)}>
-                <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-6 block">
-                  Club Providence · Membership
-                </span>
-              </motion.div>
-              <motion.div {...motionProps(0.2)}>
-                <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-light text-foreground leading-[1.1] mb-8">
-                  The Smartest Way<br />To Travel
-                </h1>
-              </motion.div>
-              <motion.div {...motionProps(0.4)}>
-                <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-4 max-w-xl">
-                  This isn't about traveling more, it's about never settling again. One membership unlocks private access to a global collection of luxury eco-sanctuaries, preferred rates, and priority privileges without ownership burdens, planning fatigue, or compromise.
-                </p>
-              </motion.div>
-              <motion.div {...motionProps(0.6)}>
-                <p className="font-heading text-base md:text-lg font-light text-muted-foreground/70 italic mb-12">
-                  This is not a vacation club. This is simply a better way to live.
-                </p>
-              </motion.div>
-              <motion.div {...motionProps(0.8)}>
-                <Button variant="hero" size="lg" asChild>
-                  <Link to="/contact">Claim Your Membership</Link>
-                </Button>
-              </motion.div>
-            </div>
-            <motion.div {...motionProps(0.2)} className="hidden md:block h-full p-8">
-              <img src="https://image2url.com/r2/default/images/1773342203677-c3e35392-d196-400d-9d86-7dba13129fcb.jpeg" alt="Membership Hero" className="w-full h-full object-cover" />
+        
+        <div className="relative z-10 flex flex-col justify-center min-h-screen max-w-7xl mx-auto px-6 md:px-12 pt-24">
+          <div className="max-w-xl">
+            <motion.div {...motionProps(0)}>
+              <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-6 block">
+                Club Providence · Membership
+              </span>
+            </motion.div>
+            <motion.div {...motionProps(0.2)}>
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-light text-white leading-[1.1] mb-8">
+                The Smartest Way<br />To Travel
+              </h1>
+            </motion.div>
+            <motion.div {...motionProps(0.4)}>
+              <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed mb-4 max-w-xl">
+                This isn't about traveling more, it's about never settling again. One membership unlocks private access to a global collection of luxury eco-sanctuaries, preferred rates, and priority privileges without ownership burdens, planning fatigue, or compromise.
+              </p>
+            </motion.div>
+            <motion.div {...motionProps(0.6)}>
+              <p className="font-heading text-base md:text-lg font-light text-white/70 italic mb-12">
+                This is not a vacation club. This is simply a better way to live.
+              </p>
+            </motion.div>
+            <motion.div {...motionProps(0.8)}>
+              <Button variant="hero" size="lg" asChild>
+                <Link to="/contact">Claim Your Membership</Link>
+              </Button>
             </motion.div>
           </div>
         </div>
+
         <motion.div
           className="absolute bottom-10 left-1/2 -translate-x-1/2"
           animate={{ y: [0, 8, 0] }}
@@ -148,43 +146,37 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 2 — SIX PILLARS ═══════ */}
-      <section className="py-20 md:py-32 px-6">
-        <div className="max-w-7xl mx-auto">
+      <section>
+        <div className="py-20 md:py-32 max-w-7xl mx-auto px-6">
           <SectionHeading title="What Membership Unlocks" />
+        </div>
 
-          <div className="mt-16 space-y-0">
-            {pillars.map((pillar, i) => {
-              const imageLeft = i % 2 === 0;
-              return (
-                <ScrollReveal key={pillar.title} delay={0.05}>
-                  <div className={`grid md:grid-cols-2 gap-8 md:gap-16 items-center py-16 md:py-24 ${i > 0 ? "border-t border-border/20" : ""}`}>
-                    {/* Image */}
-                    <div className={imageLeft ? "order-1" : "order-1 md:order-2"}>
-                      <AspectRatio ratio={16/10} className="w-full">
-                        {(pillar as any).image ? (
-                          <img src={(pillar as any).image} alt={pillar.title} className="w-full h-full object-cover" />
-                        ) : (
-                          <div className={`bg-gradient-to-br ${pillar.gradient} w-full h-full`} />
-                        )}
-                      </AspectRatio>
-                    </div>
-                    {/* Copy */}
-                    <div className={imageLeft ? "order-2" : "order-2 md:order-1"}>
-                      <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent mb-4 block">
-                        0{i + 1}
-                      </span>
-                      <h3 className="font-heading text-3xl md:text-4xl font-light text-foreground mb-6">
-                        {pillar.title}
-                      </h3>
-                      <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed">
-                        {pillar.copy}
-                      </p>
-                    </div>
-                  </div>
+        <div className="relative">
+          {pillars.map((pillar, i) => (
+            <div key={pillar.title} className="relative min-h-screen flex items-center justify-center overflow-hidden sticky top-0">
+              {pillar.image ? (
+                <img src={pillar.image} alt={pillar.title} className="absolute inset-0 w-full h-full object-cover" />
+              ) : (
+                <div className={`absolute inset-0 bg-gradient-to-br ${pillar.gradient} w-full h-full`} />
+              )}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
+              <div className="absolute inset-0 grain-overlay" />
+              <div className="relative z-10 text-center max-w-3xl mx-auto px-6">
+                <ScrollReveal>
+                  <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent">
+                    0{i + 1}
+                  </span>
+                  <div className="divider-gold mx-auto my-6" />
+                  <h3 className="font-heading text-5xl md:text-7xl font-light text-white leading-tight mb-8">
+                    {pillar.title}
+                  </h3>
+                  <p className="font-body text-sm md:text-base font-light text-white/75 leading-relaxed max-w-2xl mx-auto">
+                    {pillar.copy}
+                  </p>
                 </ScrollReveal>
-              );
-            })}
-          </div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -365,18 +357,17 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 9 — PRIORITY. ALWAYS. ═══════ */}
-      <section className="py-40 px-6 relative bg-cover bg-center" style={{ backgroundImage: "url(https://image2url.com/r2/default/images/1773325888097-362faa3e-be9c-42c0-af18-0de2bd1c7c6d.png)" }}>
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="max-w-3xl mx-auto text-center relative">
+      <section className="py-40 px-6 relative bg-primary">
+        <div className="max-w-5xl mx-auto text-center relative">
           <ScrollReveal>
             <div className="divider-gold mx-auto mb-10" />
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-white leading-tight mb-8">
+            <h2 className="font-heading text-6xl md:text-8xl lg:text-[120px] font-light text-white leading-none tracking-tight mb-12">
               Priority. Always.
             </h2>
-            <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="font-body text-sm md:text-base font-light text-white/70 leading-relaxed mb-12 max-w-2xl mx-auto">
               As a Member, priority booking, exclusive offers, and preferred pricing are simply part of the standard. Because luxury without value isn't luxury, it's performance.
             </p>
-            <p className="font-heading text-xl md:text-2xl font-light text-white/70 italic max-w-2xl mx-auto">
+            <p className="font-heading text-lg md:text-xl font-light text-accent italic max-w-2xl mx-auto">
               This is the smarter, more intentional way to experience the world. One membership. Zero compromise. This is Club Providence.
             </p>
           </ScrollReveal>

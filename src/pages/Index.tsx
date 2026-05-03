@@ -8,12 +8,10 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const villas = [
-  { tag: "Forest Sanctuary", name: "The Verdant Mirror", features: "Private Thermal Pool · King Sanctuary · Forest View", image: "/images/Home page Forest sanctuaryThe Verdant Mirror.png" },
-  { tag: "Coastal Reserve", name: "The Horizon Reflection", features: "Ocean Vista · Private Terrace · Sunrise Facing", image: "/images/Home page Coastal ReserveThe Horizon Reflection.png" },
-  { tag: "Desert Retreat", name: "The Dune Mirror", features: "Stargazing Deck · Outdoor Jacuzzi · Golden Hour View", image: "https://image2url.com/r2/default/images/1773336759992-2c5cde98-9d0a-4a38-bef0-4c55434a5be7.png" },
-  { tag: "Mountain Perch", name: "The Summit Glass", features: "Peak Panorama · Heated Floors · Alpine Serenity", image: "https://image2url.com/r2/default/images/1773323526710-c2d98a22-a667-459e-8790-4a747c8b064d.jpeg" },
-  { tag: "Valley Refuge", name: "The Canopy Mirror", features: "Garden Integration · Rain Shower · Valley Views", image: "https://image2url.com/r2/default/images/1773323394344-ace41f63-188e-43eb-9234-b5f88b3f718e.jpeg" },
   { tag: "Clifftop Estate", name: "The Edge Reflection", features: "Infinity Pool · Butler Service · 360° Vistas", image: "/images/Home page Clifftop EstateThe Edge Reflection.png" },
+  { tag: "Forest Sanctuary", name: "The Verdant Mirror", features: "Private Thermal Pool · King Sanctuary · Forest View", image: "/images/verdant mirror villa home page (new).png" },
+  { tag: "Coastal Reserve", name: "The Horizon Reflection", features: "Ocean Vista · Private Terrace · Sunrise Facing", image: "/images/Home page Coastal ReserveThe Horizon Reflection.png" },
+  { tag: "Mountain Perch", name: "The Summit Glass", features: "Peak Panorama · Heated Floors · Alpine Serenity", image: "https://image2url.com/r2/default/images/1773323526710-c2d98a22-a667-459e-8790-4a747c8b064d.jpeg" },
 ];
 
 const pillars = [
@@ -35,12 +33,7 @@ const pillars = [
   },
 ];
 
-const testimonials = [
-  { quote: "There are places you visit, and places that visit you. Providence is the latter.", author: "Founding Member", location: "Cape Town" },
-  { quote: "We came to rest. We left transformed. The difference matters.", author: "Legacy Member", location: "New York" },
-];
 
-const pressNames = ["Condé Nast", "Travel + Leisure", "Wallpaper*", "Robb Report"];
 
 export default function Index() {
   return (
@@ -49,6 +42,7 @@ export default function Index() {
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <img src="/images/Hero section hero image home page.png" alt="Providence Resort Hero" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-background/95" />
         <div className="absolute inset-0 grain-overlay" />
 
@@ -57,11 +51,11 @@ export default function Index() {
             <p className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-8">Club Providence · Est. 2025</p>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.8 }}>
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-light text-foreground leading-[1.1]">
-              Designed for Restoration. <span className="text-gradient-gold">Defined by Intention.</span>
+            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-light text-white leading-[1.1]">
+              Designed for Restoration. <span className="text-accent">Defined by Intention.</span>
             </h1>
           </motion.div>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1, duration: 0.8 }}>
+          <motion.div className="mt-16" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1, duration: 0.8 }}>
             <Button variant="hero" size="lg" asChild>
               <Link to="/experiences">Begin Your Journey</Link>
             </Button>
@@ -107,7 +101,7 @@ export default function Index() {
               <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed mb-8">
                 Our sanctuaries are not built upon the landscape. They are woven into it. Every villa is a living mirror — reflecting the sky, the forest, the mountains that surround it. A space that becomes invisible so that you can become visible.
               </p>
-              <Button variant="ghost-gold" asChild className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-accent after:transition-all after:duration-500 hover:after:w-full">
+              <Button variant="hero" asChild>
                 <Link to="/experiences">Explore Our Sanctuaries →</Link>
               </Button>
             </ScrollReveal>
@@ -124,12 +118,11 @@ export default function Index() {
           />
 
           <div className="mt-16">
-            {/* Top section: Magazine asymmetric layout */}
-            <div className="grid md:grid-cols-3 gap-8 md:gap-10 mb-8 md:mb-10">
-              {/* Hero card spans md:col-span-2 at aspect 4/3 */}
-              <ScrollReveal className="md:col-span-2">
+            {/* Top section: Hero card */}
+            <div className="mb-8 md:mb-10">
+              <ScrollReveal>
                 <div className="group">
-                  <div className="relative overflow-hidden mb-5 transition-transform duration-700 group-hover:scale-[1.04]" style={{ aspectRatio: "4/3" }}>
+                  <div className="relative overflow-hidden mb-5 transition-transform duration-700 group-hover:scale-[1.04]" style={{ aspectRatio: "16/9" }}>
                     <img src={villas[0].image} alt={villas[0].name} className="absolute inset-0 w-full h-full object-cover" />
                     <div className="absolute inset-0 grain-overlay" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
@@ -142,33 +135,12 @@ export default function Index() {
                   </div>
                 </div>
               </ScrollReveal>
-
-              {/* Right column: 2 instances stacked to match height */}
-              <div className="flex flex-col gap-8 h-full">
-                {villas.slice(1, 3).map((villa, i) => (
-                  <ScrollReveal key={villa.name} delay={(i + 1) * 0.1} className="flex-1 w-full h-full">
-                    <div className="group flex-1 w-full h-full flex flex-col">
-                      <div className="relative overflow-hidden transition-transform duration-700 group-hover:scale-[1.04] flex-1 w-full h-full">
-                        <img src={villa.image} alt={villa.name} className="absolute inset-0 w-full h-full object-cover" />
-                        <div className="absolute inset-0 grain-overlay" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                        <div className="absolute bottom-0 left-0 p-6">
-                          <div className="w-6 h-px bg-accent/60 mb-3" />
-                          <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villa.tag}</span>
-                          <h3 className="font-heading text-xl md:text-2xl font-light text-white mt-2 mb-2">{villa.name}</h3>
-                          <p className="font-body text-xs font-light text-white/70 tracking-wide">{villa.features}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </ScrollReveal>
-                ))}
-              </div>
             </div>
 
             {/* Bottom section: remaining 3 villas in equal columns */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-              {villas.slice(3).map((villa, i) => (
-                <ScrollReveal key={villa.name} delay={(i + 3) * 0.1}>
+              {villas.slice(1).map((villa, i) => (
+                <ScrollReveal key={villa.name} delay={(i + 1) * 0.1}>
                   <div className="group">
                     <div className="relative overflow-hidden mb-5 transition-transform duration-700 group-hover:scale-[1.04]" style={{ aspectRatio: "4/3" }}>
                       <img src={villa.image} alt={villa.name} className="absolute inset-0 w-full h-full object-cover" />
@@ -231,68 +203,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Impact */}
-      <section className="py-20 md:py-32 px-6">
-        <div className="max-w-5xl mx-auto">
-          <ScrollReveal>
-            <p className="font-heading text-2xl md:text-3xl lg:text-4xl font-light text-foreground text-center leading-relaxed italic mb-16">
-              Providence Resort stands as a testament to conscious living.
-            </p>
-          </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-10 mb-16">
-            {[
-              { stat: "10%", desc: "of every membership funds global initiatives" },
-              { stat: "H₂O", desc: "Clean water projects via CharityWater.org" },
-              { stat: "∞", desc: "Ripple effect of every journey taken" },
-            ].map((item, i) => (
-              <ScrollReveal key={item.stat} delay={i * 0.1}>
-                <div className="text-center">
-                  <span className="font-heading text-5xl md:text-6xl text-gradient-gold">{item.stat}</span>
-                  <p className="font-body text-sm font-light text-muted-foreground mt-3 leading-relaxed">{item.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <ScrollReveal delay={0.2}>
-            <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed text-center max-w-3xl mx-auto">
-              We are dedicated to sustainable luxury, personal transformation, and meaningful global impact. Every experience is an opportunity to grow, to understand, to connect.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20 md:py-32 px-6 bg-card">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 md:gap-20 mb-20">
-            {testimonials.map((t, i) => (
-              <ScrollReveal key={i} delay={i * 0.15}>
-                <blockquote className="border-l-2 border-accent/50 pl-8">
-                  <p className="font-heading text-xl md:text-2xl font-light text-foreground leading-relaxed italic mb-6">
-                    "{t.quote}"
-                  </p>
-                  <footer className="font-body text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                    — {t.author} · {t.location}
-                  </footer>
-                </blockquote>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          {/* Press */}
-          <ScrollReveal>
-            <div className="flex flex-wrap justify-center gap-8 md:gap-16 pt-12 border-t border-border/40">
-              {pressNames.map((name) => (
-                <span key={name} className="font-heading text-lg md:text-xl font-light text-muted-foreground/50 tracking-wider italic">
-                  {name}
-                </span>
-              ))}
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
 
       {/* Final CTA */}
       <section className="py-28 md:py-40 px-6">
@@ -300,10 +211,10 @@ export default function Index() {
           <ScrollReveal>
             <div className="divider-gold mx-auto mb-10" />
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-6">
-              Life is too short for mere existence.
+              Life's Too Short For Should Haves.
             </h2>
             <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12">
-             It's a life, chosen deliberately by those who value time above all else, and refuse to spend it anywhere that doesn't deserve it.
+             Why not have it all?
             </p>
           </ScrollReveal>
 
