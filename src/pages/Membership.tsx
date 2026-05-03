@@ -153,7 +153,7 @@ export default function Membership() {
 
         <div className="relative">
           {pillars.map((pillar, i) => (
-            <div key={pillar.title} className="relative min-h-screen flex items-center justify-center overflow-hidden sticky top-0">
+            <div key={pillar.title} className="relative min-h-screen flex items-center justify-center overflow-hidden md:sticky md:top-0">
               {pillar.image ? (
                 <img src={pillar.image} alt={pillar.title} className="absolute inset-0 w-full h-full object-cover" />
               ) : (
@@ -327,7 +327,7 @@ export default function Membership() {
             {destinations.map((d, i) => (
               <ScrollReveal key={d.name}>
                 <div className={cn("group", i % 2 !== 0 ? 'bg-background' : 'bg-card')}>
-                  <div className="grid grid-cols-[140px_1fr] min-h-[320px] border-b border-border">
+                  <div className="grid grid-cols-[80px_1fr] md:grid-cols-[140px_1fr] min-h-[320px] border-b border-border">
                     {/* Left Column */}
                     <div className="flex items-center justify-center border-r border-border py-10">
                       <span className="font-heading text-5xl md:text-6xl font-light text-foreground [writing-mode:vertical-rl] [transform:rotate(180deg)] tracking-widest whitespace-nowrap opacity-85 transition-colors duration-500 group-hover:text-accent">
@@ -361,7 +361,7 @@ export default function Membership() {
         <div className="max-w-5xl mx-auto text-center relative">
           <ScrollReveal>
             <div className="divider-gold mx-auto mb-10" />
-            <h2 className="font-heading text-6xl md:text-8xl lg:text-[120px] font-light text-white leading-none tracking-tight mb-12">
+            <h2 className="font-heading text-5xl md:text-7xl lg:text-[120px] font-light text-white leading-none tracking-tight mb-12">
               Priority. Always.
             </h2>
             <p className="font-body text-sm md:text-base font-light text-white/70 leading-relaxed mb-12 max-w-2xl mx-auto">

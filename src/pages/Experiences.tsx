@@ -127,7 +127,7 @@ export default function Experiences() {
 
       {/* Anchor Links */}
       <div className="bg-background static z-10 py-6 border-b border-border/20">
-        <div className="max-w-7xl mx-auto px-6 flex justify-center items-center gap-6 md:gap-10 overflow-x-auto scrollbar-hide">
+        <div className="max-w-7xl mx-auto px-6 flex justify-center items-center gap-6 md:gap-10 overflow-x-auto scrollbar-hide px-6">
           {tabs.map((tab, i) => (
             <button
               key={tab}
@@ -236,7 +236,7 @@ export default function Experiences() {
                         : "md:py-10 md:pr-6 md:pl-10"
                     )}
                   >
-                    <div className="w-full h-full min-h-[256px] md:min-h-[460px] overflow-hidden rounded-sm shadow-2xl transition-shadow duration-700 group-hover:shadow-[0_25px_60px_rgba(0,0,0,0.5)] relative">
+                    <div className="w-full h-full min-h-[300px] md:min-h-[460px] overflow-hidden rounded-sm shadow-2xl transition-shadow duration-700 group-hover:shadow-[0_25px_60px_rgba(0,0,0,0.5)] relative">
                       <div className="absolute inset-0 w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-105">
                         <img src={card.image} alt={card.title} className="absolute inset-0 w-full h-full object-cover" />
                         <div className="absolute inset-0 grain-overlay" />
@@ -282,7 +282,7 @@ export default function Experiences() {
                             <div className="absolute inset-0 grain-overlay" />
                             <div className="relative z-10 flex flex-col justify-end h-full min-h-[60vh] md:min-h-[80vh] pb-16 md:pb-24 px-8 md:px-20 lg:px-28 text-left">
                                 <p className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-5">{card.status}</p>
-                                <h3 className="font-heading text-6xl md:text-8xl lg:text-9xl font-light text-[hsl(var(--cream))] leading-none mb-6">{card.title}</h3>
+                                <h3 className="font-heading text-4xl md:text-8xl lg:text-9xl font-light text-[hsl(var(--cream))] leading-none mb-6">{card.title}</h3>
                                 <div className="w-12 h-px bg-accent mb-6" />
                                 <p className="font-body text-sm font-light text-[hsl(var(--cream))]/65 leading-relaxed max-w-2xl">{card.body}</p>
                             </div>

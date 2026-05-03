@@ -92,7 +92,7 @@ export default function Header() {
       <div
         className={cn(
           "md:hidden overflow-hidden transition-all duration-500 bg-background/95 backdrop-blur-md",
-          menuOpen ? "max-h-80 border-b border-border/50" : "max-h-0"
+          menuOpen ? "max-h-96 border-b border-border/50" : "max-h-0"
         )}
       >
         <nav className="flex flex-col items-center gap-6 py-8">
