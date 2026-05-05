@@ -14,6 +14,10 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+if (typeof window !== "undefined") {
+  window.history.scrollRestoration = "manual";
+}
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>

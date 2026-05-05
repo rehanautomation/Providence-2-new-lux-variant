@@ -56,17 +56,17 @@ const stayCards = [
   },
   {
     status: "Coming Soon",
-    title: "Panama",
-    body: "Panama's emerald Chiriquí Highlands enchants with its eternal spring climate, mist-kissed cloud forests, and world-renowned Geisha coffee estates, where young affluent adventurers indulge in exclusive luxury villas, private volcano summits, cascading waterfalls, and refined outdoor escapades beneath the majestic Volcán Barú.",
-    gradient: "bg-gradient-to-br from-[#0f1a14] via-[#1a2d1e] to-[#0a1510]",
-    bgImage: "https://image2url.com/r2/default/images/1773278152952-1fecba0f-9634-4c3d-8d01-eaa64bd789e8.jpg"
+    title: "UAE",
+    body: "Dubai's gilded horizons enamour with a skyline that defies gravity, desert dunes that whisper of ancient secrets, and world-class luxury that redefines the possible, where young affluent voyagers discover private island retreats, sunset yacht cruises, and Michelin-starred dining beneath the stars.",
+    gradient: "bg-gradient-to-br from-[#1a1200] via-[#2d2000] to-[#1a1500]",
+    bgImage: "/images/UAE NEW IMAGE OUR COLLECTON SECTON .png"
   },
   {
     status: "Coming Soon",
     title: "Grenada",
     body: "Perched in the sun-kissed Caribbean as the seductive Spice Isle, Grenada charms its explorers with heady scents of nutmeg, cinnamon, and cocoa drifting from verdant plantations, iconic powdery shores, elite underwater sculpture dives, rainforest waterfalls, Creole gourmet feasts, yacht escapes, and pulsing island rhythm.",
     gradient: "bg-gradient-to-br from-[#0e1520] via-[#1a2535] to-[#0a1018]",
-    bgImage: "https://image2url.com/r2/default/images/1773278336470-e83695d8-cb47-4040-acfa-77242fa2ed65.jpg"
+    bgImage: "/images/GRENADA NEW IMAGE.png"
   },
   {
     status: "Coming Soon",
@@ -108,7 +108,7 @@ export default function Experiences() {
       <Header />
 
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-start justify-center overflow-hidden bg-primary pt-16 md:pt-20">
+      <section className="relative min-h-fit flex items-center justify-center overflow-hidden bg-primary pt-16 md:pt-20 pb-20">
         <div className="absolute inset-0 grain-overlay" />
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0, duration: 0.8 }}>
@@ -170,45 +170,55 @@ export default function Experiences() {
         </div>
       </section>
 
-      {/* Culinary */}
-      <section
-        ref={(el) => { sectionRefs.current[1] = el; }}
-        className="py-40 px-6 bg-background text-center relative"
-        style={{
-          backgroundImage: `url(https://image2url.com/r2/default/images/1773341341932-f3624c8f-c208-48ce-8a4c-1656d6da5fa7.jpeg)`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="max-w-7xl mx-auto relative z-10">
-          <ScrollReveal>
-            <h2 className="text-4xl md:text-6xl font-heading font-light tracking-[0.2em] text-gradient-gold mb-8">SEE. TASTE. SAVOR.</h2>
-            <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed max-w-2xl mx-auto">
-              Indulge in a tantalizing array of exotic, plant-based cuisine that will ignite your senses with our all-inclusive menu. Experience a symphony of flavors that will leave your taste buds dancing in bliss. Our team of masterful chefs craft each meal with care, ensuring the finest desserts and exquisite mocktail drinks to accompany your culinary experience.
-            </p>
-          </ScrollReveal>
+      {/* Culinary & Wellness Split */}
+      <section className="relative min-h-[90vh] flex overflow-hidden">
+        {/* Left: Culinary */}
+        <div 
+          ref={(el) => { sectionRefs.current[1] = el; }}
+          className="w-1/2 relative overflow-hidden"
+          style={{
+            backgroundImage: `url('/images/SEE. TASTE. SAVOR. new mage .png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 z-10 flex items-center justify-center p-8 md:p-16 text-center">
+            <div className="max-w-xl">
+              <ScrollReveal>
+                <h2 className="text-3xl md:text-5xl font-heading font-light tracking-[0.2em] text-gradient-gold mb-8 uppercase">SEE. TASTE. SAVOR.</h2>
+                <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed">
+                  Indulge in a tantalizing array of exotic, plant-based cuisine that will ignite your senses with our all-inclusive menu. Experience a symphony of flavors that will leave your taste buds dancing in bliss. Our team of masterful chefs craft each meal with care, ensuring the finest desserts and exquisite mocktail drinks to accompany your culinary experience.
+                </p>
+              </ScrollReveal>
+            </div>
+          </div>
         </div>
-      </section>
 
-      {/* Wellness */}
-      <section 
-        ref={(el) => { sectionRefs.current[2] = el; }} 
-        className="py-40 px-6 text-center relative overflow-hidden"
-        style={{
-          backgroundImage: `url(https://image2url.com/r2/default/images/1773277847714-7db09845-56a5-42a5-a3a8-551b9227d316.png)`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <ScrollReveal>
-            <h2 className="text-4xl md:text-6xl font-heading font-light tracking-[0.2em] text-gradient-gold mb-8">REST. RELAX. REPEAT.</h2>
-            <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed max-w-3xl mx-auto">
-              Escape the hustle and bustle of everyday life and immerse yourself in pure bliss at our crafted sanctuaries to rejuvenate your mind, body, heart, and soul. Cease the opportunity to learn practical skills to live a healthier life with onsite Health & Wellness Experts. Indulge in discovery, pampering, and the serenity of nature as you embark on an unforgettable experience.
-            </p>
-          </ScrollReveal>
+        {/* Diagonal Divider */}
+        <div className="absolute left-1/2 top-0 bottom-0 w-[3px] bg-accent/60 transform -skew-x-6 z-20 -translate-x-1/2" />
+
+        {/* Right: Wellness */}
+        <div 
+          ref={(el) => { sectionRefs.current[2] = el; }}
+          className="w-1/2 relative overflow-hidden"
+          style={{
+            backgroundImage: `url('/images/Rest relax repeat section.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 z-10 flex items-center justify-center p-8 md:p-16 text-center">
+            <div className="max-w-xl">
+              <ScrollReveal>
+                <h2 className="text-3xl md:text-5xl font-heading font-light tracking-[0.2em] text-gradient-gold mb-8 uppercase">REST. RELAX. REPEAT.</h2>
+                <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed">
+                  Escape the hustle and bustle of everyday life and immerse yourself in pure bliss at our crafted sanctuaries to rejuvenate your mind, body, heart, and soul. Cease the opportunity to learn practical skills to live a healthier life with onsite Health & Wellness Experts. Indulge in discovery, pampering, and the serenity of nature as you embark on an unforgettable experience.
+                </p>
+              </ScrollReveal>
+            </div>
+          </div>
         </div>
       </section>
 

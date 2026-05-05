@@ -8,10 +8,34 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const villas = [
-  { tag: "Clifftop Estate", name: "The Edge Reflection", features: "Infinity Pool · Butler Service · 360° Vistas", image: "/images/Home page Clifftop EstateThe Edge Reflection.png" },
-  { tag: "Forest Sanctuary", name: "The Verdant Mirror", features: "Private Thermal Pool · King Sanctuary · Forest View", image: "/images/verdant mirror villa home page (new).png" },
-  { tag: "Coastal Reserve", name: "The Horizon Reflection", features: "Ocean Vista · Private Terrace · Sunrise Facing", image: "/images/Home page Coastal ReserveThe Horizon Reflection.png" },
-  { tag: "Mountain Perch", name: "The Summit Glass", features: "Peak Panorama · Heated Floors · Alpine Serenity", image: "https://image2url.com/r2/default/images/1773323526710-c2d98a22-a667-459e-8790-4a747c8b064d.jpeg" },
+  { 
+    tag: "Costa Rica", 
+    name: "The Edge Reflection", 
+    status: "Under Construction",
+    features: "Infinity Pool · Butler Service · 360° Vistas", 
+    image: "/images/Hero section hero image home page.png" 
+  },
+  { 
+    tag: "Belize", 
+    name: "The Verdant Mirror", 
+    status: "Coming Soon",
+    features: "Private Thermal Pool · King Sanctuary · Forest View", 
+    image: "/images/The Verdant Mirror new image .png" 
+  },
+  { 
+    tag: "UAE", 
+    name: "The Horizon Reflection", 
+    status: "Coming Soon",
+    features: "Ocean Vista · Private Terrace · Sunrise Facing", 
+    image: "/images/Coastal Reserve The Horizon Reflection new image.png" 
+  },
+  { 
+    tag: "Grenada", 
+    name: "The Summit Glass", 
+    status: "Coming Soon",
+    features: "Peak Panorama · Heated Floors · Alpine Serenity", 
+    image: "/images/Summit glass new image.png" 
+  },
 ];
 
 const pillars = [
@@ -128,6 +152,9 @@ export default function Index() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                     <div className="absolute bottom-0 left-0 p-6">
                       <div className="w-6 h-px bg-accent/60 mb-3" />
+                      {villas[0].status && (
+                        <p className="font-body text-[10px] tracking-[0.4em] uppercase text-accent/70 mb-1">{villas[0].status}</p>
+                      )}
                       <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villas[0].tag}</span>
                       <h3 className="font-heading text-xl md:text-2xl font-light text-white mt-2 mb-2">{villas[0].name}</h3>
                       <p className="font-body text-xs font-light text-white/70 tracking-wide">{villas[0].features}</p>
@@ -148,6 +175,9 @@ export default function Index() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
                       <div className="absolute bottom-0 left-0 p-6">
                         <div className="w-6 h-px bg-accent/60 mb-3" />
+                        {villa.status && (
+                          <p className="font-body text-[10px] tracking-[0.4em] uppercase text-accent/70 mb-1">{villa.status}</p>
+                        )}
                         <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent">{villa.tag}</span>
                         <h3 className="font-heading text-xl md:text-2xl font-light text-white mt-2 mb-2">{villa.name}</h3>
                         <p className="font-body text-xs font-light text-white/70 tracking-wide">{villa.features}</p>

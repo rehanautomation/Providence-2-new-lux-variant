@@ -11,8 +11,6 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-import villaCliff2 from "@/assets/villa-cliff-2.jpeg";
-import heroHome2 from "@/assets/hero-home-2.jpeg";
 
 const interests = [
   "Membership Information",
@@ -216,39 +214,6 @@ export default function Contact() {
         </ScrollReveal>
       </section>
 
-      {/* ═══════ SECTION 4 — AREAS OF INTEREST ═══════ */}
-      <section className="relative py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-[hsl(var(--obsidian))]" />
-        <div className="absolute inset-0 grain-overlay" />
-        <div className="relative z-10 max-w-6xl mx-auto px-6 md:px-12">
-          <ScrollReveal className="text-center mb-16">
-            <div className="divider-gold mx-auto mb-8" />
-            <h2 className="font-heading text-2xl md:text-4xl font-light text-[hsl(var(--cream))] leading-tight">
-              What Awaits You
-            </h2>
-          </ScrollReveal>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {[
-              { image: villaCliff2, label: "Private Sanctuaries" },
-              { image: "https://image2url.com/r2/default/images/1773198966777-e483cf36-23da-4914-a0de-c161352d2d44.jpeg", label: "Culinary Experiences" },
-              { image: "https://image2url.com/r2/default/images/1773198873050-dfe406f8-c416-4687-a3b5-0ebec289280f.jpeg", label: "Wellness & Renewal" },
-              { image: heroHome2, label: "Founding Membership" },
-            ].map((tile, i) => (
-              <ScrollReveal key={tile.label} delay={i * 0.1}>
-                <div className="group">
-                  <div className="relative overflow-hidden mb-4 rounded-sm" style={{ aspectRatio: "4/3" }}>
-                    <img src={tile.image} alt={tile.label} className="w-full h-full object-cover absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
-                  </div>
-                  <p className="font-body text-[11px] tracking-[0.15em] uppercase text-[hsl(var(--cream))]/50 text-center">
-                    {tile.label}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ═══════ SECTION 5 — CLOSING MANTRA ═══════ */}
       <section className="relative py-20 md:py-28 overflow-hidden">
