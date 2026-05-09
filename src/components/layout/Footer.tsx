@@ -24,12 +24,10 @@ const connectLinks = [
 export default function Footer() {
   return (
     <footer className="bg-primary text-primary-foreground border-t border-primary-foreground/10">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 pt-10 pb-20 md:pt-12 md:pb-28">
         {/* Brand */}
         <div className="mb-16">
-          <h3 className="font-heading text-2xl md:text-3xl tracking-[0.2em] text-primary-foreground font-light mb-2">
-            PROVIDENCE
-          </h3>
+          <img src="/images/logo white.png" alt="Providence Resorts" className="h-32 w-auto object-contain mb-4" />
           <p className="font-body text-sm font-light text-primary-foreground/70 max-w-lg leading-relaxed">
             A sanctuary of transformation. A portal to profound personal discovery — where extraordinary journeys begin.
           </p>

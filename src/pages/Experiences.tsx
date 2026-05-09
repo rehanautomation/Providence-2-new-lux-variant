@@ -171,11 +171,11 @@ export default function Experiences() {
       </section>
 
       {/* Culinary & Wellness Split */}
-      <section className="relative min-h-[90vh] flex overflow-hidden">
+      <section className="relative min-h-[90vh] flex flex-col md:flex-row overflow-hidden">
         {/* Left: Culinary */}
         <div 
           ref={(el) => { sectionRefs.current[1] = el; }}
-          className="w-1/2 relative overflow-hidden"
+          className="w-full md:w-1/2 relative overflow-hidden min-h-[50vh] md:min-h-[90vh]"
           style={{
             backgroundImage: `url('/images/SEE. TASTE. SAVOR. new mage .png')`,
             backgroundSize: 'cover',
@@ -196,12 +196,13 @@ export default function Experiences() {
         </div>
 
         {/* Diagonal Divider */}
-        <div className="absolute left-1/2 top-0 bottom-0 w-[3px] bg-accent/60 transform -skew-x-6 z-20 -translate-x-1/2" />
+        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[3px] bg-accent/60 transform -skew-x-6 z-20 -translate-x-1/2" />
+        <div className="md:hidden absolute top-1/2 left-0 right-0 h-[3px] bg-accent/60 transform -skew-y-6 z-20 -translate-y-1/2" />
 
         {/* Right: Wellness */}
         <div 
           ref={(el) => { sectionRefs.current[2] = el; }}
-          className="w-1/2 relative overflow-hidden"
+          className="w-full md:w-1/2 relative overflow-hidden min-h-[50vh] md:min-h-[90vh]"
           style={{
             backgroundImage: `url('/images/Rest relax repeat section.png')`,
             backgroundSize: 'cover',

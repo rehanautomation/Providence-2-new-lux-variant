@@ -145,7 +145,7 @@ export default function Contact() {
 
               <div>
                 <Label className="font-body text-xs tracking-wide text-[hsl(var(--cream))]/70 mb-3 block">How Would You Prefer We Reach You? *</Label>
-                <RadioGroup value={form.contactMethod} onValueChange={(v) => setForm({ ...form, contactMethod: v })} className="flex gap-6">
+                <RadioGroup value={form.contactMethod} onValueChange={(v) => setForm({ ...form, contactMethod: v })} className="flex flex-wrap gap-4 md:gap-6">
                   {["Email", "Phone", "WhatsApp"].map((m) => (
                     <div key={m} className="flex items-center gap-2">
                       <RadioGroupItem value={m.toLowerCase()} id={m.toLowerCase()} className="border-[hsl(var(--cream))]/30 text-accent" />
