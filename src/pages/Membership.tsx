@@ -7,6 +7,7 @@ import SectionHeading from "@/components/SectionHeading";
 import { motion } from "framer-motion";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { cn } from "@/lib/utils";
+import { ArrowRight } from "lucide-react";
 
 /* ── Section 2 — Six Pillars ── */
 const pillars = [
@@ -15,11 +16,11 @@ const pillars = [
     copy: "Some of the world's most coveted addresses aren't on any map you'd find online. Acres of untouched nature. Vistas that silence a room. An atmosphere so intentionally private it feels like the world was paused just for you. We welcome only a select few because extraordinary experiences demand it.",
     landscape: "forest" as const,
     gradient: "from-[hsl(145,30%,22%)] via-[hsl(140,20%,30%)] to-[hsl(145,25%,18%)]",
-    image: "https://image2url.com/r2/default/images/1773280007435-e8ad6b2e-8cc6-4aa1-b750-7eb27d8cb9c8.jpg",
+    image: "/images/Privacy section new image membership page .png",
   },
   {
     title: "Suites",
-    copy: "Every residence is a sanctuary, eco-conscious by design, five-star by standard. Our curated collection of luxury suites exists at the intersection of sustainable living and unapologetic comfort. Thoughtfully crafted, carbon-light, and exclusively yours with a guaranteed 30% member discount, because belonging here should feel as good as it looks.",
+    copy: "Every residence is a sanctuary, eco-conscious by design, five-star by standard. Our curated collection of luxury suites exists at the intersection of sustainable living and unapologetic comfort. Thoughtfully crafted, carbon-light, and exclusively yours with a guaranteed 30% member discount, because belonging here should feel as good.",
     landscape: "desert" as const,
     gradient: "from-[hsl(35,35%,55%)] via-[hsl(37,30%,62%)] to-[hsl(30,25%,50%)]",
     image: "https://image2url.com/r2/default/images/1773298658097-c04e5b7f-f696-4c3f-b0a9-faf8fbb8feb0.png",
@@ -47,7 +48,7 @@ const pillars = [
   },
   {
     title: "Entertainment",
-    copy: "The evenings here are alive. Dancing nights under open skies. Campfire conversations that last until the stars demand you look up. Live local artists, cooking experiences, mocktail parties, and connections formed with people who simply get it. This is community for those who've outgrown the ordinary, where every gathering feels like the best night of a trip you never want to end.",
+    copy: "The evenings here are alive. Dancing nights under open skies. Campfire conversations that last until the stars demand you look up. Live local artists, cooking experiences, mocktail parties, and connections formed with people who simply get it. This is community for those who've outgrown the ordinary, where every gathering feels like the ones you've been looking for.",
     landscape: "ocean" as const,
     gradient: "from-[hsl(220,25%,22%)] via-[hsl(210,20%,30%)] to-[hsl(33,20%,35%)]",
     image: "/images/Entertainment section memebership page .png",
@@ -58,7 +59,7 @@ const pillars = [
 const resortFeatures = [
   { title: "Nature-First Sanctuaries", short: "Breathtaking. Private. Quiet by design. This is hushpitality — where presence replaces performance." },
   { title: "Sleep-Optimized Residences", short: "Blackout environments. Zero-gravity beds. Spa-inspired bathrooms. Outdoor soaking under open sky. Rest, finally done right." },
-  { title: "Wellness as a Way of Life", short: "Thermal therapies. Movement. Recovery. Spaces that reset the mind as fluently as the body." },
+  { title: "The Wellness Life", short: "Thermal therapies. Movement. Recovery. Spaces that reset the mind as fluently as the body." },
   { title: "Culinary Excellence", short: "Chef-curated dining and refined non-alcoholic experiences that nourish as beautifully as they satisfy." },
 ];
 
@@ -70,7 +71,7 @@ const benefits = [
   { title: "Global Connectivity", desc: "Complimentary eSIM Data Plan on every stay" },
   { title: "Signature Dining", desc: "Member-Inclusive Signature Dining Experiences" },
   { title: "Wellness Coaching", desc: "Complimentary Onsite Health & Wellness Coaching" },
-  { title: "Residence Access", desc: "Preferred Access to Providence Residences" },
+  { title: "Asset-Level Benefits", desc: "Exclusive Pricing on Our Collection of Luxury Residences" },
 ];
 
 /* ── Section 5 — Included ── */
@@ -124,13 +125,18 @@ export default function Membership() {
               </p>
             </motion.div>
             <motion.div {...motionProps(0.6)}>
-              <p className="font-heading text-base md:text-lg font-light text-white/70 italic mb-12">
-                This is not a vacation club. This is simply a better way to live.
+              <p className="font-heading text-sm italic text-accent mb-12">
+                This is what belonging looks like at its highest.
               </p>
             </motion.div>
             <motion.div {...motionProps(0.8)}>
-              <Button variant="hero" size="lg" asChild>
-                <Link to="/contact">Claim Your Membership</Link>
+              <Button variant="rounded-pill" asChild>
+                <Link to="/contact">
+                  Claim Your Membership
+                  <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                    <ArrowRight className="text-primary w-4 h-4 -rotate-45 transition-transform duration-300 group-hover:rotate-0" />
+                  </div>
+                </Link>
               </Button>
             </motion.div>
           </div>
@@ -205,6 +211,38 @@ export default function Membership() {
         </div>
       </section>
 
+      {/* ═══════ OUR STANDARD ═══════ */}
+      <section className="py-20 md:py-32 px-6 bg-card">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <ScrollReveal>
+              <div className="divider-gold mx-auto mb-8" />
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-3 uppercase">
+                OUR STANDARD
+              </h2>
+              <p className="font-heading text-lg text-muted-foreground italic">Included With Every Stay</p>
+            </ScrollReveal>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 mb-12">
+            {includedCards.map((c, i) => (
+              <ScrollReveal key={c.title} delay={i * 0.1}>
+                <div className="py-6 border-b border-white/10">
+                  <h3 className="font-heading text-lg md:text-xl font-light text-foreground mb-3">{c.title}</h3>
+                  <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">{c.copy}</p>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal delay={0.3}>
+            <p className="font-heading text-xl md:text-2xl font-light text-center italic bg-gradient-to-br from-[hsl(145,30%,35%)] to-[hsl(37,40%,50%)] bg-clip-text text-transparent">
+              Cultural, Natural, Unforgettable.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* ═══════ SECTION 4 — MEMBERSHIP BENEFITS ═══════ */}
       <section className="py-20 md:py-32 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
@@ -212,14 +250,14 @@ export default function Membership() {
             {/* Image */}
             <ScrollReveal>
               <AspectRatio ratio={3/4} className="w-full">
-                <img src="https://image2url.com/r2/default/images/1773279607629-cac4f8f5-58d0-4d8d-81c8-f3df6cc99889.jpeg" alt="What Membership Unlocks" className="w-full h-full object-cover" />
+                <img src="/images/Swhat your membership unlocks section membershp page .png" alt="What Membership Unlocks" className="w-full h-full object-cover" />
               </AspectRatio>
             </ScrollReveal>
             {/* Benefits */}
             <ScrollReveal delay={0.15}>
               <div className="divider-gold mb-8" />
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-10">
-                What Membership Unlocks
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light bg-gradient-to-br from-[hsl(145,30%,35%)] to-[hsl(37,40%,50%)] bg-clip-text text-transparent leading-tight mb-10">
+                Welcome to Club Providence
               </h2>
               <ul className="space-y-6">
                 {benefits.map((b) => (
@@ -239,42 +277,12 @@ export default function Membership() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 5 — INCLUDED WITH EVERY STAY ═══════ */}
-      <section className="py-20 md:py-32 px-6 bg-card">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <ScrollReveal>
-              <div className="divider-gold mx-auto mb-8" />
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-3">
-                Included With Every Stay
-              </h2>
-              <p className="font-heading text-lg text-accent italic">The Standard</p>
-            </ScrollReveal>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-x-12 gap-y-8 mb-12">
-            {includedCards.map((c, i) => (
-              <ScrollReveal key={c.title} delay={i * 0.1}>
-                <div className="py-6 border-b border-white/10">
-                  <h3 className="font-heading text-lg md:text-xl font-light text-foreground mb-3">{c.title}</h3>
-                  <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">{c.copy}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <ScrollReveal delay={0.3}>
-            <p className="font-body text-xs md:text-sm font-light text-muted-foreground text-center leading-relaxed max-w-4xl mx-auto">
-              Private airport transfers. 24-hour service. Daily housekeeping. Discreet concierge. Signature wellness sessions. Curated local experiences — cultural, natural, unforgettable.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
 
       {/* ═══════ SECTION 6 — HOW IT WORKS ═══════ */}
       <section
         className="py-40 md:py-56 px-6 relative bg-cover bg-center"
-        style={{ backgroundImage: "url(https://image2url.com/r2/default/images/1773322316842-28111289-9c23-4746-a726-9d5c2638bfda.jpeg)" }}
+        style={{ backgroundImage: "url('/images/Simple. Exclusive. Designed Around You membership page .png')" }}
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="max-w-3xl mx-auto text-center relative">
@@ -318,7 +326,7 @@ export default function Membership() {
                 A World Being Built Around You
               </h2>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Begin in Costa Rica, one of the most breathtaking, biodiverse sanctuaries on earth. Then follow us across continents, each new destination hand-selected for its privacy, its beauty, and its power to restore. You won't find these places on a travel algorithm. You'll find them because you belong here.
+                Begin in Costa Rica, one of the most breathtaking, biodiverse sanctuaries on earth. Then follow us across continents, each new destination hand-selected for its privacy, its beauty, and its power to restore. You won't find these places on a travel algorithm. You'll find them because you belong here…
               </p>
             </ScrollReveal>
           </div>
@@ -408,7 +416,7 @@ export default function Membership() {
 
           <ScrollReveal delay={0.4}>
             <p className="font-body text-xs tracking-[0.3em] uppercase text-accent/40 mt-16">
-              Live Vigorously · Live Abundantly · Live Empowered
+              TRAVEL DELIBERATELY · RECHARGE INTENTIONALLY · BELONG EXCLUSIVELY
             </p>
           </ScrollReveal>
         </div>

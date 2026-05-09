@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 /* ── Section 3 — Three Values ── */
 const values = [
@@ -88,13 +89,14 @@ export default function Responsibility() {
       <section className="py-40 md:py-56 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <ScrollReveal>
-            <p className="font-heading text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-relaxed italic">
-              Our micro-resort framework was built deliberately small not as a limitation, but as a philosophy. Intimate by design, each sanctuary creates the rare conditions where disconnection becomes possible and reconnection with nature, community, and self becomes inevitable.
+            <p className="font-heading text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-relaxed italic mb-6">
+              Intimacy is not an accident here; it is the architecture. Each sanctuary is deliberately small, designed to create the rare conditions where disconnection becomes possible and reconnection with nature, community, and self becomes inevitable.
             </p>
-          </ScrollReveal>
-          <ScrollReveal delay={0.2}>
-            <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mt-10 max-w-2xl mx-auto">
-              Every detail, down to the simplest touch; the linens, the cutlery, the cleaning supplies is chosen with the same intentionality we bring to everything bearing the Providence name. Because those who've built extraordinary lives understand that how you do the small things is how you do everything.
+            <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              Every detail bears the same weight, the linens, the cutlery, chosen with the same intentionality as everything that carries the Providence name. Because those who have built extraordinary lives understand that how you do the small things is how you do everything.
+            </p>
+            <p className="font-heading text-xl md:text-2xl font-light mt-8 italic bg-gradient-to-br from-[hsl(145,30%,35%)] to-[hsl(37,40%,50%)] bg-clip-text text-transparent">
+              The Epitome of Hospitality
             </p>
           </ScrollReveal>
         </div>
@@ -108,7 +110,7 @@ export default function Responsibility() {
               <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-4 block">Our Values</span>
               <div className="divider-gold mx-auto mb-8" />
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight">
-                Luxury With Intention.<br />Impact by Design.
+                Elevated Experiences<br />Meet Enduring Impact
               </h2>
             </div>
           </ScrollReveal>
@@ -139,7 +141,7 @@ export default function Responsibility() {
           </div>
 
           <ScrollReveal delay={0.3}>
-            <p className="font-heading text-xl md:text-2xl font-light text-foreground text-center mt-16 italic">
+            <p className="font-heading text-xl md:text-2xl font-light text-center mt-16 italic bg-gradient-to-br from-[hsl(145,30%,35%)] to-[hsl(37,40%,50%)] bg-clip-text text-transparent">
               All leading to a healthier, fulfilled, longer life.
             </p>
           </ScrollReveal>
@@ -153,7 +155,7 @@ export default function Responsibility() {
             {/* Image placeholder */}
             <ScrollReveal>
               <div className="w-full aspect-[3/4]">
-                <img src="https://image2url.com/r2/default/images/1773322534005-e0d0dcc7-035e-4942-a45d-255c743b4da1.jpeg" alt="Affordable Housing Initiative" className="w-full h-full object-cover" />
+                <img src="/images/ethos page Our Reasonable Service section new image.png" alt="Affordable Housing Initiative" className="w-full h-full object-cover" />
               </div>
             </ScrollReveal>
             {/* Copy */}
@@ -163,10 +165,10 @@ export default function Responsibility() {
               </span>
               <div className="divider-gold mb-8" />
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-8">
-                The Most Meaningful Luxury Doesn't Just Elevate Your Life.
+                Our Reasonable Service
               </h2>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
-                Membership at Club Providence extends far beyond the sanctuary you sleep in. A portion of every annual revenue is intentionally directed toward vetted nonprofits and community-led initiatives tackling the global affordable housing crisis, not as a marketing moment, but as a founding principle.
+                A membership at Club Providence extends far beyond the sanctuary you sleep in. A portion of every annual revenue is intentionally directed toward vetted nonprofits and community-led initiatives tackling the global affordable housing crisis, not as a marketing moment, but as a founding principle.
               </p>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-10">
                 Borders don't limit this commitment. Families across the world gain access, stability, and opportunity because you chose to belong here. At Providence, impact isn't a campaign we run seasonally or a line item we debate annually. It's embedded in how we build, how we operate, and how we grow.
@@ -188,7 +190,7 @@ export default function Responsibility() {
             <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-4 block">Our Culture</span>
             <div className="divider-gold mx-auto mb-8" />
             <h2 className="font-heading text-4xl md:text-6xl font-light leading-tight mb-4">
-              Integrity. Service.<br />Empowerment. Stewardship.
+              Luxury With Intention.<br />Impact by Design.
             </h2>
             <p className="font-body text-sm md:text-base font-light text-primary-foreground/60 mb-16">
               Where elevated experiences meet enduring impact.
@@ -269,8 +271,13 @@ export default function Responsibility() {
           </ScrollReveal>
 
           <ScrollReveal delay={0.2}>
-            <Button variant="hero" size="lg" className="bg-accent text-accent-foreground hover:bg-accent/85" asChild>
-              <Link to="/membership">Explore Membership</Link>
+            <Button variant="rounded-pill" asChild>
+              <Link to="/membership">
+                Explore Membership
+                <div className="w-8 h-8 rounded-full bg-accent flex items-center justify-center">
+                  <ArrowRight className="text-primary w-4 h-4 -rotate-45 transition-transform duration-300 group-hover:rotate-0" />
+                </div>
+              </Link>
             </Button>
           </ScrollReveal>
         </div>

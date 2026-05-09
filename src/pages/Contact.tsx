@@ -13,11 +13,10 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
 const interests = [
-  "Membership Information",
-  "Wellness Experiences",
-  "Custom Journeys",
-  "General Inquiry",
-  "Partnership Opportunities",
+  "Founding Member Inquiry",
+  "Investor Inquiry",
+  "Partnership Inquiry",
+  "Press & Media Inquiry",
 ];
 
 export default function Contact() {
@@ -91,11 +90,11 @@ export default function Contact() {
               We Value Meaningful Communication
             </h2>
             <p className="font-body text-sm font-light text-[hsl(var(--cream))]/60 leading-relaxed mb-10">
-              Our team approaches each conversation with care, intention, and a commitment to understanding your unique aspirations. Reach out and we will respond with the same attention and care that defines our approach to travel and wellness.
+              Every conversation begins the same way, with genuine curiosity about who you are and what you're looking for. Reach out when you're ready. We'll be here, unhurried and attentive, within 24 hours.
             </p>
 
             <div className="space-y-4 mb-10">
-              {["Response within 24 hours", "No obligation, no pressure", "Your information is never shared"].map((line) => (
+              {["Your privacy is sacred to us.", "Your information goes nowhere."].map((line) => (
                 <div key={line} className="flex items-center gap-3">
                   <span className="w-4 h-px bg-accent" />
                   <span className="font-body text-xs font-light text-[hsl(var(--cream))]/50 tracking-wide">{line}</span>
@@ -106,7 +105,6 @@ export default function Contact() {
             <div className="space-y-2">
               <p className="font-body text-xs font-light text-[hsl(var(--cream))]/40 tracking-wide">Prefer to reach us directly?</p>
               <a href="mailto:hello@clubprovidence.com" className="font-body text-xs text-accent hover:text-accent/80 transition-colors block">hello@clubprovidence.com</a>
-              <a href="https://wa.me/1234567890" className="font-body text-xs text-accent hover:text-accent/80 transition-colors block">WhatsApp</a>
             </div>
           </ScrollReveal>
 
@@ -178,7 +176,7 @@ export default function Contact() {
                 <Textarea
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  placeholder="Share anything you'd like us to know — your interests, your ideal experience, or simply what drew you to Providence."
+                  placeholder="Tell us what brought you here, your interests, the experience you're looking for, or simply what drew you to Providence."
                   className="bg-[hsl(var(--cream))]/5 border-[hsl(var(--cream))]/10 text-[hsl(var(--cream))] placeholder:text-[hsl(var(--cream))]/20 focus-visible:ring-accent min-h-[120px]"
                   maxLength={1000}
                 />
@@ -209,8 +207,9 @@ export default function Contact() {
             Your Story Matters
           </h2>
           <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-xl mx-auto">
-            Every journey begins with a single step. Let this be yours.
+            The rarest journeys begin not with a booking, but with a single, honest conversation. We're listening.
           </p>
+          <div className="divider-gold mx-auto mt-6" />
         </ScrollReveal>
       </section>
 
@@ -220,7 +219,7 @@ export default function Contact() {
         <div className="absolute inset-0 bg-[hsl(var(--obsidian))]" />
         <ScrollReveal className="relative z-10 text-center px-6">
           <p className="font-body text-[11px] md:text-xs tracking-[0.35em] uppercase text-accent/60">
-            Live Vigorously. Live Abundantly. Live Empowered.
+            TRAVEL DELIBERATELY · RECHARGE INTENTIONALLY · BELONG EXCLUSIVELY
           </p>
         </ScrollReveal>
       </section>

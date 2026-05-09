@@ -11,12 +11,12 @@ import tranquilloActivity from "@/assets/tranquillo-activity.jpeg";
 import transformativeActivity from "@/assets/transformative-activity.jpeg";
 import adventureActivity from "@/assets/adventure-activity.jpeg";
 
-const tabs = ["Service", "Culinary", "Wellness", "Activities", "Stays", "Community Impact"];
+const tabs = ["Service", "Culinary", "Wellness", "Activities", "Stays"];
 
 const activityCards = [
   {
     title: "Luxurious",
-    body: "Nature has never felt like this. Immersed in breathtaking landscapes yet wrapped in every comfort you refuse to leave behind — this is the wild, refined. Where the untamed world meets impeccable service, and adventure feels less like a departure from your life and more like the fullest expression of it.",
+    body: "Nature has never felt like this. Immersed in breathtaking landscapes yet wrapped in every comfort you've earned, this is the wild, refined. Where the untamed world meets impeccable service, and adventure becomes the fullest expression of your life.",
     closing: "Your Vacation. Your Rules.",
     image: "/images/experence page Choose Your Vibe luxirious.png",
   },
@@ -57,7 +57,7 @@ const stayCards = [
   {
     status: "Coming Soon",
     title: "UAE",
-    body: "Dubai's gilded horizons enamour with a skyline that defies gravity, desert dunes that whisper of ancient secrets, and world-class luxury that redefines the possible, where young affluent voyagers discover private island retreats, sunset yacht cruises, and Michelin-starred dining beneath the stars.",
+    body: "Dubai's gilded horizons enamour with eternal golden warmth and ancient Bedouin mystique woven into breathtaking modern grandeur where falcon-dotted dunes dissolve into glittering skylines and every sunrise over the Gulf whispers of something rare and extraordinary. Here, our members will indulge in an exclusive golden oasis crafted for those who have learned to demand nothing less than the world itself.",
     gradient: "bg-gradient-to-br from-[#1a1200] via-[#2d2000] to-[#1a1500]",
     bgImage: "/images/UAE NEW IMAGE OUR COLLECTON SECTON .png"
   },
@@ -114,12 +114,12 @@ export default function Experiences() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0, duration: 0.8 }}>
             <div className="divider-gold mx-auto mb-10" />
             <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-light text-[hsl(var(--cream))] leading-[1.1] mb-6">
-              Beyond Travel. A Path<br />of Transformation.
+              Beyond Travel. A Path of Transformation.
             </h1>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.8 }}>
             <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              We curate experiences that are more than activities — they are portals to deeper understanding, personal growth, and connection. Every moment is designed to help you return home to your most vibrant, authentic self.
+              Because the most meaningful thing you can bring home isn't a souvenir. It's a better version of who you already are.
             </p>
           </motion.div>
         </div>
@@ -224,7 +224,7 @@ export default function Experiences() {
 
       {/* Activities */}
       <section ref={(el) => { sectionRefs.current[3] = el; }} className="bg-background">
-        <div className="max-w-5xl mx-auto py-32 md:py-48 px-6">
+        <div className="max-w-5xl mx-auto py-16 md:py-24 px-6">
           <div className="text-center mb-24">
             <ScrollReveal>
               <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-4">Choose Your Vibe</h2>
@@ -274,11 +274,11 @@ export default function Experiences() {
 
       {/* Stays */}
         <section ref={(el) => { sectionRefs.current[4] = el; }} className="bg-card">
-            <div className="max-w-5xl mx-auto py-32 md:py-48 px-6">
+            <div className="max-w-5xl mx-auto py-16 md:py-24 px-6">
                 <div className="text-center mb-24">
                     <ScrollReveal>
-                        <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-4">Our Collection</h2>
-                        <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-3xl mx-auto">Travel Made Intimate. At Providence Resorts, we delve deeply into what moves our members, crafting bespoke escapes that transcend mere luxury. Each residence is thoughtfully woven into breathtaking nature to deliver the serene bliss of true Quiet-Cations and our signature five-star Hushpitality, where every whisper of indulgence and every moment of hushed tranquility is yours to savor in effortless, elevated sophistication.</p>
+                        <h2 className="font-heading text-4xl md:text-5xl font-light bg-gradient-to-br from-[hsl(145,30%,35%)] to-[hsl(37,40%,50%)] bg-clip-text text-transparent mb-4">Our Collection</h2>
+                        <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-3xl mx-auto">Distinct By Design. At Providence Resorts, we delve deeply into what moves our members, crafting bespoke escapes that transcend mere luxury. Each residence is thoughtfully woven into breathtaking nature to deliver the serene bliss of true Quiet-Cations and our signature five-star Hushpitality, where every whisper of indulgence and every moment of hushed tranquility is yours to savor in effortless, elevated sophistication.</p>
                     </ScrollReveal>
                 </div>
             </div>
@@ -302,64 +302,11 @@ export default function Experiences() {
             </div>
         </section>
 
-      {/* Community Impact */}
-      <section ref={(el) => { sectionRefs.current[5] = el; }} className="py-32 md:py-48 px-6 bg-background">
-        <div className="max-w-4xl mx-auto text-center">
-          <ScrollReveal>
-            <h2 className="font-heading text-4xl md:text-5xl font-light text-foreground mb-4">Your Journey Creates Change</h2>
-            <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-2xl mx-auto">Ten percent of your membership supports critical global initiatives. Every stay becomes a bridge between personal discovery and global responsibility.</p>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-2 gap-12 mt-20 text-left">
-            <ScrollReveal delay={0.1}>
-              <div>
-                <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-medium">Clean Water Initiative</span>
-                <h3 className="font-heading text-2xl font-light text-foreground mt-4 mb-3">CharityWater.org Partnership</h3>
-                <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">
-                  Every membership directly funds clean water projects in communities that need it most. Through our partnership with CharityWater.org, your journey becomes a lifeline — providing access to safe, clean drinking water for families across the developing world.
-                </p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={0.2}>
-              <div>
-                <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-medium">Housing Initiative</span>
-                <h3 className="font-heading text-2xl font-light text-foreground mt-4 mb-3">Affordable Housing Initiative</h3>
-                <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">
-                  We believe that shelter is a fundamental right. A portion of every membership contributes to affordable housing projects, creating stable foundations for families and communities to thrive. Your luxury experience directly supports dignity and security for others.
-                </p>
-              </div>
-            </ScrollReveal>
-          </div>
-
-
+        <div className="py-24 md:py-32 text-center bg-card">
+          <p className="font-body text-xs tracking-[0.3em] uppercase text-accent/40">
+            TRAVEL DELIBERATELY · RECHARGE INTENTIONALLY · BELONG EXCLUSIVELY
+          </p>
         </div>
-      </section>
-
-      {/* Closing CTA */}
-      <section className="py-32 md:py-48 px-6 bg-card">
-        <div className="max-w-3xl mx-auto text-center">
-          <ScrollReveal>
-            <div className="divider-gold mx-auto mb-10" />
-            <p className="font-heading text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-relaxed italic mb-6">
-              Every moment is an invitation to profound discovery.
-            </p>
-            <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-xl mx-auto mb-12">
-              Join fewer than 250 founding members and begin your pathway to extraordinary living.
-            </p>
-          </ScrollReveal>
-
-          <ScrollReveal delay={0.2}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button variant="hero" size="lg" asChild>
-                <Link to="/membership">Explore Membership</Link>
-              </Button>
-              <Button variant="outline-light" size="lg" asChild>
-                <Link to="/contact">Begin a Conversation</Link>
-              </Button>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
 
       <Footer />
     </div>

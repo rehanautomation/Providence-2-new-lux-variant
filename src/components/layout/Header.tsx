@@ -4,10 +4,9 @@ import { cn } from "@/lib/utils";
 
 const navLinks = [
   { label: "Home", path: "/", active: true },
-  { label: "Experiences", path: "/experiences", active: true },
+  { label: "Ethos", path: "/responsibility", active: true },
   { label: "Membership", path: "/membership", active: true },
-  { label: "Our Responsibility", path: "/responsibility", active: true },
-  // { label: "Residences", path: "/residences", active: true },
+  { label: "Experiences", path: "/experiences", active: true },
   { label: "Contact", path: "/contact", active: true },
 ];
 

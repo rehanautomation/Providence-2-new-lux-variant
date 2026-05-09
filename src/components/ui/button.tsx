@@ -18,6 +18,7 @@ const buttonVariants = cva(
         hero: "bg-primary text-primary-foreground hover:bg-primary/85 font-light text-xs tracking-[0.25em] border border-primary/20",
         "outline-light": "border border-foreground/30 text-foreground bg-transparent hover:border-primary hover:text-primary font-light text-xs tracking-[0.25em]",
         "ghost-gold": "text-primary hover:text-primary/80 font-light text-xs tracking-[0.25em] underline-offset-8 hover:underline",
+        "rounded-pill": "group inline-flex w-fit items-center gap-4 bg-primary text-white rounded-full pl-6 pr-2 py-2 font-body text-xs tracking-[0.2em] uppercase hover:bg-primary/90 transition-all duration-300",
       },
       size: {
         default: "h-10 px-4 py-2",
