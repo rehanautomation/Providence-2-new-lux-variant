@@ -63,9 +63,9 @@ export default function Index() {
 
       {/* Hero */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-32 md:pt-40">
+        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20 mt-8">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.8 }}>
-            <p className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-8">Club Providence · Est. 2025</p>
+            <p className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-6">Club Providence · Est. 2025</p>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.8 }}>
             <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-light text-white leading-[1.1]">
