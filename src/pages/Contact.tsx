@@ -94,7 +94,7 @@ export default function Contact() {
             </p>
 
             <div className="space-y-4 mb-10">
-              {["Your privacy is sacred to us.", "Your information goes nowhere."].map((line) => (
+              {["Your privacy is sacred to us", "Your information goes nowhere"].map((line) => (
                 <div key={line} className="flex items-center gap-3">
                   <span className="w-4 h-px bg-accent" />
                   <span className="font-body text-xs font-light text-[hsl(var(--cream))]/50 tracking-wide">{line}</span>
@@ -146,7 +146,7 @@ export default function Contact() {
               <div>
                 <Label className="font-body text-xs tracking-wide text-[hsl(var(--cream))]/70 mb-3 block">How Would You Prefer We Reach You? *</Label>
                 <RadioGroup value={form.contactMethod} onValueChange={(v) => setForm({ ...form, contactMethod: v })} className="flex flex-wrap gap-4 md:gap-6">
-                  {["Email", "Phone", "WhatsApp"].map((m) => (
+                  {["Email", "Phone"].map((m) => (
                     <div key={m} className="flex items-center gap-2">
                       <RadioGroupItem value={m.toLowerCase()} id={m.toLowerCase()} className="border-[hsl(var(--cream))]/30 text-accent" />
                       <Label htmlFor={m.toLowerCase()} className="font-body text-xs text-[hsl(var(--cream))]/60 cursor-pointer">{m}</Label>
@@ -199,29 +199,56 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 3 — YOUR STORY MATTERS ═══════ */}
+      {/* ═══════ SECTION 3 — WHAT AWAITS YOU ═══════ */}
       <section className="relative py-24 md:py-32 overflow-hidden bg-card">
-        <div className="absolute inset-0 grain-overlay" />
-        <ScrollReveal className="relative z-10 text-center px-6">
-          <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground leading-tight mb-6">
-            Your Story Matters
-          </h2>
-          <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-xl mx-auto">
-            The rarest journeys begin not with a booking, but with a single, honest conversation. We're listening.
-          </p>
-          <div className="divider-gold mx-auto mt-6" />
-        </ScrollReveal>
-      </section>
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <ScrollReveal>
+            <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground leading-tight mb-16">
+              What Awaits You
+            </h2>
+          </ScrollReveal>
 
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <ScrollReveal delay={0.1}>
+              <div className="flex flex-col items-center">
+                <div className="w-full aspect-square bg-muted/20 overflow-hidden mb-4 rounded-sm">
+                  <img src="/images/Privacy section new image membership page .png" alt="Private Sanctuaries" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="font-heading text-lg font-light text-foreground">Private Sanctuaries</h3>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.2}>
+              <div className="flex flex-col items-center">
+                <div className="w-full aspect-square bg-muted/20 overflow-hidden mb-4 rounded-sm">
+                  <img src="/images/Culinary Experience section of memebership page .png" alt="Culinary Experiences" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="font-heading text-lg font-light text-foreground">Culinary Experiences</h3>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.3}>
+              <div className="flex flex-col items-center">
+                <div className="w-full aspect-square bg-muted/20 overflow-hidden mb-4 rounded-sm">
+                  <img src="/images/membershp page wellnes section .png" alt="Wellness and Renewal" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="font-heading text-lg font-light text-foreground">Wellness and Renewal</h3>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.4}>
+              <div className="flex flex-col items-center">
+                <div className="w-full aspect-square bg-muted/20 overflow-hidden mb-4 rounded-sm">
+                  <img src="/images/Ethos page our philosophy section new image.png" alt="Cultural Immersion" className="w-full h-full object-cover" />
+                </div>
+                <h3 className="font-heading text-lg font-light text-foreground">Cultural Immersion</h3>
+              </div>
+            </ScrollReveal>
+          </div>
 
-      {/* ═══════ SECTION 5 — CLOSING MANTRA ═══════ */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-[hsl(var(--obsidian))]" />
-        <ScrollReveal className="relative z-10 text-center px-6">
-          <p className="font-body text-[11px] md:text-xs tracking-[0.35em] uppercase text-accent/60">
-            TRAVEL DELIBERATELY · RECHARGE INTENTIONALLY · BELONG EXCLUSIVELY
-          </p>
-        </ScrollReveal>
+          <ScrollReveal delay={0.5}>
+            <p className="font-body text-[11px] md:text-xs tracking-[0.35em] uppercase text-accent/60 mt-20">
+              TRAVEL DELIBERATELY · RECHARGE INTENTIONALLY · BELONG EXCLUSIVELY
+            </p>
+          </ScrollReveal>
+        </div>
       </section>
 
       <Footer />

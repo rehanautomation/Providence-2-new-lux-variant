@@ -20,7 +20,7 @@ const pillars = [
   },
   {
     title: "Suites",
-    copy: "Every residence is a sanctuary, eco-conscious by design, five-star by standard. Our curated collection of luxury suites exists at the intersection of sustainable living and unapologetic comfort. Thoughtfully crafted, carbon-light, and exclusively yours with a guaranteed 30% member discount, because belonging here should feel as good.",
+    copy: "Every residence is a sanctuary, eco-conscious by design, five-star by standard. Our curated collection of luxury suites exists at the intersection of sustainable living and unapologetic comfort. Thoughtfully crafted, carbon-light, and exclusively yours. Members enjoy a guaranteed 30% discount, because belonging here should feel as good as it looks.",
     landscape: "desert" as const,
     gradient: "from-[hsl(35,35%,55%)] via-[hsl(37,30%,62%)] to-[hsl(30,25%,50%)]",
     image: "https://image2url.com/r2/default/images/1773298658097-c04e5b7f-f696-4c3f-b0a9-faf8fbb8feb0.png",
@@ -34,7 +34,7 @@ const pillars = [
   },
   {
     title: "Concierge Services",
-    copy: "Your time is your most valuable asset and we treat it accordingly. Whether you're planning a spontaneous escape or mapping out an entire year of restorative travel, your dedicated Travel Ambassador handles every detail with precision and genuine care. Peak season. Off-peak solitude. Last-minute or long-planned. We're already on it.",
+    copy: "Your time is your most valuable asset and we treat it accordingly. Whether you're planning a spontaneous escape or mapping out an entire year of restorative travel, your dedicated Travel Ambassador handles every detail with precision and genuine care. Peak season. Off-peak solitude. Last-minute or planned. We're already on it.",
     landscape: "mountain" as const,
     gradient: "from-[hsl(33,27%,38%)] via-[hsl(30,22%,45%)] to-[hsl(35,25%,35%)]",
     image: "/images/membership page conceriege service.png",
@@ -57,8 +57,8 @@ const pillars = [
 
 /* ── Section 3 — Resort Features ── */
 const resortFeatures = [
-  { title: "Nature-First Sanctuaries", short: "Breathtaking. Private. Quiet by design. This is hushpitality — where presence replaces performance." },
-  { title: "Sleep-Optimized Residences", short: "Blackout environments. Zero-gravity beds. Spa-inspired bathrooms. Outdoor soaking under open sky. Rest, finally done right." },
+  { title: "Nature First Sanctuaries", short: "Breathtaking. Private. Quiet by design. This is hushpitality where presence replaces performance." },
+  { title: "Sleep Optimized Residences", short: "Blackout environments, Zero-gravity beds, Spa-level bathrooms and Outdoor soaking under open sky. Rest, finally done right." },
   { title: "The Wellness Life", short: "Thermal therapies. Movement. Recovery. Spaces that reset the mind as fluently as the body." },
   { title: "Culinary Excellence", short: "Chef-curated dining and refined non-alcoholic experiences that nourish as beautifully as they satisfy." },
 ];
@@ -84,10 +84,34 @@ const includedCards = [
 
 /* ── Section 8 — Destinations ── */
 const destinations = [
-  { name: "Costa Rica", status: "Under Construction", tagline: "Where the untamed world whispers of luxury.", desc: "Secretly tucked away from tourist hotspots lays a nature lover's sanctuary that whispers of untamed luxury with its iconic Whale's Tail sandbar, where young affluent explorers revel in private mountain villas with ocean vistas, intimate humpback whale encounters, cascading hidden waterfalls, and eco-chic retreats amid lush rainforests teeming with wildlife.", landscape: "forest" as const },
-  { name: "UAE", status: "Coming Soon", tagline: "Where golden dunes dissolve into glittering horizons.", desc: "Dubai's gilded horizons enamour with eternal golden warmth and ancient Bedouin mystique woven into breathtaking modern grandeur where falcon-dotted dunes dissolve into glittering skylines and every sunrise over the Gulf whispers of something rare and extraordinary. Here, our members will indulge in an exclusive golden oasis crafted for those who have learned to demand nothing less than the world itself.", landscape: "desert" as const },
-  { name: "Grenada", status: "Coming Soon", tagline: "The seductive Spice Isle of the Caribbean.", desc: "Perched in the sun-kissed Caribbean as the seductive Spice Isle, Grenada charms its explorers with heady scents of nutmeg, cinnamon, and cocoa drifting from verdant plantations, iconic powdery shores, elite underwater sculpture dives, rainforest waterfalls, Creole gourmet feasts, yacht escapes, and pulsing island rhythm.", landscape: "ocean" as const },
-  { name: "Belize", status: "Coming Soon", tagline: "Barefoot sophistication on turquoise shores.", desc: "Hidden on the turquoise-lapped west coast of Ambergris Caye, lures escapists to its crystalline shallows, over-water swings, pineapple-garnished concoctions at chic beach bars, and laid-back Caribbean vibes, private sun-drenched oases, golf-cart adventures, reef-proximate luxury, and effortless barefoot sophistication amid Belize's iconic island allure.", landscape: "valley" as const },
+  {
+    name: "Cultural Immersion",
+    status: "Destinations Being Curated",
+    tagline: "Culture, lived from the inside out.",
+    desc: "Every destination is chosen for what it cannot fake; its soul. The rhythm of locals, the weight of ancient traditions, the taste of something grown within miles of your table. Here, the land slows your pulse before you realize it's happening. This is your invitation to stop observing the world and finally become part of it.",
+    landscape: "forest" as const,
+  },
+  {
+    name: "Wellness Reimagined",
+    status: "Your Restoration Awaits",
+    tagline: "Where Burnout Meets Its Match.",
+    desc: "Every wellness experience at Providence is chosen for what it cannot manufacture, transformation. The kind that unknots what years of ambition quietly tightened. Movement that reminds your body it was built for more than a desk. Nutrition that doesn't lecture, it reveals. Here, wellness isn't a programme you follow. It's a standard you refuse to fall below once you've felt it.",
+    landscape: "valley" as const,
+  },
+  {
+    name: "Culinary Experiences",
+    status: "Rotating Menus Composed",
+    tagline: "Food As Philosophy. Pleasure As Purpose.",
+    desc: "Every plate at Providence begins the same way, with intention. Plant-based, chef-crafted, and grown steps from your table, our culinary experience was designed to reveal what food can taste like when nothing is processed. Resident chefs and rotating Michelin-recognized talents compose each meal and mocktail to make you forget what you thought you were missing. The absence of alcohol isn't a limitation, it's a liberation. Clarity never tasted like this.",
+    landscape: "desert" as const,
+  },
+  {
+    name: "Private Sanctuaries",
+    status: "Reservations By Invite",
+    tagline: "Seclusion By Design. Ambiance By Nature.",
+    desc: "Ten residences. Not nine. Not eleven. Ten, because extraordinary experiences collapse under their own weight the moment a crowd arrives. Every villa exists at the precise intersection of ecological reverence and unapologetic luxury, where nature frames every waking moment and every comfort you've earned follows you inside. No corridors of strangers. Just the rare, weightless feeling of a world that exists entirely for you.",
+    landscape: "ocean" as const,
+  },
 ];
 
 const motionProps = (delay: number) => ({
@@ -126,7 +150,7 @@ export default function Membership() {
             </motion.div>
             <motion.div {...motionProps(0.6)}>
               <p className="font-heading text-sm italic text-accent mb-12">
-                This is what belonging looks like at its highest.
+                This is what belonging looks like at its highest level.
               </p>
             </motion.div>
             <motion.div {...motionProps(0.8)}>
@@ -153,10 +177,6 @@ export default function Membership() {
 
       {/* ═══════ SECTION 2 — SIX PILLARS ═══════ */}
       <section>
-        <div className="py-20 md:py-32 max-w-7xl mx-auto px-6">
-          <SectionHeading title="What Membership Unlocks" />
-        </div>
-
         <div className="relative">
           {pillars.map((pillar, i) => (
             <div key={pillar.title} className="relative min-h-screen flex items-center justify-center overflow-hidden md:sticky md:top-0">
@@ -189,7 +209,7 @@ export default function Membership() {
       {/* ═══════ SECTION 3 — RESORT FEATURES ═══════ */}
       <section className="py-20 md:py-32 px-6 bg-card">
         <div className="max-w-7xl mx-auto">
-          <SectionHeading title="Features That Define Our Resorts" />
+          <SectionHeading title="What Defines Our Resorts" />
 
           <div className="mt-16">
             {resortFeatures.map((f, i) => (
@@ -217,7 +237,7 @@ export default function Membership() {
           <div className="text-center mb-16">
             <ScrollReveal>
               <div className="divider-gold mx-auto mb-8" />
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-3 uppercase">
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-accent leading-tight mb-3 uppercase">
                 OUR STANDARD
               </h2>
               <p className="font-heading text-lg text-muted-foreground italic">Included With Every Stay</p>
@@ -238,6 +258,25 @@ export default function Membership() {
           <ScrollReveal delay={0.3}>
             <p className="font-heading text-xl md:text-2xl font-light text-center italic bg-gradient-to-br from-[hsl(145,30%,35%)] to-[hsl(37,40%,50%)] bg-clip-text text-transparent">
               Cultural, Natural, Unforgettable.
+            </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ═══════ SECTION 6 — HOW IT WORKS ═══════ */}
+      <section
+        className="py-40 md:py-56 px-6 relative bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/Simple. Exclusive. Designed Around You membership page .png')" }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="max-w-3xl mx-auto text-center relative">
+          <ScrollReveal>
+            <div className="divider-gold mx-auto mb-10" />
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-8">
+              <span className="text-gradient-gold">Simple. Exclusive.</span><br />Designed Around You.
+            </h2>
+            <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed max-w-2xl mx-auto">
+              One membership. One monthly fee. A world of sanctuaries that keeps growing with you already inside it. No ownership burdens, no timeshare complexity, no fine print designed to confuse. Just rare access, preserved for those who claimed it early.
             </p>
           </ScrollReveal>
         </div>
@@ -277,27 +316,6 @@ export default function Membership() {
         </div>
       </section>
 
-
-
-      {/* ═══════ SECTION 6 — HOW IT WORKS ═══════ */}
-      <section
-        className="py-40 md:py-56 px-6 relative bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/Simple. Exclusive. Designed Around You membership page .png')" }}
-      >
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="max-w-3xl mx-auto text-center relative">
-          <ScrollReveal>
-            <div className="divider-gold mx-auto mb-10" />
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-8">
-              <span className="text-gradient-gold">Simple. Exclusive.</span><br />Designed Around You.
-            </h2>
-            <p className="font-body text-sm md:text-base font-light text-white/80 leading-relaxed max-w-2xl mx-auto">
-              One membership. One monthly fee. A world of sanctuaries that keeps growing with you already inside it. No ownership burdens, no timeshare complexity, no fine print designed to confuse. Just rare access, preserved for those who claimed it early.
-            </p>
-          </ScrollReveal>
-        </div>
-      </section>
-
       {/* ═══════ SECTION 7 — FOUNDING MEMBERS ═══════ */}
       <section className="py-40 px-6 bg-gradient-to-br from-primary/30 via-background to-background">
         <div className="max-w-2xl mx-auto text-center">
@@ -323,10 +341,10 @@ export default function Membership() {
             <ScrollReveal>
               <div className="divider-gold mx-auto mb-8" />
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-6">
-                A World Being Built Around You
+                The Providence Experience
               </h2>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Begin in Costa Rica, one of the most breathtaking, biodiverse sanctuaries on earth. Then follow us across continents, each new destination hand-selected for its privacy, its beauty, and its power to restore. You won't find these places on a travel algorithm. You'll find them because you belong here…
+                Four pillars. One standard. Every detail of your stay is shaped by what matters most — culture, wellness, nourishment, and seclusion. This is membership that lives in the details.
               </p>
             </ScrollReveal>
           </div>
@@ -338,7 +356,7 @@ export default function Membership() {
                   <div className="grid grid-cols-[80px_1fr] md:grid-cols-[140px_1fr] min-h-[320px] border-b border-border">
                     {/* Left Column */}
                     <div className="flex items-center justify-center border-r border-border py-10">
-                      <span className="font-heading text-5xl md:text-6xl font-light text-foreground [writing-mode:vertical-rl] [transform:rotate(180deg)] tracking-widest whitespace-nowrap opacity-85 transition-colors duration-500 group-hover:text-accent">
+                      <span className="font-heading text-3xl md:text-4xl font-light text-foreground [writing-mode:vertical-rl] [transform:rotate(180deg)] tracking-widest whitespace-nowrap opacity-85 transition-colors duration-500 group-hover:text-accent">
                         {d.name}
                       </span>
                     </div>

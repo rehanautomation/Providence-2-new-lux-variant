@@ -15,7 +15,7 @@ const tabs = ["Service", "Culinary", "Wellness", "Activities", "Stays"];
 
 const activityCards = [
   {
-    title: "Luxurious",
+    title: "Eco-Luxurious",
     body: "Nature has never felt like this. Immersed in breathtaking landscapes yet wrapped in every comfort you've earned, this is the wild, refined. Where the untamed world meets impeccable service, and adventure becomes the fullest expression of your life.",
     closing: "Your Vacation. Your Rules.",
     image: "/images/experence page Choose Your Vibe luxirious.png",
@@ -36,7 +36,7 @@ const activityCards = [
     title: "Adventure",
     body: "For those who've conquered the boardroom and now hunger for the mountain. From horseback riding through mist-covered trails and summiting dormant volcanoes, to ziplining across ancient rainforest canopies, we curate high-octane experiences that push boundaries. Your adrenaline, perfectly orchestrated.",
     closing: "Personalized Adventure.",
-    image: "/images/experence page Choose Your Vibe adventure.png",
+    image: "/images/experrence page adventure image new .png",
   },
   {
     title: "Personalized",
@@ -71,7 +71,7 @@ const stayCards = [
   {
     status: "Coming Soon",
     title: "Belize",
-    body: "Hidden on the turquoise-lapped west coast of Ambergris Caye, lures escapists to its crystalline shallows, over-water swings, pineapple-garnished concoctions at chic beach bars, and laid-back Caribbean vibes, private sun-drenched oases, golf-cart adventures, reef-proximate luxury, and effortless barefoot sophistication amid Belize's iconic island allure.",
+    body: "Hidden where turquoise waters lap against untouched shores, this secret corner of Belize lures escapists to crystalline shallows, over-water swings, pineapple-garnished concoctions at chic barefoot bars, and unhurried Caribbean rhythm where reef-kissed coastlines and ancient jungle-draped interiors converge into private sun-drenched oases of effortless barefoot grace.",
     gradient: "bg-gradient-to-br from-[#0a1a18] via-[#152d28] to-[#0a1515]",
     bgImage: "/images/Experience page belize image.png"
   },
@@ -279,7 +279,8 @@ export default function Experiences() {
                 <div className="text-center mb-24">
                     <ScrollReveal>
                         <h2 className="font-heading text-4xl md:text-5xl font-light bg-gradient-to-br from-[hsl(145,30%,35%)] to-[hsl(37,40%,50%)] bg-clip-text text-transparent mb-4">Our Collection</h2>
-                        <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-3xl mx-auto">Distinct By Design. At Providence Resorts, we delve deeply into what moves our members, crafting bespoke escapes that transcend mere luxury. Each residence is thoughtfully woven into breathtaking nature to deliver the serene bliss of true Quiet-Cations and our signature five-star Hushpitality, where every whisper of indulgence and every moment of hushed tranquility is yours to savor in effortless, elevated sophistication.</p>
+                        <p className="font-body text-sm md:text-base text-accent mt-6 mb-4">Distinct By Design</p>
+                        <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-3xl mx-auto">At Providence Resorts, we delve deeply into what moves our members, crafting bespoke escapes that transcend mere luxury. Each residence is thoughtfully woven into breathtaking nature to deliver the serene bliss of true Quiet-Cations and our signature five-star Hushpitality, where every whisper of indulgence and every moment of hushed tranquility is yours to savor in effortless, elevated sophistication.</p>
                     </ScrollReveal>
                 </div>
             </div>
@@ -303,11 +304,37 @@ export default function Experiences() {
             </div>
         </section>
 
-        <div className="py-24 md:py-32 text-center bg-card">
-          <p className="font-body text-xs tracking-[0.3em] uppercase text-accent/40">
-            TRAVEL DELIBERATELY · RECHARGE INTENTIONALLY · BELONG EXCLUSIVELY
-          </p>
+      {/* Final CTA */}
+      <section className="py-20 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <ScrollReveal>
+            <div className="divider-gold mx-auto mb-10" />
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-6">
+              Your Time Is Sacred. Spend It Accordingly.
+            </h2>
+            <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-12">
+             Founding membership is limited. Your access begins with a single conversation.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.2}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Button variant="hero" size="lg" asChild>
+								<Link to="/contact">Claim Your Membership</Link>
+							</Button>
+              <Button variant="outline-light" size="lg" asChild>
+								<Link to="/contact">Begin a Conversation</Link>
+							</Button>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.4}>
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-accent/40 mt-16">
+              TRAVEL DELIBERATELY · RECHARGE INTENTIONALLY · BELONG EXCLUSIVELY
+            </p>
+          </ScrollReveal>
         </div>
+      </section>
 
       <Footer />
     </div>

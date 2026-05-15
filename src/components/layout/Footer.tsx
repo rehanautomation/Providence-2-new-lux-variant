@@ -2,23 +2,14 @@ import { Link } from "react-router-dom";
 
 const exploreLinks = [
   { label: "Experiences", path: "/experiences" },
-  { label: "Accommodations", path: "/experiences" },
-  { label: "Wellness", path: "/experiences" },
-  { label: "Culinary", path: "/experiences" },
-];
-
-const membershipLinks = [
-  { label: "Tiers & Pricing" },
-  { label: "Founding Member Offer" },
-  { label: "Our Philosophy" },
-  { label: "Community Impact" },
+  { label: "Accommodations", path: "/experiences#stays" },
+  { label: "Wellness", path: "/experiences#wellness" },
+  { label: "Culinary", path: "/experiences#culinary" },
 ];
 
 const connectLinks = [
-  { label: "Contact Us" },
-  { label: "WhatsApp" },
+  { label: "Contact Us", path: "/contact" },
   { label: "Instagram" },
-  { label: "Schedule a Call" },
 ];
 
 export default function Footer() {
@@ -29,12 +20,12 @@ export default function Footer() {
         <div className="mb-16">
           <img src="/images/logo white.png" alt="Providence Resorts" className="h-32 w-auto object-contain mb-4" />
           <p className="font-body text-sm font-light text-primary-foreground/70 max-w-lg leading-relaxed">
-            A sanctuary of transformation. A portal to profound personal discovery — where extraordinary journeys begin.
+            A sanctuary of transformation. A portal to profound personal discovery, where extraordinary journeys begin.
           </p>
         </div>
 
         {/* Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           <div>
             <h4 className="font-body text-[10px] tracking-[0.3em] uppercase text-accent mb-6">Explore</h4>
             <ul className="space-y-3">
@@ -52,26 +43,22 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-body text-[10px] tracking-[0.3em] uppercase text-accent mb-6">Membership</h4>
-            <ul className="space-y-3">
-              {membershipLinks.map((link) => (
-                <li key={link.label}>
-                   <span className="font-body text-sm font-light text-primary-foreground/40 cursor-default">
-                    {link.label}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
             <h4 className="font-body text-[10px] tracking-[0.3em] uppercase text-accent mb-6">Connect</h4>
             <ul className="space-y-3">
               {connectLinks.map((link) => (
                 <li key={link.label}>
-                   <span className="font-body text-sm font-light text-primary-foreground/40 cursor-default">
-                    {link.label}
-                  </span>
+                  {link.path ? (
+                    <Link
+                      to={link.path}
+                      className="font-body text-sm font-light text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <span className="font-body text-sm font-light text-primary-foreground/60 cursor-default">
+                      {link.label}
+                    </span>
+                  )}
                 </li>
               ))}
             </ul>

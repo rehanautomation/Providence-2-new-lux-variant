@@ -19,30 +19,30 @@ const villas = [
     name: "Grenada", 
     status: "Coming Soon",
     features: "Ocean Panorama · Sunrise Facing · Island Bliss", 
-    image: "/images/The Verdant Mirror new image .png" 
+    image: "/images/Home page Grenada new image.png" 
   },
   { 
     name: "UAE", 
     status: "Coming Soon",
     features: "Private Terraces · Golden Sunsets · Desert Oasis", 
-    image: "/images/Home page UAE new image (HOME PAGE).png" 
+    image: "/images/UAE home page card new image.png" 
   },
   { 
     name: "Belize", 
     status: "Coming Soon",
     features: "Ocean Vista · Sunset Facing · Serene Nature", 
-    image: "/images/Home page our collection belzie new image 2.png" 
+    image: "/images/Home page Belize new image.png" 
   },
 ];
 
 const pillars = [
   {
-    title: "Nature-First Sanctuaries",
+    title: "Nature First Sanctuaries",
     body: "Breathtaking. Private. Quiet by design. This is hushpitality where presence replaces performance.",
   },
   {
     title: "Sleep Optimized Villas",
-    body: "Blackout environments. Zero-gravity beds. Spa-level bathrooms and outdoor soaking under open sky. Rest, finally done right.",
+    body: "Blackout environments, Zero-gravity beds, Spa-level bathrooms and Outdoor soaking under open sky. Rest, finally done right.",
   },
   {
     title: "The Wellness Life",
@@ -138,7 +138,7 @@ export default function Index() {
       </section>
 
       {/* Sanctuaries Grid */}
-      <section className="pt-0 pb-16 px-6 bg-card">
+      <section className="pt-16 md:pt-24 pb-16 px-6 bg-card">
         <div className="max-w-7xl mx-auto">
           <SectionHeading
             title="Each Villa, A World of Its Own"
@@ -179,12 +179,12 @@ export default function Index() {
                       <div className="absolute bottom-0 left-0 p-4">
                         <div className="w-6 h-px bg-accent/60 mb-3" />
                         {villa.status && (
-                          <p className="font-body text-[10px] tracking-[0.4em] uppercase text-accent/70 mb-0">{villa.status}</p>
+                          <p className="font-body text-[10px] tracking-[0.4em] uppercase text-accent/70 mb-1">{villa.status}</p>
                         )}
-                        <h3 className="font-heading text-xl md:text-2xl font-light text-white mt-0 mb-0">{villa.name}</h3>
+                        <h3 className="font-heading text-xl md:text-2xl font-light text-white mt-0 mb-1">{villa.name}</h3>
+                        <p className="font-body text-xs font-light text-white/70 tracking-wide">{villa.features}</p>
                       </div>
                     </div>
-                    <p className="font-body text-[10px] text-muted-foreground/80 tracking-widest uppercase mt-3 mb-0 text-center">{villa.features}</p>
                   </div>
                 </ScrollReveal>
               ))}
@@ -196,18 +196,16 @@ export default function Index() {
       {/* Four Pillars */}
       <section className="py-20 md:py-32 px-6">
         <div className="max-w-7xl mx-auto">
-          <SectionHeading
-            title="What Defines Our Resorts"
-            subtitle="Distinct by design..."
-          />
+          <SectionHeading title="What Defines Our Resorts" />
+          <p className="font-body text-sm md:text-base text-accent text-center mt-4">Distinct by design...</p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mt-16">
             {pillars.map((pillar, i) => (
               <ScrollReveal key={pillar.title} delay={i * 0.15}>
-                <div className="border border-accent/20 p-8 md:p-10 h-full hover:border-accent/40 transition-colors duration-500 hover:bg-primary/5">
+                <div className="border border-accent/20 p-8 md:p-10 h-full hover:bg-primary hover:text-primary-foreground group transition-all duration-700">
                    <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-medium">0{i + 1}</span>
-                   <h3 className="font-heading text-2xl font-light text-foreground mt-4 mb-5">{pillar.title}</h3>
-                  <p className="font-body text-sm font-light text-muted-foreground leading-relaxed">{pillar.body}</p>
+                   <h3 className="font-heading text-2xl font-light text-foreground group-hover:text-primary-foreground mt-4 mb-5">{pillar.title}</h3>
+                  <p className="font-body text-sm font-light text-muted-foreground group-hover:text-primary-foreground/70 leading-relaxed">{pillar.body}</p>
                 </div>
               </ScrollReveal>
             ))}

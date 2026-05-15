@@ -95,7 +95,7 @@ export default function Responsibility() {
             <p className="font-body text-sm text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Every detail bears the same weight, the linens, the cutlery, chosen with the same intentionality as everything that carries the Providence name. Because those who have built extraordinary lives understand that how you do the small things is how you do everything.
             </p>
-            <p className="font-heading text-xl md:text-2xl font-light mt-8 italic bg-gradient-to-br from-[hsl(145,30%,35%)] to-[hsl(37,40%,50%)] bg-clip-text text-transparent">
+            <p className="font-heading text-xl md:text-2xl font-light mt-8 italic text-accent">
               The Epitome of Hospitality
             </p>
           </ScrollReveal>
@@ -123,9 +123,6 @@ export default function Responsibility() {
                   <span className="absolute top-4 right-6 font-heading text-[80px] md:text-[100px] font-light text-accent/10 group-hover:text-primary-foreground/10 leading-none transition-colors duration-700 select-none">
                     {v.num}
                   </span>
-                  <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent group-hover:text-accent font-medium relative z-10">
-                    {v.num}
-                  </span>
                   <h3 className="font-heading text-2xl md:text-3xl font-light text-foreground group-hover:text-primary-foreground mt-4 mb-2 relative z-10 transition-colors duration-700">
                     {v.title}
                   </h3>
@@ -141,43 +138,41 @@ export default function Responsibility() {
           </div>
 
           <ScrollReveal delay={0.3}>
-            <p className="font-heading text-xl md:text-2xl font-light text-center mt-16 italic bg-gradient-to-br from-[hsl(145,30%,35%)] to-[hsl(37,40%,50%)] bg-clip-text text-transparent">
+            <p className="font-heading text-xl md:text-2xl font-light text-center mt-16 italic text-accent">
               All leading to a healthier, fulfilled, longer life.
             </p>
           </ScrollReveal>
         </div>
       </section>
 
-      {/* ═══════ SECTION 4 — AFFORDABLE HOUSING ═══════ */}
-      <section className="py-20 md:py-32 px-6 bg-card">
+      {/* ═══════ SECTION 6 — OUR PHILOSOPHY ═══════ */}
+      <section className="py-32 md:py-48 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-            {/* Image placeholder */}
-            <ScrollReveal>
-              <div className="w-full aspect-[3/4]">
-                <img src="/images/ethos page Our Reasonable Service section new image.png" alt="Affordable Housing Initiative" className="w-full h-full object-cover" />
-              </div>
-            </ScrollReveal>
             {/* Copy */}
-            <ScrollReveal delay={0.15}>
+            <ScrollReveal>
               <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-4 block">
-                Affordable Housing Initiative
+                Our Philosophy
               </span>
               <div className="divider-gold mb-8" />
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-8">
-                Our Reasonable Service
+                Some Places Exist to Impress. We Exist to Restore.
               </h2>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
-                A membership at Club Providence extends far beyond the sanctuary you sleep in. A portion of every annual revenue is intentionally directed toward vetted nonprofits and community-led initiatives tackling the global affordable housing crisis, not as a marketing moment, but as a founding principle.
+                Providence is where the extraordinary couple escapes the noise not just to unwind, but to reconnect. With each other. With nature. With what actually matters.
               </p>
-              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-10">
-                Borders don't limit this commitment. Families across the world gain access, stability, and opportunity because you chose to belong here. At Providence, impact isn't a campaign we run seasonally or a line item we debate annually. It's embedded in how we build, how we operate, and how we grow.
+              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
+                We've reimagined luxury as something deeper than thread counts and champagne towers. Here, it's the guided breath at sunrise. The skill learned. The digital silence that finally lets you think.
               </p>
-              <blockquote className="border-l-2 border-accent/50 pl-6">
-                <p className="font-heading text-xl md:text-2xl font-light text-foreground italic leading-relaxed">
-                  The most meaningful luxury doesn't just elevate your life, it quietly, deliberately, changes someone else's.
-                </p>
-              </blockquote>
+              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed">
+                Our Members don't just vacation, they belong to something rare. A curated world where world class experience meets genuine purpose: clean water flowing into communities that need it, roofs over heads that deserve them. This is luxury with a conscience & Exclusivity with a soul.
+              </p>
+            </ScrollReveal>
+            {/* Image placeholder — golden hour, intimate */}
+            <ScrollReveal delay={0.15}>
+               <div className="w-full aspect-[3/4]">
+                <img src="/images/Ethos page our philosophy section new image.png" alt="Our Philosophy" className="w-full h-full object-cover" />
+              </div>
             </ScrollReveal>
           </div>
         </div>
@@ -213,34 +208,36 @@ export default function Responsibility() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 6 — OUR PHILOSOPHY ═══════ */}
-      <section className="py-32 md:py-48 px-6">
+      {/* ═══════ SECTION 4 — AFFORDABLE HOUSING ═══════ */}
+      <section className="py-20 md:py-32 px-6 bg-card">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-            {/* Copy */}
+            {/* Image placeholder */}
             <ScrollReveal>
+              <div className="w-full aspect-[3/4]">
+                <img src="/images/ethos page Our Reasonable Service section new image.png" alt="Affordable Housing Initiative" className="w-full h-full object-cover" />
+              </div>
+            </ScrollReveal>
+            {/* Copy */}
+            <ScrollReveal delay={0.15}>
               <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-4 block">
-                Our Philosophy
+                Affordable Housing Initiative
               </span>
               <div className="divider-gold mb-8" />
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-8">
-                Some Places Exist to Impress. We Exist to Restore.
+                Our Reasonable Service
               </h2>
               <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
-                Providence is where the extraordinary couple escapes the noise not just to unwind, but to reconnect. With each other. With nature. With what actually matters.
+                A membership at Club Providence extends far beyond the sanctuary you sleep in. A portion of every annual revenue is intentionally directed toward vetted nonprofits and community-led initiatives tackling the global affordable housing crisis, not as a marketing moment, but as a founding principle.
               </p>
-              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
-                We've reimagined luxury as something deeper than thread counts and champagne towers. Here, it's the guided breath at sunrise. The skill learned. The digital silence that finally lets you think.
+              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-10">
+                Borders don't limit this commitment. Families across the world gain access, stability, and opportunity because you chose to belong here. At Providence, impact isn't a campaign we run seasonally or a line item we debate annually. It's embedded in how we build, how we operate, and how we grow.
               </p>
-              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed">
-                Our Members don't just vacation, they belong to something rare. A curated world where world class experience meets genuine purpose: clean water flowing into communities that need it, roofs over heads that deserve them. This is luxury with a conscience & Exclusivity with a soul.
-              </p>
-            </ScrollReveal>
-            {/* Image placeholder — golden hour, intimate */}
-            <ScrollReveal delay={0.15}>
-               <div className="w-full aspect-[3/4]">
-                <img src="https://image2url.com/r2/default/images/1773323051295-48dc24c1-23f2-4ac4-86c9-738c3d32a8b1.jpg" alt="Our Philosophy" className="w-full h-full object-cover" />
-              </div>
+              <blockquote className="border-l-2 border-accent/50 pl-6">
+                <p className="font-heading text-xl md:text-2xl font-light text-foreground italic leading-relaxed">
+                  The most meaningful luxury doesn't just elevate your life, it quietly, deliberately, changes someone else's.
+                </p>
+              </blockquote>
             </ScrollReveal>
           </div>
         </div>
