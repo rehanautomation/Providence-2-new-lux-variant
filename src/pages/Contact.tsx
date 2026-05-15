@@ -200,10 +200,11 @@ export default function Contact() {
       </section>
 
       {/* ═══════ SECTION 3 — WHAT AWAITS YOU ═══════ */}
-      <section className="relative py-24 md:py-32 overflow-hidden bg-card">
-        <div className="max-w-6xl mx-auto px-6 text-center">
+      <section className="relative py-24 md:py-32 overflow-hidden bg-[hsl(var(--obsidian))]">
+        <div className="absolute inset-0 grain-overlay" />
+        <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
           <ScrollReveal>
-            <h2 className="font-heading text-3xl md:text-4xl font-light text-foreground leading-tight mb-16">
+            <h2 className="font-heading text-3xl md:text-4xl font-light text-[hsl(var(--cream))] leading-tight mb-16">
               What Awaits You
             </h2>
           </ScrollReveal>
@@ -212,33 +213,33 @@ export default function Contact() {
             <ScrollReveal delay={0.1}>
               <div className="flex flex-col items-center">
                 <div className="w-full aspect-square bg-muted/20 overflow-hidden mb-4 rounded-sm">
-                  <img src="/images/Privacy section new image membership page .png" alt="Private Sanctuaries" className="w-full h-full object-cover" />
+                  <img src="/images/private sancuaries contact page .png" alt="Private Sanctuaries" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="font-heading text-lg font-light text-foreground">Private Sanctuaries</h3>
+                <h3 className="font-heading text-lg font-light text-[hsl(var(--cream))]">Private Sanctuaries</h3>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
               <div className="flex flex-col items-center">
                 <div className="w-full aspect-square bg-muted/20 overflow-hidden mb-4 rounded-sm">
-                  <img src="/images/Culinary Experience section of memebership page .png" alt="Culinary Experiences" className="w-full h-full object-cover" />
+                  <img src="/images/Culinary exp for contact page .jpeg" alt="Culinary Experiences" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="font-heading text-lg font-light text-foreground">Culinary Experiences</h3>
+                <h3 className="font-heading text-lg font-light text-[hsl(var(--cream))]">Culinary Experiences</h3>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.3}>
               <div className="flex flex-col items-center">
                 <div className="w-full aspect-square bg-muted/20 overflow-hidden mb-4 rounded-sm">
-                  <img src="/images/membershp page wellnes section .png" alt="Wellness and Renewal" className="w-full h-full object-cover" />
+                  <img src="/images/wellness and renewal contact page.jpeg" alt="Wellness and Renewal" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="font-heading text-lg font-light text-foreground">Wellness and Renewal</h3>
+                <h3 className="font-heading text-lg font-light text-[hsl(var(--cream))]">Wellness and Renewal</h3>
               </div>
             </ScrollReveal>
             <ScrollReveal delay={0.4}>
               <div className="flex flex-col items-center">
                 <div className="w-full aspect-square bg-muted/20 overflow-hidden mb-4 rounded-sm">
-                  <img src="/images/Ethos page our philosophy section new image.png" alt="Cultural Immersion" className="w-full h-full object-cover" />
+                  <img src="/images/cultural immersion contact page .png" alt="Cultural Immersion" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="font-heading text-lg font-light text-foreground">Cultural Immersion</h3>
+                <h3 className="font-heading text-lg font-light text-[hsl(var(--cream))]">Cultural Immersion</h3>
               </div>
             </ScrollReveal>
           </div>

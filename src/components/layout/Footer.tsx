@@ -7,6 +7,13 @@ const exploreLinks = [
   { label: "Culinary", path: "/experiences#culinary" },
 ];
 
+const membershipLinks = [
+  { label: "Our Standard", path: "/membership#standard" },
+  { label: "Our Philosophy", path: "/membership#philosophy" },
+  { label: "Founding Members Offer", path: "/membership#founding" },
+  { label: "What Your Membership Unlocks", path: "/membership#unlocks" },
+];
+
 const connectLinks = [
   { label: "Contact Us", path: "/contact" },
   { label: "Instagram" },
@@ -20,16 +27,32 @@ export default function Footer() {
         <div className="mb-16">
           <img src="/images/logo white.png" alt="Providence Resorts" className="h-32 w-auto object-contain mb-4" />
           <p className="font-body text-sm font-light text-primary-foreground/70 max-w-lg leading-relaxed">
-            A sanctuary of transformation. A portal to profound personal discovery, where extraordinary journeys begin.
+            Where extraordinary feels like home.
           </p>
         </div>
 
         {/* Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div>
             <h4 className="font-body text-[10px] tracking-[0.3em] uppercase text-accent mb-6">Explore</h4>
             <ul className="space-y-3">
               {exploreLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    to={link.path}
+                    className="font-body text-sm font-light text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-body text-[10px] tracking-[0.3em] uppercase text-accent mb-6">Membership</h4>
+            <ul className="space-y-3">
+              {membershipLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     to={link.path}

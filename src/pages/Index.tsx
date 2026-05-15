@@ -203,8 +203,7 @@ export default function Index() {
             {pillars.map((pillar, i) => (
               <ScrollReveal key={pillar.title} delay={i * 0.15}>
                 <div className="border border-accent/20 p-8 md:p-10 h-full hover:bg-primary hover:text-primary-foreground group transition-all duration-700">
-                   <span className="font-body text-[10px] tracking-[0.3em] uppercase text-accent font-medium">0{i + 1}</span>
-                   <h3 className="font-heading text-2xl font-light text-foreground group-hover:text-primary-foreground mt-4 mb-5">{pillar.title}</h3>
+                   <h3 className="font-heading text-2xl font-light text-foreground group-hover:text-primary-foreground mb-5">{pillar.title}</h3>
                   <p className="font-body text-sm font-light text-muted-foreground group-hover:text-primary-foreground/70 leading-relaxed">{pillar.body}</p>
                 </div>
               </ScrollReveal>

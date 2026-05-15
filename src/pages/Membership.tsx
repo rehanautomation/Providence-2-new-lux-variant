@@ -232,7 +232,7 @@ export default function Membership() {
       </section>
 
       {/* ═══════ OUR STANDARD ═══════ */}
-      <section className="py-20 md:py-32 px-6 bg-card">
+      <section id="standard" className="py-20 md:py-32 px-6 bg-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <ScrollReveal>
@@ -265,6 +265,7 @@ export default function Membership() {
 
       {/* ═══════ SECTION 6 — HOW IT WORKS ═══════ */}
       <section
+        id="philosophy"
         className="py-40 md:py-56 px-6 relative bg-cover bg-center"
         style={{ backgroundImage: "url('/images/Simple. Exclusive. Designed Around You membership page .png')" }}
       >
@@ -283,7 +284,7 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 4 — MEMBERSHIP BENEFITS ═══════ */}
-      <section className="py-20 md:py-32 px-6 bg-background">
+      <section id="unlocks" className="py-20 md:py-32 px-6 bg-background">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             {/* Image */}
@@ -296,7 +297,7 @@ export default function Membership() {
             <ScrollReveal delay={0.15}>
               <div className="divider-gold mb-8" />
               <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light bg-gradient-to-br from-[hsl(145,30%,35%)] to-[hsl(37,40%,50%)] bg-clip-text text-transparent leading-tight mb-10">
-                Welcome to Club Providence
+                What Your Membership Unlocks
               </h2>
               <ul className="space-y-6">
                 {benefits.map((b) => (
@@ -317,7 +318,7 @@ export default function Membership() {
       </section>
 
       {/* ═══════ SECTION 7 — FOUNDING MEMBERS ═══════ */}
-      <section className="py-40 px-6 bg-gradient-to-br from-primary/30 via-background to-background">
+      <section id="founding" className="py-40 px-6 bg-gradient-to-br from-primary/30 via-background to-background">
         <div className="max-w-2xl mx-auto text-center">
           <ScrollReveal>
             <div className="divider-gold mb-8 mx-auto" />

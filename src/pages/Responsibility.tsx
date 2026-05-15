@@ -102,7 +102,40 @@ export default function Responsibility() {
         </div>
       </section>
 
-      {/* ═══════ SECTION 3 — THE THREE VALUES ═══════ */}
+      {/* ═══════ OUR PHILOSOPHY ═══════ */}
+      <section className="py-32 md:py-48 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
+            {/* Copy */}
+            <ScrollReveal>
+              <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-4 block">
+                Our Philosophy
+              </span>
+              <div className="divider-gold mb-8" />
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-8">
+                Some Places Exist to Impress. We Exist to Restore.
+              </h2>
+              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
+                Providence is where the extraordinary couple escapes the noise not just to unwind, but to reconnect. With each other. With nature. With what actually matters.
+              </p>
+              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
+                We've reimagined luxury as something deeper than thread counts and champagne towers. Here, it's the guided breath at sunrise. The skill learned. The digital silence that finally lets you think.
+              </p>
+              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed">
+                Our Members don't just vacation, they belong to something rare. A curated world where world class experience meets genuine purpose: clean water flowing into communities that need it, roofs over heads that deserve them. This is luxury with a conscience & Exclusivity with a soul.
+              </p>
+            </ScrollReveal>
+            {/* Image placeholder — golden hour, intimate */}
+            <ScrollReveal delay={0.15}>
+               <div className="w-full aspect-[3/4]">
+                <img src="/images/Ethos page our philosophy section new image.png" alt="Our Philosophy" className="w-full h-full object-cover" />
+              </div>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ OUR VALUES ═══════ */}
       <section className="py-20 md:py-32 px-6 bg-card">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>
@@ -142,39 +175,6 @@ export default function Responsibility() {
               All leading to a healthier, fulfilled, longer life.
             </p>
           </ScrollReveal>
-        </div>
-      </section>
-
-      {/* ═══════ SECTION 6 — OUR PHILOSOPHY ═══════ */}
-      <section className="py-32 md:py-48 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-            {/* Copy */}
-            <ScrollReveal>
-              <span className="font-body text-[10px] tracking-[0.4em] uppercase text-accent mb-4 block">
-                Our Philosophy
-              </span>
-              <div className="divider-gold mb-8" />
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-foreground leading-tight mb-8">
-                Some Places Exist to Impress. We Exist to Restore.
-              </h2>
-              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
-                Providence is where the extraordinary couple escapes the noise not just to unwind, but to reconnect. With each other. With nature. With what actually matters.
-              </p>
-              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed mb-6">
-                We've reimagined luxury as something deeper than thread counts and champagne towers. Here, it's the guided breath at sunrise. The skill learned. The digital silence that finally lets you think.
-              </p>
-              <p className="font-body text-sm md:text-base font-light text-muted-foreground leading-relaxed">
-                Our Members don't just vacation, they belong to something rare. A curated world where world class experience meets genuine purpose: clean water flowing into communities that need it, roofs over heads that deserve them. This is luxury with a conscience & Exclusivity with a soul.
-              </p>
-            </ScrollReveal>
-            {/* Image placeholder — golden hour, intimate */}
-            <ScrollReveal delay={0.15}>
-               <div className="w-full aspect-[3/4]">
-                <img src="/images/Ethos page our philosophy section new image.png" alt="Our Philosophy" className="w-full h-full object-cover" />
-              </div>
-            </ScrollReveal>
-          </div>
         </div>
       </section>
 
@@ -244,7 +244,7 @@ export default function Responsibility() {
       </section>
 
       {/* ═══════ SECTION 7 — CLOSING STATEMENT ═══════ */}
-      <section className="relative py-40 md:py-56 px-6 overflow-hidden">
+      <section className="relative py-20 md:py-32 px-6 overflow-hidden">
         {/* Wide natural landscape bg */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-[hsl(145,22%,22%)] to-[hsl(140,18%,18%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(37,40%,50%,0.1),transparent_60%)]" />
@@ -259,11 +259,8 @@ export default function Responsibility() {
             <p className="font-body text-sm md:text-base font-light text-primary-foreground/70 leading-relaxed mb-12 max-w-2xl mx-auto">
               Club Providence is an invitation to elevated living, rare destinations, restored well-being, and luxury with purpose.
             </p>
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-accent/50 mb-2">
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-accent/50 mb-8">
               Work Less. Live More.
-            </p>
-            <p className="font-body text-xs tracking-[0.3em] uppercase text-accent/50 mb-12">
-              Live Vigorously. Live Abundantly. Live Empowered.
             </p>
           </ScrollReveal>
 
@@ -276,6 +273,12 @@ export default function Responsibility() {
                 </div>
               </Link>
             </Button>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.4}>
+            <p className="font-body text-xs tracking-[0.3em] uppercase text-accent/50 mt-12">
+              Travel deliberately. Recharge intentionally. Belong exclusively.
+            </p>
           </ScrollReveal>
         </div>
       </section>

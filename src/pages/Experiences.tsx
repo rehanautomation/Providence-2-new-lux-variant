@@ -118,7 +118,7 @@ export default function Experiences() {
             </h1>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.8 }}>
-            <p className="font-body text-sm md:text-base font-light text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="font-body text-sm md:text-base font-light text-accent max-w-2xl mx-auto leading-relaxed">
               Because the most meaningful thing you can bring home isn't a souvenir. It's a better version of who you already are.
             </p>
           </motion.div>
